@@ -3,7 +3,9 @@
  */
 const ftpClientInstance = require('ftp');
 const fs = require('fs');
+const fse = require('fs-extra');
 const targz = require('targz');
+const xmlParser = require('xml-js');
 
 /**
  * Include configuration
@@ -11,12 +13,33 @@ const targz = require('targz');
 const { IUB } = require('../config');
 
 /**
+ * Parses XML file to JSON string.
+ * @param {string} xmlPath - Path to the XML file which needs to be parsed to JSON.
+ */
+function parseIUBXmlToJson(xmlPath) {
+  return new Promise((resolve, reject) => {
+    // Read the file
+    fs.readFile(xmlPath, 'utf8', (err, data) => {
+      if (err) reject(err);
+
+      // Parse XML to JSON
+      const parsedFileContent = xmlParser.xml2json(data, { compact: true, spaces: 4 });
+
+      // TODO: Save parsed file content to the database.
+
+      // Resolve after everything has executed
+      resolve(true);
+    });
+  });
+}
+
+/**
  * Extracts a specific .tar.gz file and saves the files to the database.
  * @param {Object} filePath - Path to the file which needs to be extracted.
  */
 function extractIUBFileData(filePath) {
   // Remove directory and extension for file name, so we can save it in a specific directory
-  const fileName = filePath.replace(IUB.IUBLocalDataDirectory, '').replace('.tar.gz', '');
+  const fileName = filePath.replace(`${IUB.IUBLocalDataDirectory}/`, '').replace('.tar.gz', '');
 
   // Decompress IUB .tar.gz files to our server
   targz.decompress({
@@ -29,6 +52,30 @@ function extractIUBFileData(filePath) {
     // First let's delete the .tar.gz file
     fs.unlinkSync(filePath);
 
+    // Now let's read files in the extracted directory
+    fs.readdir(`${IUB.IUBLocalDataDirectory}/${fileName}`, (err, files) => {
+      if (err) throw err;
+
+      // Create promise array for the file parsing
+      const IUBFileParsingPromises = [];
+
+      // Go through each of the files
+      files.forEach(file => {
+        // Add each file to promise
+        IUBFileParsingPromises.push(parseIUBXmlToJson(`${IUB.IUBLocalDataDirectory}/${fileName}/${file}`));
+      });
+
+      // Wait for all files are parsed
+      Promise.all(IUBFileParsingPromises).then(() => {
+        // After all files are parsed, make sure that we delete directory with files
+        fse.remove(`${IUB.IUBLocalDataDirectory}/${fileName}`, err => {
+          if (err) throw err;
+        });
+      })
+      .catch(err => {
+        throw err
+      });
+    });
   });
 }
 
@@ -43,7 +90,12 @@ function downloadIUBData(ftpClient, fileToFetch) {
     if (err) throw err;
 
     // When ZIP file is saved, make sure to extract and save data
-    stream.once('close', () => extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`));
+    stream.once('close', () => {
+      // TODO: Save last fetched file in the database
+
+      // Extract IUB File
+      extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`);
+    });
 
     // Save the file to local system
     stream.pipe(fs.createWriteStream(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`));
@@ -104,7 +156,13 @@ function readIUBFtpStructure(ftpClient) {
   });
 }
 
+/**
+ * Modules that are exported from the controller.
+ */
 module.exports = {
+  /**
+   * Fetches data from the IUB data.
+   */
   fetchIUBData() {
     // Initialize ftp client
     const ftpClient = new ftpClientInstance();
