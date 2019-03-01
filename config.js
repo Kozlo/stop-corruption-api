@@ -33,4 +33,4 @@ const errorStatusCodes = {
     'ValidationError': httpStatusCodes.badRequest
 };
 
-module.exports = { httpStatusCodes, errorStatusCodes, maxFieldLength, userConfig };
+module.exports = { httpStatusCodes, errorStatusCodes, };
