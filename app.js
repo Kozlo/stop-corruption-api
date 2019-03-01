@@ -16,6 +16,11 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
+/**
+ * Import custom controllers.
+ */
+const iubDataFetcher = require('./controllers/iub-data-fetcher');
+
 //=================
 // DB setup
 //=================
@@ -51,6 +56,9 @@ app.use('/', routes);
 //=================
 // Error handling
 //=================
+
+// Fetch IUB data
+iubDataFetcher.fetchIUBData();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
