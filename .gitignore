@@ -63,3 +63,4 @@ typings/
 # other
 .idea
 start.sh
+iub_data/*

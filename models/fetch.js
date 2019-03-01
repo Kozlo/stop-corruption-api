@@ -46,4 +46,4 @@ const properties = {
 
 const schema = new mongoose.Schema(properties);
 
-module.exports = mongoose.model('UIBDataFetch', schema);
+module.exports = mongoose.model('IUBDataFetch', schema);

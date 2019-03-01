@@ -28,34 +28,62 @@ function parseIUBXmlToJson(xmlPath) {
       if (err) reject(err);
 
       // Parse XML to JSON
-      const parsedFileContent = JSON.parse(xmlParser.xml2json(data, { compact: true, spaces: 4 }));
-      const documentId = parsedFileContent.document.id._text;
+      let parsedData;
 
-      // TODO: Save parsed file content to the database.
-      IubEntry.findOne({ document_id: documentId })
-        .then(entry => {
-          if (entry) {
-            return IubEntry.findByIdAndUpdate(entry._id, {
-              document_id: documentId,
-              general: {
-                name: parsedFileContent.document.general.name._text,
-              },
-            }, { 'new': true, runValidators: true });
+      try {
+        parsedData = JSON.parse(xmlParser.xml2json(data, { compact: true, spaces: 4 }));
+      } catch (e) {
+        console.error(e);
+        return resolve(true);
+      }
 
-          } else {
-            return IubEntry.create({
-              document_id: documentId,
-              general: {
-                name: parsedFileContent.document.general.name._text,
-              },
-            });
-          }
-        })
-        .then(() => resolve(true))
-        .catch(err => {
-          console.log(err);
-          reject(err);
-        });
+      const {
+        id, // PVS dokumenta ID
+        authority_name, // Iestādes nosaukums
+        authority_reg_num = {}, // Iestādes reģistrācijas Nr.
+        general: { // Vispārējie paziņojuma parametri
+          main_cpv = {}, // Datu bloks satur iepirkuma galveno CPV kodu
+        } = {},
+        part_5_list: { // Līguma slēgšanas tiesību piešķiršana
+          part_5: { // Saraksts var saturēt vienu vai vairākas paziņojuma par iepirkuma procedūras rezultātiem V daļas (paziņojuma par līguma slēgšanas tiesību piešķiršanu IV daļas) datu struktūras „part_5
+            decision_date = {}, // Lēmuma pieņemšanas datums / Līguma slēgšanas datums
+            contract_price_exact = {}, // Kopējā līgumcena
+            exact_currency = {}, // Kopējā līgumcena – valūta.
+            tender_num = {}, // Saņemto piedāvājumu skaits.
+          } = {},
+        } = {},
+        eu_fund,
+      } = parsedData.document;
+
+      IubEntry.findOneAndUpdate(
+        { document_id: id._text },
+        {
+          document_id: id._text,
+          authority_name: authority_name ? authority_name['_text'] : undefined,
+          authority_reg_num: authority_reg_num._text,
+          main_cpv: {
+            lv: main_cpv.lv,
+            en: main_cpv.en,
+          },
+          part_5_list: {
+            part_5: {
+              decision_date: decision_date._text,
+              contract_price_exact: contract_price_exact._text,
+              exact_currency: exact_currency._text,
+              tender_num: tender_num._text,
+            },
+          },
+          eu_fund: eu_fund === '0' ? false : eu_fund === '1' ? true : undefined,
+        },
+        {
+          upsert: true, // insert if not found
+        }
+      )
+      .then(() => resolve(true))
+      .catch(err => {
+        console.log(err);
+        reject(err);
+      });
     });
   });
 }

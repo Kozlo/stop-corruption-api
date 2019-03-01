@@ -47,7 +47,7 @@ const properties = {
     contract_name: String,
     place: String,
     region: String,
-    eu_fund: String,
+    eu_fund: Boolean,
     environment_req: String,
     approval_date_stamp: String,
     parts: String,
@@ -160,4 +160,4 @@ const properties = {
 
 const schema = new mongoose.Schema(properties);
 
-module.exports = mongoose.model('IUBDataFetch', schema);
+module.exports = mongoose.model('IUBEntry', schema);
