@@ -1,8 +1,9 @@
 /**
  * IUB Data Fetcher controller.
  */
-const Client = require('ftp');
-var fs = require('fs');
+const ftpClientInstance = require('ftp');
+const fs = require('fs');
+const targz = require('targz');
 
 /**
  * Include configuration
@@ -11,10 +12,24 @@ const { IUB } = require('../config');
 
 /**
  * Extracts a specific .tar.gz file and saves the files to the database.
- * @param {Object} fileName - File which needs to be extracted.
+ * @param {Object} filePath - Path to the file which needs to be extracted.
  */
-function extractIUBFileData(fileName) {
+function extractIUBFileData(filePath) {
+  // Remove directory and extension for file name, so we can save it in a specific directory
+  const fileName = filePath.replace(IUB.IUBLocalDataDirectory, '').replace('.tar.gz', '');
 
+  // Decompress IUB .tar.gz files to our server
+  targz.decompress({
+    src: filePath,
+    dest: `${IUB.IUBLocalDataDirectory}/${fileName}`
+  }, err => {
+    if (err) throw err;
+
+    // If there are no errors, we have successfully decompressed the files
+    // First let's delete the .tar.gz file
+    fs.unlinkSync(filePath);
+
+  });
 }
 
 /**
@@ -28,10 +43,10 @@ function downloadIUBData(ftpClient, fileToFetch) {
     if (err) throw err;
 
     // When ZIP file is saved, make sure to extract and save data
-    stream.once('close', () => extractIUBFileData(fileToFetch.name));
+    stream.once('close', () => extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`));
 
     // Save the file to local system
-    stream.pipe(fs.createWriteStream(fileToFetch.name));
+    stream.pipe(fs.createWriteStream(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`));
   });
 }
 
@@ -92,7 +107,7 @@ function readIUBFtpStructure(ftpClient) {
 module.exports = {
   fetchIUBData() {
     // Initialize ftp client
-    const ftpClient = new Client();
+    const ftpClient = new ftpClientInstance();
 
     // Retrieve directory list
     ftpClient.on('ready', () => readIUBFtpStructure(ftpClient));
