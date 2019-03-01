@@ -4,6 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+/**
+ * Import custom controllers.
+ */
+const iubDataFetcher = require('./controllers/iub-data-fetcher');
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
@@ -21,6 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+// Fetch IUB data
+iubDataFetcher.fetchIUBData();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
