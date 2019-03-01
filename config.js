@@ -33,4 +33,70 @@ const errorStatusCodes = {
     'ValidationError': httpStatusCodes.badRequest
 };
 
-module.exports = { httpStatusCodes, errorStatusCodes, };
+const monthStrings = {
+    '01': {
+        num: 0,
+        en: 'January',
+        lv: 'Janvāris',
+    },
+    '02': {
+        num: 1,
+        en: 'February',
+        lv: 'Februāris',
+    },
+    '03': {
+        num: 2,
+        en: 'March',
+        lv: 'Marts',
+    },
+    '04': {
+        num: 3,
+        en: 'April',
+        lv: 'Aprīlis',
+    },
+    '05': {
+        num: 4,
+        en: 'May',
+        lv: 'Maijs',
+    },
+    '06': {
+        num: 5,
+        en: 'June',
+        lv: 'Jūnijs',
+    },
+    '07': {
+        num: 6,
+        en: 'July',
+        lv: 'Jūlijs',
+    },
+    '08': {
+        num: 7,
+        en: 'August',
+        lv: 'Augusts',
+    },
+    '09': {
+        num: 8,
+        en: 'September',
+        lv: 'Septembris',
+    },
+    '10': {
+        num: 9,
+        en: 'October',
+        lv: 'Oktobris',
+    },
+    '11': {
+        num: 10,
+        en: 'November',
+        lv: 'Novembris',
+    },
+    '12': {
+        num: 11,
+        en: 'December',
+        lv: 'Decembris',
+    }
+};
+
+
+const dayStrings = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12'];
+
+module.exports = { httpStatusCodes, errorStatusCodes, monthStrings, dayStrings, };
