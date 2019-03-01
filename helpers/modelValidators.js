@@ -3,7 +3,6 @@
  */
 
 const mongoose = require('mongoose');
-const helpers = require('./');
 const { monthStrings } = require('../config');
 
 module.exports = {
@@ -80,7 +79,7 @@ module.exports = {
      * @returns {boolean} Flag showing if the field is valid
      */
     isValidTimestamp(timestamp) {
-        return new Date(timestamp) !=== 'Invalid Date' &&
+        return new Date(timestamp) !== 'Invalid Date' &&
           mongoose.Types.Date.isValid(timestamp);
     },
 };

@@ -6,6 +6,7 @@ const fs = require('fs');
 const fse = require('fs-extra');
 const targz = require('targz');
 const xmlParser = require('xml-js');
+const IubEntry = require('../models/iubEntry');
 
 /**
  * Include configuration
@@ -14,6 +15,9 @@ const { IUB } = require('../config');
 
 /**
  * Parses XML file to JSON string.
+ *
+ * If an entry already exists based on the ID then update it, otherwise create a new one.
+ *
  * @param {string} xmlPath - Path to the XML file which needs to be parsed to JSON.
  */
 function parseIUBXmlToJson(xmlPath) {
@@ -23,12 +27,34 @@ function parseIUBXmlToJson(xmlPath) {
       if (err) reject(err);
 
       // Parse XML to JSON
-      const parsedFileContent = xmlParser.xml2json(data, { compact: true, spaces: 4 });
+      const parsedFileContent = JSON.parse(xmlParser.xml2json(data, { compact: true, spaces: 4 }));
+      const documentId = parsedFileContent.document.id._text;
 
       // TODO: Save parsed file content to the database.
+      IubEntry.findOne({ document_id: documentId })
+        .then(entry => {
+          if (entry) {
+            return IubEntry.findByIdAndUpdate(entry._id, {
+              document_id: documentId,
+              general: {
+                name: parsedFileContent.document.general.name._text,
+              },
+            }, { 'new': true, runValidators: true });
 
-      // Resolve after everything has executed
-      resolve(true);
+          } else {
+            return IubEntry.create({
+              document_id: documentId,
+              general: {
+                name: parsedFileContent.document.general.name._text,
+              },
+            });
+          }
+        })
+        .then(() => resolve(true))
+        .catch(err => {
+          console.error(err);
+          reject(err);
+        });
     });
   });
 }

@@ -105,5 +105,16 @@ const monthStrings = {
 
 
 const dayStrings = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '12'];
+const countryCodes = {
+    '1': {
+        en: 'Latvia',
+        lv: 'Latvija',
+    },
+};
+
+const currencyCodes = {
+    '1': 'LVL',
+    '2': 'EUR',
+};
 
 module.exports = { httpStatusCodes, errorStatusCodes, monthStrings, dayStrings, IUB, };
