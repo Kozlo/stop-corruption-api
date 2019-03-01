@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304351</id>
+<general>
+<name>Grīdas un kāpņu telpas remonts Sociālā dienesta telpās Raiņa ielā 10, Ventspilī</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>001</procurement_id>
+<authority_id>22808</authority_id>
+<authority_name>Pašvaldības SIA "Ventspils nekustamie īpašumi"</authority_name>
+<authority_reg_num>41203001885</authority_reg_num>
+<address>Užavas ielā 8, II.stāvs</address>
+<city>Ventspils</city>
+<zip_code>LV-3601</zip_code>
+<country>1</country>
+<main_cpv>
+<code>45430000-0</code>
+<code_num>45430000</code_num>
+<type>2</type>
+<lv>Grīdu un sienu apdares darbi.</lv>
+<en>Floor and wall covering work</en>
+<cpv_a>45</cpv_a>
+<cpv_b>430000-0</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>10000</price_from>
+<price_to>120000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>PSIA "VNĪ" 2013/001</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357550927</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Pašvaldības SIA "Ventspils nekustamie īpašumi"</authority_name>
+<address>Užavas ielā 8, II.stāvs</address>
+<authority_reg_num>41203001885</authority_reg_num>
+<zip_code>LV-3601</zip_code>
+<city>Ventspils</city>
+<country>1</country>
+<documentation_online>1</documentation_online>
+<authority_id>22808</authority_id>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357550799</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Pašvaldības SIA "Ventspils nekustamie īpašumi"</name>
+<short_name>PSIA "VNĪ"</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Užavas ielā 8, Ventspilī</place>
+<person>Andris Blathens</person>
+<phone>63629558</phone>
+<fax>63629563</fax>
+<email>andris.blathens@inbox.lv</email>
+<url>http://www.ventspils.lv/lat/ventspils_parvalde/publiskie_iepirkumi/</url>
+<url_client>http://www.ventspils.lv/lat/ventspils_parvalde/publiskie_iepirkumi/</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<middleman>0</middleman>
+<eu_list></eu_list>
+<type>notice_planned_contract</type>
+<language>11</language>
+<place>Raiņa ielā 10, Ventspilī</place>
+<region>3</region>
+<service_type>Atbilstoši darbu apjomiem un tehniskajām specifikācijām</service_type>
+<months>2</months>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<tender_for_parts>0</tender_for_parts>
+<submit_date>18/01/2013</submit_date>
+<submit_date_stamp>1358460000</submit_date_stamp>
+<timelimits>
+<dok_req_date>18/01/2013</dok_req_date>
+<work_time>8:00-12:00 un no 13:00-16:00</work_time>
+<submit_hour>14</submit_hour>
+<submit_minute>1</submit_minute>
+<tender_open_date>18/01/2013</tender_open_date>
+<tender_open_hour>14</tender_open_hour>
+<tender_open_minute>11</tender_open_minute>
+<tender_open_place>Jūras ielā 36, Ventspilī</tender_open_place>
+<submit_date>18/01/2013</submit_date>
+<submit_date_stamp>1358460000</submit_date_stamp></timelimits>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357550927</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<interrupt_info>Nepieciešams veikt izmaiņas darbu apjomu sarakstos un tehniskajās specifikācijās.</interrupt_info>
+<interrupt_date>09/01/2013</interrupt_date>
+<interrupted>1</interrupted>
+<interrupt_user_id>23131</interrupt_user_id>
+<interruption_date_stamp>1357732008</interruption_date_stamp>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

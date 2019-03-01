@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>303936</id>
+<general>
+<name>Pārtikas produktu iegāde PII Bitīte 2013. gadā</name>
+<procurement_id>129</procurement_id>
+<authority_id>94183</authority_id>
+<authority_name>Laucienes pirmsskolas izglītības iestāde "Bitīte"</authority_name>
+<authority_reg_num>2201901585</authority_reg_num>
+<address>"Bitītes", Lauciene, Laucienes pag., Talsu nov. </address>
+<city>Talsi</city>
+<zip_code>LV - 3285</zip_code>
+<country>1</country>
+<procurement_year>2013</procurement_year>
+<main_cpv>
+<code>15000000-6</code>
+<code_num>15000000</code_num>
+<type>1</type>
+<cpv_a>15</cpv_a>
+<cpv_b>000000-6</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>PII "Bitīte" 2013/129</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357622932</approval_date_stamp>
+<divided_in_parts>1</divided_in_parts>
+<parts>
+<part>
+<name>Maizes izstrādājumu piegāde</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>1</nr></part>
+<part>
+<name>Piena produktu piegāde</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>2</nr></part>
+<part>
+<name>Gaļas produktu piegāde</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>3</nr></part>
+<part>
+<name>Bakalejas preču piegāde</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>4</nr></part></parts>
+<part_5_list>
+<part_5>
+<contract_nr>1</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Maizes izstrādājumu piegāde</concluded_contract_name>
+<decision_date>11/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>1795.94</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>1795.94</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA Leipomo Lehmusmaki</winner_name>
+<winner_reg_num>40002011600</winner_reg_num>
+<winner_address>Kareivju iela 16, Talsi, </winner_address>
+<winner_city>Talsu novads</winner_city>
+<winner_zip_code>LV-3201</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>26103315</winner_phone>
+<winner_fax></winner_fax>
+<winner_email>info@maiznicaliepkalni.lv</winner_email>
+<winner_url>www.maiznicaliepkalni.lv</winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>2</contract_nr>
+<part_nr>2</part_nr>
+<concluded_contract_name>Piena produktu piegāde</concluded_contract_name>
+<decision_date>11/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>2069.82</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>2069.82</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Piensaimnieku lauksaimniecības pakalpojumu kooperatīvā sabiedrība "Dundaga"</winner_name>
+<winner_reg_num>49003001419</winner_reg_num>
+<winner_address>E. Dinsberga1, Dundaga</winner_address>
+<winner_city>Dundagas novads</winner_city>
+<winner_zip_code>LV - 3270</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>63291651</winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>3</contract_nr>
+<part_nr>3</part_nr>
+<concluded_contract_name>Gaļas produktu piegāde</concluded_contract_name>
+<decision_date>11/12/2012</decision_date>
+<tender_num>3</tender_num>
+<initial_price>2073.17</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>2073.17</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA "Rēzeknes gaļas kombināts"</winner_name>
+<winner_reg_num>42403012397</winner_reg_num>
+<winner_address>Rīgas iela 22</winner_address>
+<winner_city>Rēzekne</winner_city>
+<winner_zip_code>LV - 4601</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>64607300</winner_phone>
+<winner_fax>64628050</winner_fax>
+<winner_email>sekretare@rgk.lv</winner_email>
+<winner_url></winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>4</contract_nr>
+<part_nr>4</part_nr>
+<concluded_contract_name>Bakalejas preču piegāde</concluded_contract_name>
+<decision_date>11/12/2012</decision_date>
+<tender_num>3</tender_num>
+<initial_price>1297.88</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>1297.88</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA Kabuletu Fruit</winner_name>
+<winner_reg_num>40003959814</winner_reg_num>
+<winner_address>Lubānas iela 82</winner_address>
+<winner_city>Rīga</winner_city>
+<winner_zip_code>LV - 1073</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>67247680</winner_phone>
+<winner_fax>67247285</winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Laucienes pirmsskolas izglītības iestāde "Bitīte"</authority_name>
+<address>"Bitītes", Lauciene, Laucienes pag., Talsu nov. </address>
+<authority_reg_num>2201901585</authority_reg_num>
+<zip_code>LV - 3285</zip_code>
+<city>Talsi</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357621426</creation_date_stamp>
+<authority_id>94183</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Laucienes pirmsskolas izglītības iestāde "Bitīte"</name>
+<short_name>PII "Bitīte"</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>"Bitītes", Lauciene, Laucienes pagasts, Talsu novads</place>
+<person>Ivika Zēberga</person>
+<phone>63291616</phone>
+<fax>63291616</fax>
+<email>ivikazeberga@inbox.lv</email>
+<url>http://www.talsi.lv</url>
+<url_client>http://www.talsi.lv/publiskie iepirkumi</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<region>1</region>
+<price_exact>7236.81</price_exact>
+<currency>1</currency>
+<contract_name>Pārtikas produktu iegāde PII Bitīte 2013. gadā</contract_name>
+<place>pārtikas produktu iegāde PII Bitīte</place>
+<description>pārtikas produktu piegāde</description>
+<extra_winners>1</extra_winners>
+<extra_winners_reason>Iepirkums tika sastādīts daļās</extra_winners_reason>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<approval_date>08/01/2013</approval_date>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357622932</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>10297.11</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA Leipomo Lehmusmaki,Piensaimnieku lauksaimniecības pakalpojumu kooperatīvā sabiedrība Dundaga,SIA Rēzeknes gaļas kombināts,SIA Kabuletu Fruit</global_winner_title>
+<global_winner_reg_num>40002011600,49003001419,42403012397,40003959814</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

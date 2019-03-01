@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304480</id>
+<general>
+<name>Malkas piegāde Gulbenes novada Līgo pagasta pārvaldes vajadzībām 2013.gadam</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>1</procurement_id>
+<authority_id>94267</authority_id>
+<authority_name>Gulbenes novada  Līgo pagasta pārvalde</authority_name>
+<authority_reg_num>90000011802</authority_reg_num>
+<address>Krasta iela 12, Līgo , Līgo pagasts, Gulbenes novads </address>
+<city>Gulbenes novads</city>
+<zip_code>LV _ 4421</zip_code>
+<country>1</country>
+<main_cpv>
+<code>03413000-8</code>
+<code_num>3413000</code_num>
+<type>1</type>
+<lv>Kurināmā koksne.</lv>
+<en>Fuel wood</en>
+<cpv_a>03</cpv_a>
+<cpv_b>413000-8</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>GNLPP 2013/1</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357627277</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Gulbenes novada  Līgo pagasta pārvalde</authority_name>
+<address>Krasta iela 12, Līgo , Līgo pagasts, Gulbenes novads </address>
+<authority_reg_num>90000011802</authority_reg_num>
+<zip_code>LV _ 4421</zip_code>
+<city>Gulbenes novads</city>
+<country>1</country>
+<documentation_online>1</documentation_online>
+<authority_id>94267</authority_id>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357627181</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Gulbenes novada Līgo pagasta pārvalde</name>
+<short_name>GNLPP</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Krasta iela 12, Līgo , Līgo pagasts, Gulbenes novads </place>
+<person>Uldis Doņuks</person>
+<phone>644472347</phone>
+<fax>64472348</fax>
+<email>ligo@gulbene.lv</email>
+<url>http://www.gulbene.lv</url>
+<url_client>http://gulbene.lv/indekx.php/iepirkumi- procedūras</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<middleman>0</middleman>
+<eu_list></eu_list>
+<type>notice_planned_contract</type>
+<language>11</language>
+<place>Gulbenes novada Līgo pagasts</place>
+<region>8</region>
+<service_type>Malkas piegāde Gulbenes novada Līgo pagasta pārvaldes vajadzībām 2013.gadam</service_type>
+<months>4</months>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<tender_for_parts>0</tender_for_parts>
+<submit_date>04/02/2013</submit_date>
+<submit_date_stamp>1359928800</submit_date_stamp>
+<timelimits>
+<dok_req_date>04/02/2013</dok_req_date>
+<work_time>8.00-17.00</work_time>
+<submit_hour>11</submit_hour>
+<submit_minute>1</submit_minute>
+<tender_open_hour>0</tender_open_hour>
+<tender_open_minute>0</tender_open_minute>
+<submit_date>04/02/2013</submit_date>
+<submit_date_stamp>1359928800</submit_date_stamp></timelimits>
+<approval_date>08/01/2013</approval_date>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357627277</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

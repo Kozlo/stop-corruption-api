@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304507</id>
+<general>
+<name>Pārtikas preču piegāde</name>
+<procurement_id>1</procurement_id>
+<authority_id>93760</authority_id>
+<authority_name>Rīgas 126. pirmsskolas izglītības iestāde</authority_name>
+<authority_reg_num>3701901687</authority_reg_num>
+<address>Zemgaļu iela 23b</address>
+<city>Rīga</city>
+<zip_code>1006</zip_code>
+<country>1</country>
+<procurement_year>2013</procurement_year>
+<main_cpv>
+<code>15000000-8</code>
+<code_num>15000000</code_num>
+<type>1</type>
+<lv>Pārtikas produkti, dzērieni, tabaka un saistītā produkcija.</lv>
+<en>Food, beverages, tobacco and related products</en>
+<cpv_a>15</cpv_a>
+<cpv_b>000000-8</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>126.pii 2013/1</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357632451</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<part_5_list>
+<part_5>
+<contract_nr>1</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Pārtikas preču piegāde</concluded_contract_name>
+<decision_date>02/01/2013</decision_date>
+<tender_num>1</tender_num>
+<initial_price>15898.71</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>15898.71</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA " S.A.V."</winner_name>
+<winner_reg_num>40003226249</winner_reg_num>
+<winner_address>Ozolu iela 8a</winner_address>
+<winner_city>Jūrmala</winner_city>
+<winner_zip_code>LV-2008</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>67530011, 67530040</winner_phone>
+<winner_fax></winner_fax>
+<winner_email>e-pasts s.a.v@inbox.lv</winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Rīgas 126. pirmsskolas izglītības iestāde</authority_name>
+<address>Zemgaļu iela 23b</address>
+<authority_reg_num>3701901687</authority_reg_num>
+<zip_code>1006</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357630694</creation_date_stamp>
+<authority_id>93760</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Rīgas 126. pirmsskolas izglītības iestāde</name>
+<short_name>126.pii</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Rīgā, zemgaļu ielā 23b</place>
+<person>Rasma Freimane</person>
+<phone>67848229</phone>
+<fax></fax>
+<email>r126pii@riga.lv</email>
+<url></url>
+<url_client></url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<place>Rīgā, Zemgaļu ielā 23b</place>
+<region>6</region>
+<description>Pārtikas preču piegāde</description>
+<price_exact>15898.71</price_exact>
+<currency>1</currency>
+<contract_name>Pārtikas preču piegāde</contract_name>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<approval_date>08/01/2013</approval_date>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357632451</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>22621.96</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA  S.A.V.</global_winner_title>
+<global_winner_reg_num>40003226249</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

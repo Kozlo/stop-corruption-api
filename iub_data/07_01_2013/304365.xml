@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304365</id>
+<general>
+<name>Pārtikas produktu piegāde Vecbebru profesionālās vidusskolas mācību virtuvēm.</name>
+<procurement_id>2</procurement_id>
+<authority_id>94845</authority_id>
+<authority_name>VECBEBRU PROFESIONĀLĀ VIDUSSKOLA</authority_name>
+<authority_reg_num>90000043028</authority_reg_num>
+<address>VECBEBRI ,BEBRU pagasts,KOKNESES novads</address>
+<city>AIZKRAUKLE</city>
+<zip_code>LV-5135</zip_code>
+<country>1</country>
+<procurement_year>2013</procurement_year>
+<main_cpv>
+<code>15000000-8</code>
+<code_num>15000000</code_num>
+<type>1</type>
+<lv>Pārtikas produkti, dzērieni, tabaka un saistītā produkcija.</lv>
+<en>Food, beverages, tobacco and related products</en>
+<cpv_a>15</cpv_a>
+<cpv_b>000000-8</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>VPV 2013/2</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357557191</approval_date_stamp>
+<divided_in_parts>1</divided_in_parts>
+<parts>
+<part>
+<name>Pārtikas produktu piegāde-SIA Vecā maiznīca-7.daļa Maize</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>2</nr></part>
+<part>
+<name>Pārtikas produktu piegāde-SIA Kabuleti Fruit-3.4.5.5a.6.9.10.daļas Putnu gaļa un olas.Zivis un zivju izstrādājumi.Augļi,ogas,dārzeņi. Latvijas dārzeņi.Bakaleja un citi pārtikas produkti. Saldēti pārtikas produkti.Piena pārstrādes produkti.</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>5</nr></part>
+<part>
+<name>Pārtikas produktu piegāde-z/s Sietiņi-2.daļa  Nesaldēta svaiga cūkgaļa un svaigās cūkgaļas produkti</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>6</nr></part>
+<part>
+<name>Pārtikas produktu piegāde-SIA Forevers-8.daļa Desas,žāvējumi.</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>7</nr></part>
+<part>
+<name>Pārtikas produktu piegāde-A/S Preiļu siers-1.daļa Piens un piena produkti.</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>8</nr></part></parts>
+<part_5_list>
+<part_5>
+<contract_nr>4.</contract_nr>
+<part_nr>8-Desas,žāvējumi.</part_nr>
+<concluded_contract_name>Pārtikas produktu piegāde</concluded_contract_name>
+<decision_date>20/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>974.82</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>974.82</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA Forevers</winner_name>
+<winner_reg_num>40003307535</winner_reg_num>
+<winner_address>Granīta iela9a</winner_address>
+<winner_city>Rīga</winner_city>
+<winner_zip_code>LV-1057</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>67844565</winner_phone>
+<winner_fax>67844564</winner_fax>
+<winner_email>info@forevers.lv</winner_email>
+<winner_url>info@forevers.lv</winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>3</contract_nr>
+<part_nr>3.4.5.5a.6.9.10.</part_nr>
+<concluded_contract_name>Pārtikas produktu piegāde- Putnu gaļa un olas.Zivis un zivju izstrādājumi.Augļi,ogas,dārzeņi. Latvijas dārzeņi.Bakaleja un citi pārtikas produkti. Saldēti pārtikas produkti.Piena pārstrādes produkti.</concluded_contract_name>
+<decision_date>20/12/2012</decision_date>
+<tender_num>3</tender_num>
+<initial_price>5520.27</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>5520.27</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA KABULETI FRUIT</winner_name>
+<winner_reg_num>40003959814</winner_reg_num>
+<winner_address>Lubānas iela 82</winner_address>
+<winner_city>Rīga</winner_city>
+<winner_zip_code>LV-1073</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>67247680</winner_phone>
+<winner_fax>67247285</winner_fax>
+<winner_email>info@kabuleti.lv</winner_email>
+<winner_url>info@kabuleti.lv</winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>1</contract_nr>
+<part_nr>2</part_nr>
+<concluded_contract_name>Pārtikas produktu piegāde- Nesaldēta svaiga cūkgaļa un svaigās cūkgaļas produkti</concluded_contract_name>
+<decision_date>20/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>2193.8</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>2193.8</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>z/s SIETIŅI</winner_name>
+<winner_reg_num>48701003196</winner_reg_num>
+<winner_address>Sietiņi,Kokneses pagasts</winner_address>
+<winner_city>Kokneses novads</winner_city>
+<winner_zip_code>LV-5113</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>29165194</winner_phone>
+<winner_fax>65129251</winner_fax>
+<winner_email>gcsietini@inbox.lv</winner_email>
+<winner_url>gcsietini@inbox.lv</winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>2.</contract_nr>
+<part_nr>7</part_nr>
+<concluded_contract_name>Pārtikas produktu piegāde-Maize.</concluded_contract_name>
+<decision_date>20/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>392.18</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>392.18</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA Vecā maiznīca</winner_name>
+<winner_reg_num>42403007589</winner_reg_num>
+<winner_address>Brīvības ielā14k</winner_address>
+<winner_city>Rēzekne</winner_city>
+<winner_zip_code>LV-4601</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>64621055</winner_phone>
+<winner_fax>64621055</winner_fax>
+<winner_email>veca.maiznica@apollo.lv</winner_email>
+<winner_url>veca.maiznica@apollo.lv</winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>5</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Pārtikas produktu piegāde- Piens un piena produkti.</concluded_contract_name>
+<decision_date>20/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>3464.93</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>3464.93</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>A/S PREIĻU SIERS</winner_name>
+<winner_reg_num>50003026431</winner_reg_num>
+<winner_address>Daugaupils iela75</winner_address>
+<winner_city>Preiļi</winner_city>
+<winner_zip_code>LV-5301</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>65307046</winner_phone>
+<winner_fax>65321402</winner_fax>
+<winner_email>tatjana.capule@preilusiers.lv</winner_email>
+<winner_url>tatjana.capule@preilusiers.lv</winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>VECBEBRU PROFESIONĀLĀ VIDUSSKOLA</authority_name>
+<address>VECBEBRI ,BEBRU pagasts,KOKNESES novads</address>
+<authority_reg_num>90000043028</authority_reg_num>
+<zip_code>LV-5135</zip_code>
+<city>AIZKRAUKLE</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357554144</creation_date_stamp>
+<authority_id>94845</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Vecbebru Profesionālā vidusskola</name>
+<short_name>VPV</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>VPV</place>
+<person>Austra Midega</person>
+<phone>65133605</phone>
+<fax>65164323</fax>
+<email>austramidega@inbox.lv</email>
+<url>http://www.vecbebri.lv</url>
+<url_client>http://www.vecbebri.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<place>Vecbebri,Bebru pagasts,Kokneses novads</place>
+<region>1</region>
+<description>Produktu piegāde</description>
+<price_exact>12546</price_exact>
+<currency>1</currency>
+<extra_winners>1</extra_winners>
+<extra_winners_reason>Atsevišķas pārtikas daļas var piegādāt tikai noteikti piegādātāji.</extra_winners_reason>
+<contract_name>Pārtikas produktu piegāde Vecbebru profesionālās vidusskolas mācību virtuvēm.</contract_name>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357557191</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>17851.45</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA Forevers,SIA KABULETI FRUIT,z/s SIETIŅI,SIA Vecā maiznīca,A/S PREIĻU SIERS</global_winner_title>
+<global_winner_reg_num>40003307535,40003959814,48701003196,42403007589,50003026431</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

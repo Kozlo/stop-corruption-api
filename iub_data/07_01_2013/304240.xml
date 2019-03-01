@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304240</id>
+<source_notice>301321</source_notice>
+<status>1</status>
+<general>
+<procurement_code>KNP 2012/116-K</procurement_code>
+<procurement_id>KNP 2012/116-K</procurement_id>
+<main_cpv>
+<code>15800000-6</code>
+<code_num>15800000</code_num>
+<type>1</type>
+<lv>Dažādi pārtikas produkti.</lv>
+<en>Miscellaneous food products</en>
+<cpv_a>15</cpv_a>
+<cpv_b>800000-6</cpv_b></main_cpv>
+<name>Pārtikas produktu piegāde Kuldīgas Centra vidusskolai Mucenieku ielā 6, Kuldīgā, Kuldīgas novadā</name>
+<price_from>20000</price_from>
+<price_to>92053</price_to>
+<procurement_type>2</procurement_type>
+<authority_id>23038</authority_id>
+<authority_name>Kuldīgas novada Dome</authority_name>
+<authority_reg_num>90000035590</authority_reg_num>
+<address>Pilsētas laukums 2</address>
+<city>Kuldīga</city>
+<zip_code>LV-3301</zip_code>
+<country>1</country>
+<procurement_year>2013</procurement_year>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list></general>
+<divided_in_parts>1</divided_in_parts>
+<contract_name>Pārtikas produktu piegāde Kuldīgas Centra vidusskolai Mucenieku ielā 6, Kuldīgā, Kuldīgas novadā</contract_name>
+<description>Pārtikas produktu piegāde Kuldīgas Centra vidusskolai Mucenieku ielā 6, Kuldīgā, Kuldīgas novadā</description>
+<middleman>1</middleman>
+<place>Mucenieku iela 6, Kuldīga</place>
+<region>3</region>
+<supply_types>1</supply_types>
+<state_procurement>1</state_procurement>
+<criteria_type>3</criteria_type>
+<proc_type>1</proc_type>
+<additional_info>
+<environment_req>0</environment_req></additional_info>
+<approval_date_stamp>1357553653</approval_date_stamp>
+<parts>
+<part>
+<name>Gaļa un gaļas produkti</name>
+<description>Gaļa un gaļas produkti</description>
+<main_cpv>
+<code>15130000-8</code>
+<code_num>15130000</code_num>
+<type>1</type>
+<lv>Gaļas produkti.</lv>
+<en>Meat products</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>12</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types>1</supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>1</nr></part>
+<part>
+<name>Piena produkti</name>
+<description></description>
+<main_cpv>
+<code>15500000-3</code>
+<code_num>15500000</code_num>
+<type>1</type>
+<lv>Piena produkti.</lv>
+<en>Dairy products</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>12</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types>1</supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>2</nr></part>
+<part>
+<name>Ilglaicīgai uzglabāšanai paredzēti produkti</name>
+<description></description>
+<main_cpv>
+<code>15890000-3</code>
+<code_num>15890000</code_num>
+<type>1</type>
+<lv>Dažādi pārtikas produkti un žāvēti produkti.</lv>
+<en>Miscellaneous food products and dried goods</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>12</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types>1</supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>1</nr></part>
+<part>
+<name>Maize un tās izstrādājumi</name>
+<description></description>
+<main_cpv>
+<code>15811000-6</code>
+<code_num>15811000</code_num>
+<type>1</type>
+<lv>Maizes izstrādājumi.</lv>
+<en>Bread products</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>12</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types>1</supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>2</nr></part></parts>
+<authority_name>Kuldīgas novada Dome</authority_name>
+<address>Pilsētas laukums 2</address>
+<authority_reg_num>90000035590</authority_reg_num>
+<zip_code>LV-3301</zip_code>
+<city>Kuldīga</city>
+<country>1</country>
+<authority_id>23038</authority_id>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357553571</creation_date_stamp>
+<contract_approval_date>10/12/2012</contract_approval_date>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Kuldīgas novada pašvaldība</name>
+<short_name>KNP</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Baznīcas iela 1, Kuldīga</place>
+<person>Zaiga Kudiņa</person>
+<phone>63322469</phone>
+<fax>63341422</fax>
+<email>zaiga.kudina@kuldiga.lv</email>
+<url>http://www.kuldiga.lv</url>
+<url_client>http://www.kuldiga.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<contract_publication_date>10/12/2012</contract_publication_date>
+<send_oj>0</send_oj>
+<notes>Skatīt precizējumus iepirkumu dokumentācijā www.kuldiga.lv</notes>
+<approval_date>07/01/2013</approval_date>
+<checker_id>23001</checker_id>
+<checking_started>07/01/2013 13:10:22</checking_started>
+<cancel_user>Linda Spurķe</cancel_user>
+<type>notice_changes</type>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357557108</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

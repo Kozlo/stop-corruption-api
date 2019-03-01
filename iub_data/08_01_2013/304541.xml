@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304541</id>
+<status>1</status>
+<approval_date>08/01/2013</approval_date>
+<approval_date_stamp>1357596000</approval_date_stamp>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357665250</creation_date_stamp>
+<authority_name>Biedrība &quot;Baltijas Zivsaimnieku apvienība&quot;</authority_name>
+<reg_num>40008169154</reg_num>
+<address>Lielā iela 7, Liepāja</address>
+<zip_code>3401</zip_code>
+<phone>29235120</phone>
+<subject>Izotermiskie zivju konteineri</subject>
+<description>Izotermiskie zivju konteineri</description>
+<invitation_publication_date>13/12/2012</invitation_publication_date>
+<decision_date>08/01/2013</decision_date>
+<winners>
+<winner>
+<firm>Promens Dalvik ehf</firm>
+<reg_num>560660-2240</reg_num>
+<address>Gunnarsbraut 12, 620 Dalvik Iceland</address>
+<price>129720</price></winner></winners>
+<price_exact>129720</price_exact>
+<currency>2</currency>
+<price_exact_lvl>91167.73</price_exact_lvl>
+<other_notes>---</other_notes>
+<send_date>08/01/2013</send_date>
+<general>
+<dummy>0</dummy>
+<main_cpv>
+<cpv_a></cpv_a>
+<cpv_b></cpv_b></main_cpv></general>
+<invitation_id>301793</invitation_id>
+<offers>
+<offer>
+<firm>SIA &quot;Karno exsperts&quot;</firm>
+<reg_num>40003793348</reg_num>
+<address>Pļavnieku 6-82, Rīga, LV-1021</address>
+<firm>SIA &quot;REGRAND&quot;</firm>
+<reg_num>40003326945</reg_num>
+<address>Zvīņu iela 65-4, Rīga</address>
+<firm>Promens Dalvik ehf</firm>
+<reg_num>560660-2240</reg_num>
+<address>Gunnarsbraut 12, 620 Dalvik Iceland</address></offer></offers>
+<checker_id>23001</checker_id>
+<checking_started>08/01/2013 19:14:26</checking_started>
+<type>notice_call_for_offer_results</type>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357665270</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>129720</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>Promens Dalvik ehf</global_winner_title>
+<global_winner_reg_num>560660-2240</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

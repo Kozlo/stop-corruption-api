@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304646</id>
+<source_notice>301628</source_notice>
+<status>1</status>
+<general>
+<procurement_code>SkrudPP 2012/8</procurement_code>
+<procurement_id>SkrudPP 2012/8</procurement_id>
+<main_cpv>
+<code>09100000-0</code>
+<code_num>9100000</code_num>
+<type>1</type>
+<lv>Degvielas.</lv>
+<en>Fuels</en>
+<cpv_a>09</cpv_a>
+<cpv_b>100000-0</cpv_b></main_cpv>
+<name>Degvielas iegāde </name>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<authority_id>22802</authority_id>
+<authority_name>Skrudalienas pagasta pārvalde</authority_name>
+<authority_reg_num>90000073569</authority_reg_num>
+<address>c.Silene, Skrudalienas pagasts</address>
+<city>Daugavpils novads</city>
+<zip_code>LV-5470</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list></general>
+<divided_in_parts>0</divided_in_parts>
+<contract_name>Degvielas iegāde </contract_name>
+<place>Skrudalienas pagasta pārvaldē, Skaista iela 9, Silene, Skrudalienas pagasts, Daugavpils novads</place>
+<region>5</region>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<approval_date_stamp>1357724365</approval_date_stamp>
+<parts></parts>
+<part_5_list>
+<part_5>
+<contract_nr>1</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Par degvielas iegādi </concluded_contract_name>
+<decision_date>02/01/2013</decision_date>
+<tender_num>3</tender_num>
+<initial_price>17002</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>17002</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA "RusLatNafta"</winner_name>
+<winner_reg_num>40003497879</winner_reg_num>
+<winner_address>Jelgavas iela 2 a</winner_address>
+<winner_city>Daugavpils</winner_city>
+<winner_zip_code>LV-5404</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>65407612</winner_phone>
+<winner_fax>65407620</winner_fax>
+<winner_email>office@daug.dinaz.lv</winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Skrudalienas pagasta pārvalde</authority_name>
+<address>c.Silene, Skrudalienas pagasts</address>
+<authority_reg_num>90000073569</authority_reg_num>
+<zip_code>LV-5470</zip_code>
+<city>Daugavpils novads</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>09/01/2013</creation_date>
+<creation_date_stamp>1357723586</creation_date_stamp>
+<authority_id>22802</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Skrudalienas pagasta pārvalde</name>
+<short_name>SkrudPP</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Skrudalienas pagasta pārvalde</place>
+<person>Inese Alehina</person>
+<phone>65439238</phone>
+<fax>65439238</fax>
+<email>parvalde@skrudaliena.lv</email>
+<url>http://www.skrudaliena.lv</url>
+<url_client>http://www.skrudaliena.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<description>Benzīns  AI 95e 6 500  litri; dīzeļdegviela 17 000 litri</description>
+<price_exact>17002</price_exact>
+<currency>1</currency>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<approval_date>09/01/2013</approval_date>
+<publication_date>09/01/2013</publication_date>
+<publication_date_stamp>1357724365</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>24191.8</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA RusLatNafta</global_winner_title>
+<global_winner_reg_num>40003497879</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304326</id>
+<general>
+<name>Dzīvojamās mājas Katoļu ielā 17, Jelgavā energoefektivitātes paaugstināšanas pasākumi</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>1 ERAF</procurement_id>
+<authority_id>94239</authority_id>
+<authority_name>SIA "Jelgavas nekustamā īpašuma pārvalde"</authority_name>
+<authority_reg_num>43603011548</authority_reg_num>
+<address>Pulkveža Brieža iela 26</address>
+<city>Jelgava</city>
+<zip_code>LV-3007</zip_code>
+<country>1</country>
+<main_cpv>
+<code_num>45211340</code_num>
+<type>2</type>
+<code>45211340-4</code>
+<lv>Daudzdzīvokļu ēku celtniecības darbi.</lv>
+<en>Multi-dwelling buildings construction work</en>
+<cpv_a>45</cpv_a>
+<cpv_b>211340-4</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>120000</price_from>
+<price_to>3540500</price_to>
+<procurement_type>2</procurement_type>
+<procurement_code>SIA "JNĪP" 2013/1 ERAF</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357545660</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<info_places>1</info_places>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>SIA "Jelgavas nekustamā īpašuma pārvalde"</authority_name>
+<address>Pulkveža Brieža iela 26</address>
+<authority_reg_num>43603011548</authority_reg_num>
+<zip_code>LV-3007</zip_code>
+<city>Jelgava</city>
+<country>1</country>
+<authority_id>94239</authority_id>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357543325</creation_date_stamp>
+<contract_expects>0</contract_expects>
+<middleman>0</middleman>
+<contract_name>Dzīvojamās mājas Katoļu ielā 17, Jelgavā energoefektivitātes paaugstināšanas pasākumi</contract_name>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>SIA "Jelgavas nekustamā īpašuma pārvalde"</name>
+<short_name>SIA "JNĪP"</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>SIA "Jelgavas nekustamā īpašuma pārvalde"</place>
+<person>Natālija Vasiļjeva</person>
+<phone>63022484, 29174750</phone>
+<fax>63012173</fax>
+<email>info@jnip.lv</email>
+<url>http://www.nip.lv</url>
+<url_client>http://www.nip.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<building_types>1</building_types>
+<place>Jelgava</place>
+<region>9</region>
+<description>Dzīvojamās mājas Katoļu ielā 17, Jelgavā energoefektivitātes paaugstināšanas pasākumi</description>
+<state_procurement>1</state_procurement>
+<contract_amount>Dzīvojamās mājas Katoļu ielā 17, Jelgavā energoefektivitātes paaugstināšanas pasākumi</contract_amount>
+<contract_price_exact>0</contract_price_exact>
+<contract_price_from>0</contract_price_from>
+<contract_price_to>450000</contract_price_to>
+<contract_currency>1</contract_currency>
+<options>0</options>
+<contract_months>6</contract_months>
+<tender_for_parts>0</tender_for_parts>
+<supplement_3>
+<guarantee>saskaņā ar nolikumu</guarantee>
+<financial_rules>saskaņā ar nolikumu</financial_rules>
+<groups>saskaņā ar nolikumu</groups>
+<other_conditions>0</other_conditions>
+<businessman_requirements>saskaņā ar nolikumu</businessman_requirements>
+<financial_requirements>saskaņā ar nolikumu</financial_requirements>
+<financial_requirements_min>saskaņā ar nolikumu</financial_requirements_min>
+<technical_requirements>saskaņā ar nolikumu</technical_requirements>
+<technical_requirements_min>saskaņā ar nolikumu</technical_requirements_min>
+<reserved>0</reserved></supplement_3>
+<procedure>
+<proc_type>1</proc_type>
+<candidates_selected>0</candidates_selected>
+<count_restrictions>0</count_restrictions>
+<tenderer_decrease>0</tenderer_decrease></procedure>
+<criteria_list></criteria_list>
+<criteria_type>1</criteria_type>
+<auction>0</auction>
+<variants>0</variants>
+<administrative_info>
+<oj_digital>0</oj_digital>
+<digital_access>1</digital_access>
+<url>www.nip.lv</url>
+<previous_publications>0</previous_publications>
+<previous_publications_oj>0</previous_publications_oj>
+<previous_publications_other>0</previous_publications_other>
+<oj_list></oj_list>
+<publication_list></publication_list>
+<submit_date>14/02/2013</submit_date>
+<submit_hour>10</submit_hour>
+<submit_minute>1</submit_minute>
+<submit_date_stamp>1360792800</submit_date_stamp>
+<document_request_date>14/02/2013</document_request_date>
+<document_request_hour>10</document_request_hour>
+<document_request_minute>1</document_request_minute>
+<payment>0</payment>
+<currency>1</currency>
+<language>11</language>
+<tender_open_hour>10</tender_open_hour>
+<tender_open_minute>1</tender_open_minute>
+<allowed>1</allowed>
+<allowed_persons>Visas ieinteresētās personas</allowed_persons>
+<tender_open_date>14/02/2013</tender_open_date>
+<tender_open_place>Pulkveža Brieža ielā 26, Jelgavā</tender_open_place></administrative_info>
+<submit_date>14/02/2013</submit_date>
+<submit_date_stamp>1360792800</submit_date_stamp>
+<submit_hour>10</submit_hour>
+<submit_minute>1</submit_minute>
+<additional_info>
+<eu_list>
+<eu>
+<eu_short>ERAF</eu_short>
+<eu_long>Eiropas reģionālās attistības fonds</eu_long></eu></eu_list>
+<current>0</current>
+<eu_fund>1</eu_fund>
+<environment_req>0</environment_req>
+<appeal_date>Saskaņā ar Publisko iepirkumu likuma 83. panta trešo daļu</appeal_date>
+<appeal_name>Iepirkumu uzraudzības birojs</appeal_name>
+<appeal_reg_num>90001263305</appeal_reg_num>
+<appeal_address>Eksporta iela 6</appeal_address>
+<appeal_city>Rīga</appeal_city>
+<appeal_zip_code> LV-1010</appeal_zip_code>
+<appeal_country>1</appeal_country>
+<appeal_phone>+371 67326719</appeal_phone>
+<appeal_fax>+371 67326720</appeal_fax>
+<appeal_email>pasts@iub.gov.lv</appeal_email>
+<appeal_url>http://www.iub.gov.lv</appeal_url>
+<appeal_info_name>Iepirkumu uzraudzības birojs</appeal_info_name>
+<appeal_info_reg_num>90001263305</appeal_info_reg_num>
+<appeal_info_address>Eksporta iela 6</appeal_info_address>
+<appeal_info_city>Rīga</appeal_info_city>
+<appeal_info_zip_code> LV-1010</appeal_info_zip_code>
+<appeal_info_country>1</appeal_info_country>
+<appeal_info_phone>+371 67326719</appeal_info_phone>
+<appeal_info_fax>+371 67326720</appeal_info_fax>
+<appeal_info_email>pasts@iub.gov.lv</appeal_info_email>
+<appeal_info_url>http://www.iub.gov.lv</appeal_info_url></additional_info>
+<type>notice_contract</type>
+<approval_date>07/01/2013</approval_date>
+<checker_id>23001</checker_id>
+<checking_started>08/01/2013 11:35:56</checking_started>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357637793</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

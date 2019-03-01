@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304389</id>
+<general>
+<name>Energoefektivitātes paaugstināšana daudzdzīvokļu dzīvojamai ēkai Lielajā prospektā 35, Ventspilī</name>
+<procurement_year>2012</procurement_year>
+<procurement_id>207 ERAF</procurement_id>
+<authority_id>22808</authority_id>
+<authority_name>Pašvaldības SIA "Ventspils nekustamie īpašumi"</authority_name>
+<authority_reg_num>41203001885</authority_reg_num>
+<address>Užavas ielā 8, II.stāvs</address>
+<city>Ventspils</city>
+<zip_code>LV-3601</zip_code>
+<country>1</country>
+<main_cpv>
+<code>45000000-7</code>
+<code_num>45000000</code_num>
+<type>2</type>
+<lv>Celtniecības darbi.</lv>
+<en>Construction work</en>
+<cpv_a>45</cpv_a>
+<cpv_b>000000-7</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>10000</price_from>
+<price_to>120000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>VNĪ 2012/207 ERAF</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357556532</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Pašvaldības SIA "Ventspils nekustamie īpašumi"</authority_name>
+<address>Užavas ielā 8, II.stāvs</address>
+<authority_reg_num>41203001885</authority_reg_num>
+<zip_code>LV-3601</zip_code>
+<city>Ventspils</city>
+<country>1</country>
+<documentation_online>1</documentation_online>
+<authority_id>22808</authority_id>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357556135</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Pašvaldības SIA "Ventspils nekustamie īpašumi"</name>
+<short_name>VNĪ</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Užavas ielā 8, Ventspilī (2. stāvs)</place>
+<person>Ivars Haselbaums</person>
+<phone>63629557</phone>
+<fax>63629563</fax>
+<email>ivars.haselbaums@ventspils.gov.lv</email>
+<url>http://www.ventspils.lv/lat/ventspils_parvalde/publiskie_iepirkumi/</url>
+<url_client>http://www.ventspils.lv/lat/ventspils_parvalde/publiskie_iepirkumi/</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<middleman>0</middleman>
+<eu_list>
+<eu>
+<eu_short>ERAF</eu_short>
+<eu_long>Eiropas reģionālās attīstības fonds</eu_long></eu></eu_list>
+<type>notice_planned_contract</type>
+<language>11</language>
+<place>Lielais prospekts 35, Ventspilī</place>
+<region>3</region>
+<service_type>Daudzdzīvokļu dzīvojamās ēkas fasāžu renovācijas un energoefektivitātes paaugstināšanas būvdarbi </service_type>
+<days>210</days>
+<eu_fund>1</eu_fund>
+<environment_req>0</environment_req>
+<tender_for_parts>0</tender_for_parts>
+<submit_date>25/01/2013</submit_date>
+<submit_date_stamp>1359064800</submit_date_stamp>
+<timelimits>
+<dok_req_date>25/01/2013</dok_req_date>
+<work_time>Darba dienās no plkst. 8.00-12.00 un no plkst. 13.00-17.00, piektdienās līdz 16.00</work_time>
+<submit_hour>14</submit_hour>
+<submit_minute>1</submit_minute>
+<tender_open_date>25/01/2013</tender_open_date>
+<tender_open_hour>14</tender_open_hour>
+<tender_open_minute>11</tender_open_minute>
+<tender_open_place>Jūras iela 36, Ventspils (2. stāva zāle)</tender_open_place>
+<submit_date>25/01/2013</submit_date>
+<submit_date_stamp>1359064800</submit_date_stamp></timelimits>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357556532</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

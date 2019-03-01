@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304489</id>
+<status>1</status>
+<approval_date>08/01/2013</approval_date>
+<approval_date_stamp>1357596000</approval_date_stamp>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357664549</creation_date_stamp>
+<authority_name>Biedrība &quot;Latvijas Ķīmijas un farmācijas uzņēmēju asociācija&quot;</authority_name>
+<reg_num>40008010454</reg_num>
+<address>Dzirnavu iela 93-27, Rīga</address>
+<zip_code>1011</zip_code>
+<phone>67298683</phone>
+<subject>B sadaļa Inženierzinātnes un tehnoloģijas mācību kursu organizēšana (6.daļa)</subject>
+<description>B sadaļa Inženierzinātnes un tehnoloģijas mācību kursu organizēšana (6.daļa)</description>
+<invitation_publication_date>19/12/2012</invitation_publication_date>
+<decision_date>07/01/2013</decision_date>
+<winners>
+<winner>
+<firm>SIA &quot;VINEA&quot;</firm>
+<reg_num>40003994222</reg_num>
+<address>Vesetas iela 10-20, Rīga, LV-1013</address>
+<price>5900</price></winner></winners>
+<price_exact>5900</price_exact>
+<currency>1</currency>
+<send_date>08/01/2013</send_date>
+<general>
+<dummy>0</dummy>
+<main_cpv>
+<cpv_a></cpv_a>
+<cpv_b></cpv_b></main_cpv></general>
+<invitation_id>302423</invitation_id>
+<offers>
+<offer>
+<firm>SIA &quot;VINEA&quot;</firm>
+<reg_num>40003994222</reg_num>
+<address>Vesetas iela 10-20, Rīga, LV-1013</address></offer></offers>
+<checker_id>23001</checker_id>
+<checking_started>08/01/2013 19:03:10</checking_started>
+<type>notice_call_for_offer_results</type>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357664593</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>8394.99</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA "VINEA"</global_winner_title>
+<global_winner_reg_num>40003994222</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

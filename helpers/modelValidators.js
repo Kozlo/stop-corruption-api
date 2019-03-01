@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const { monthStrings } = require('../config');
 
 module.exports = {
-
     /**
      * Checks if the passed value is a positive integer.
      *
@@ -41,7 +40,6 @@ module.exports = {
 
         return typeof year === 'string' &&
           !isNaN(parsedYear) &&
-          mongoose.Types.Number.isValid(parsedYear) &&
           Math.round(parsedYear).toString() === year &&
           parsedYear > 1000 &&
           parsedYear < 3000;
@@ -67,8 +65,7 @@ module.exports = {
      * @returns {boolean} Flag showing if the field is valid
      */
     isValidDay(day) {
-        return typeof day === 'string' &&
-          monthStrings.find(dayString => dayString === day);
+        return typeof day === 'string';
     },
 
     /**
@@ -79,7 +76,6 @@ module.exports = {
      * @returns {boolean} Flag showing if the field is valid
      */
     isValidTimestamp(timestamp) {
-        return new Date(timestamp) !== 'Invalid Date' &&
-          mongoose.Types.Date.isValid(timestamp);
+        return new Date(timestamp) !== 'Invalid Date';
     },
 };

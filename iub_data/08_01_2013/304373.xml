@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304373</id>
+<status>1</status>
+<approval_date>07/01/2013</approval_date>
+<approval_date_stamp>1357509600</approval_date_stamp>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357664155</creation_date_stamp>
+<authority_name>SIA &quot;Conatus bioenergy&quot;</authority_name>
+<reg_num>45403022903</reg_num>
+<address>&quot;Graudiņi&quot;, Sausnējas pagasts, Ērgļu novads, </address>
+<zip_code>4841</zip_code>
+<phone>29191799</phone>
+<fax>67808412</fax>
+<subject>Pašgājējsmalcinātāja iegāde</subject>
+<description>Pašgājējsmalcinātāja iegāde</description>
+<invitation_publication_date>14/12/2012</invitation_publication_date>
+<decision_date>07/01/2013</decision_date>
+<winners>
+<winner>
+<firm>SIA &quot; Dojus Latvija &quot;</firm>
+<reg_num>40103315280</reg_num>
+<address>Tīraines iela 15, Rīga, Latvija, LV-1058</address>
+<price>357000</price></winner></winners>
+<price_exact>357000</price_exact>
+<currency>2</currency>
+<price_exact_lvl>250901.03</price_exact_lvl>
+<send_date>08/01/2013</send_date>
+<general>
+<dummy>0</dummy>
+<main_cpv>
+<cpv_a></cpv_a>
+<cpv_b></cpv_b></main_cpv></general>
+<invitation_id>301951</invitation_id>
+<offers>
+<offer>
+<firm>SIA &quot; Dojus Latvija &quot;</firm>
+<reg_num>40103315280</reg_num>
+<address>Tīraines iela 15, Rīga, Latvija, LV-1058</address>
+<firm>ALBERT BUSCH Landmaschinen, Kraftfahrzeuge Inhaber Rolf Busch e.K.</firm>
+<reg_num>DE135158915</reg_num>
+<address>Süderstrasse 41, 25767 Albersdorf, Vācija</address></offer></offers>
+<checker_id>23001</checker_id>
+<checking_started>08/01/2013 18:56:07</checking_started>
+<type>notice_call_for_offer_results</type>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357664171</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>357000</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA " Dojus Latvija "</global_winner_title>
+<global_winner_reg_num>40103315280</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

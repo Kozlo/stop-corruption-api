@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304328</id>
+<source_notice>300975</source_notice>
+<status>1</status>
+<general>
+<procurement_code>LLKC 2012/11 ELFLA</procurement_code>
+<procurement_id>LLKC 2012/11 ELFLA</procurement_id>
+<main_cpv>
+<code>79823000-9</code>
+<code_num>79823000</code_num>
+<type>3</type>
+<lv>Iespiešanas un piegādes pakalpojumi.</lv>
+<en>Printing and delivery services</en>
+<cpv_a>79</cpv_a>
+<cpv_b>823000-9</cpv_b></main_cpv>
+<name>Informatīvo izdevumu sagatavošanas un drukāšanas pakalpojums SIA "Latvijas Lauku konsultāciju un izglītības centrs"</name>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<authority_id>94681</authority_id>
+<authority_name>SIA " Latvijas Lauku konsultāciju un izglītības centrs"</authority_name>
+<authority_reg_num>40003347699</authority_reg_num>
+<address>Rīgas iela 34, Ozolnieki</address>
+<city>Ozolnieku pagasts, Ozolnieku novads</city>
+<zip_code>LV - 3018</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list></general>
+<divided_in_parts>0</divided_in_parts>
+<contract_name>Informatīvo izdevumu sagatavošanas un drukāšanas pakalpojums SIA "Latvijas Lauku konsultāciju un izglītības centrs"</contract_name>
+<place>Rīgas iela 34, Ozolnieki, Ozolnieku pagasts, Ozolnieku novads, LV-3018</place>
+<region>9</region>
+<eu_fund>1</eu_fund>
+<environment_req>0</environment_req>
+<approval_date_stamp>1357543454</approval_date_stamp>
+<eu_list>
+<eu>
+<eu_short>ELFLA</eu_short>
+<eu_long>Eiropas Lauksaimniecības fonds lauku attīstībai</eu_long></eu></eu_list>
+<parts></parts>
+<part_5_list>
+<part_5>
+<contract_nr>5-10/1</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>LĪGUMS par LLKC Informatīvo izdevumu sagatavošanas un drukāšanas pakalpojumu (LLKC 2012/11 ELFLA)</concluded_contract_name>
+<decision_date>17/12/2012</decision_date>
+<tender_num>4</tender_num>
+<initial_price>11438</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>11438</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Sabiedrība ar ierobežotu atbildību "MicroDot"</winner_name>
+<winner_reg_num>40003660384</winner_reg_num>
+<winner_address>Jūrkalnes 15/25, </winner_address>
+<winner_city>Rīga</winner_city>
+<winner_zip_code>LV-1046</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>67370092</winner_phone>
+<winner_fax>67370074</winner_fax>
+<winner_email>brigita@microdot.lv</winner_email>
+<winner_url>www.microdot.lv</winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>SIA " Latvijas Lauku konsultāciju un izglītības centrs"</authority_name>
+<address>Rīgas iela 34, Ozolnieki</address>
+<authority_reg_num>40003347699</authority_reg_num>
+<zip_code>LV - 3018</zip_code>
+<city>Ozolnieku pagasts, Ozolnieku novads</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357543155</creation_date_stamp>
+<authority_id>94681</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>SIA " Latvijas Lauku konsultāciju un izglītības centrs"</name>
+<short_name>LLKC</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Rīgas iela 34, Ozolnieki, Ozolnieku pagasts, Ozolnieku novads, LV - 3018</place>
+<person>Edgars Linde</person>
+<phone>29139027</phone>
+<fax>63022264</fax>
+<email>edgars.linde@llkc.lv</email>
+<url>http://www.llkc.lv</url>
+<url_client>http://www.llkc.lv/?id=400325</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<service_types>15</service_types>
+<description>LLKC informatīvo izdevumu sagatavošana, drukāšana un piegāde , </description>
+<price_exact>11438</price_exact>
+<currency>1</currency>
+<type>notice_concluded_contract</type>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357543454</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>16274.9</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>Sabiedrība ar ierobežotu atbildību MicroDot</global_winner_title>
+<global_winner_reg_num>40003660384</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

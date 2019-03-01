@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304242</id>
+<general>
+<name>Par pārmiju pārvedu un pārmiju detaļu piegādi 2013.gadā</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>5-IB</procurement_id>
+<authority_id>94804</authority_id>
+<authority_name>Valsts akciju sabiedrība "Latvijas dzelzceļš"</authority_name>
+<authority_reg_num>40003032065</authority_reg_num>
+<address>Gogoļa iela 3</address>
+<city>Rīga</city>
+<zip_code>LV-1547</zip_code>
+<country>1</country>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en>
+<cpv_a>34</cpv_a>
+<cpv_b>940000-8</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>283240</price_from>
+<procurement_type>3</procurement_type>
+<procurement_code>LDZ 2013/5-IB</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357537157</approval_date_stamp>
+<divided_in_parts>1</divided_in_parts>
+<parts>
+<part>
+<name>Pārmiju pārvedas R-65 1/9 tipa (3kreisā+1 labā), saskaņā ar tehniskajiem noteikumiem ar rasējumiem Nr.1,2 (nolikuma pielikums Nr.3)</name>
+<description>4 kompl.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>1</nr></part>
+<part>
+<name>Krustpārmijas R-65 1/9 tipa, saskaņā ar tehniskajiem noteikumiem ar rasējumiem Nr.3,4 (nolikuma pielikums Nr.4)</name>
+<description>1 kompl.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>2</nr></part>
+<part>
+<name>Krustpārmijas R-65 1/9 tipa, saskaņā ar tehniskajiem noteikumiem ar rasējumiem Nr. 3,4 (nolikuma pielikums Nr.4)</name>
+<description>1 kompl.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>3</nr></part>
+<part>
+<name>Nekustīgs krustojums R-65 2/9 tipa, saskaņā ar tehniskajiem noteikumiem ar rasējumiem Nr.5,6 (nolikuma pielikums Nr.5)</name>
+<description>1 kompl.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>4</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 1/11 tipa, projekts 2433.00.000</name>
+<description>12 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>5</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 1/11 tipa, projekts 2561.00.000</name>
+<description>2 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>6</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 1/9 tipa, projekts  2434.00.000</name>
+<description>9 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>7</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 1/9 tipa (ass), projekts  1580.00.000</name>
+<description>8 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>8</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 1/9 tipa (neass),projekts  1580.00.000</name>
+<description>4 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>9</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 2/9 tipa (neass), projekts  1684.00.000</name>
+<description>2 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>10</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 2/11 tipa (ass), projekts  1683.00.000</name>
+<description>2 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>11</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 2/11 tipa (neass), projekts  1683.00.000</name>
+<description>1 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>12</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 2/6(ass), projekts  2521.00.000</name>
+<description>1 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>13</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 2/6 (neass), projekts  2521.00.000</name>
+<description>1 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>14</nr></part>
+<part>
+<name>Pārmiju krusteņi R-65 1/6, projekts  2307.00.000</name>
+<description>1 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>15</nr></part>
+<part>
+<name>Pārmiju krusteņi R-50 1/11 tipa, projekts 2497.00.000</name>
+<description>4 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>16</nr></part>
+<part>
+<name>Pārmiju krusteņi R-50 1/9 tipa, projekts 2498.00.000</name>
+<description>5 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>17</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: kreisais (1LK)+labais(1KL)+kreisais(1KK) R-65 1/18 tipa, projekts 1323.00.000</name>
+<description>3 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>18</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: kreisai ( LK)  R-65 1/18 tipa, projekts 2451.00.000</name>
+<description>1 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>19</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: kreisais ( 2 LK) + labais (1KL) +kreisais(1KK) R-65 1/11 tipa, projekts 2764.00.000</name>
+<description>4 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>20</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: labais (2 KL)+ labais (1LL)  R-65 1/9 tipa, projekts 2766.00.000</name>
+<description>3 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>21</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: kreisais ( 4 LK) + labais (11KL) +kreisais (2KK) R-65 1/11, 1/9 tipa, projekts 2433.00.000</name>
+<description>17 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>22</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: kreisais (3  LK)+labais(2KL)  R-65 1/11, 1/9   tipa, projekts 2497.00.000</name>
+<description>5 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>23</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: kreisais(2K) iekšējie R-65 1/9 krustparmijai, projekts 1580.00.000</name>
+<description>2 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>24</nr></part>
+<part>
+<name>Pārmiju asmenis ( līks) ar rāmjsliedi (taisns)  labais un kreisais: labais (2 L)+kreisais (3K) R-65 1/6 tipa uzkalnai, projekts  8307.00.000</name>
+<description>5 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>25</nr></part>
+<part>
+<name>Bremzes kurpju nosviedēji R-65 tipa  (2 kreisais), projekts 1704.000</name>
+<description>2 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>26</nr></part>
+<part>
+<name>Pārmiju kontrsliedes R-65 1/11 tipa, projekts 2433.00.000</name>
+<description>13 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>27</nr></part>
+<part>
+<name>Pārmiju kontrsliedes R-65 1/11 tipa, projekts 2764.00.000</name>
+<description>4 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>28</nr></part>
+<part>
+<name>Pārmiju kontrsliedes R-65 1/11 tipa, projekts 2750.00.000</name>
+<description>8 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>29</nr></part>
+<part>
+<name>Pārmiju kontrsliedes R-65 1/9 tipa, projekts 2434.00.000</name>
+<description>5 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>30</nr></part>
+<part>
+<name>Pārmiju kontrsliedes R-65 2/11 tipa, projekts 1683.00.000</name>
+<description>8 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>31</nr></part>
+<part>
+<name>Pārmiju kontrsliedes R-65 2/9, projekts 1684.00.000</name>
+<description>2 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>32</nr></part>
+<part>
+<name>Pārmiju kontrsliedes R-65 1/6 4(pr.8307), projekts 8307.00.000</name>
+<description>2 gab.</description>
+<main_cpv>
+<code>34940000-8</code>
+<code_num>34940000</code_num>
+<type>1</type>
+<lv>Dzelzceļa aprīkojums.</lv>
+<en>Railway equipment</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>8</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>33</nr></part></parts>
+<info_places>1</info_places>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Valsts akciju sabiedrība "Latvijas dzelzceļš"</authority_name>
+<address>Gogoļa iela 3</address>
+<authority_reg_num>40003032065</authority_reg_num>
+<zip_code>LV-1547</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<authority_id>94804</authority_id>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357532731</creation_date_stamp>
+<contract_expects>0</contract_expects>
+<contract_name>Par pārmiju pārvedu un pārmiju detaļu piegādi 2013.gadā</contract_name>
+<new_scopes>7</new_scopes>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>VAS "Latvijas dzelzceļš"</name>
+<short_name>LDZ</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>VAS "Latvijas dzelzceļš" Iepirkumu birojs</place>
+<person>Jeļena Baševska</person>
+<phone>+371 67233404</phone>
+<fax>+371 67234250</fax>
+<email>jelena.basevska@ldz.lv</email>
+<url>http://ldz.lv</url>
+<url_client>http://ldz.lv/?object_id=956</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<supply_types>1</supply_types>
+<place>Rīga, Jelgava, Daugavpils</place>
+<region>1</region>
+<basic_contract_sum_value>0</basic_contract_sum_value>
+<description>Par pārmiju pārvedu un pārmiju detaļu piegādi 2013.gadā</description>
+<state_procurement>0</state_procurement>
+<tender_for_parts>1</tender_for_parts>
+<variants>0</variants>
+<contract_price_exact>0</contract_price_exact>
+<contract_price_from>0</contract_price_from>
+<contract_price_to>0</contract_price_to>
+<contract_currency>1</contract_currency>
+<contract_amount>Pārmiju pārvedas=7kompl.; pārmiju krusteņi=52 gab.; pārmiju asmenis (līks) ar rāmjsliedi (taisns) labais un kreisais= 40gab.; bremzes kurpju nosviedēji=2gab.; pārmiju kontrsliedes=42gab. </contract_amount>
+<contract_months>8</contract_months>
+<supplement_3>
+<guarantee>Piedāvājuma nodrošinājuma summas katrai konkursa priekšmeta daļai atsevišķi ir šādas:1.daļa  -  piedāvājuma nodrošinājums 1180,00 LVL;2.daļa  -  piedāvājuma nodrošinājums  820,00 LVL; 3.daļa  -  piedāvājuma nodrošinājums  820,00 LVL;4.daļa  - piedāvājuma nodrošinājums  400,00 LVL;5.daļa  -  piedāvājuma nodrošinājums 620,00 LVL;6.daļa  -  piedāvājuma nodrošinājums 110,00 LVL;7.daļa  -  piedāvājuma nodrošinājums 470,00 LVL;8.daļa  -  piedāvājuma nodrošinājums 420,00 LVL;9.daļa  -  piedāvājuma nodrošinājums 470,00 LVL;10.daļa - piedāvājuma nodrošinājums 160,00 LVL;11.daļa - piedāvājuma nodrošinājums 110,00 LVL;12.daļa - piedāvājuma nodrošinājums   85,00 LVL;13.daļa - piedāvājuma nodrošinājums   60,00 LVL;14.daļa - piedāvājuma nodrošinājums   65,00 LVL;15.daļa - piedāvājuma nodrošinājums   65,00 LVL;16.daļa - piedāvājuma nodrošinājums   45,00 LVL;17.daļa - piedāvājuma nodrošinājums  240,00 LVL;18.daļa - piedāvājuma nodrošinājums  450,00 LVL;19.daļa - piedāvājuma nodrošinājums  155,00 LVL; 20.daļa - piedāvājuma nodrošinājums  300,00 LVL;21.daļa - piedāvājuma nodrošinājums 80,00 LVL; 22.daļa - piedāvājuma nodrošinājums 1070,00 LVL;23.daļa - piedāvājuma nodrošinājums 275,00 LVL;24.daļa - piedāvājuma nodrošinājums 110,00 LVL;25.daļa - piedāvājuma nodrošinājums 300,00 LVL;26.daļa - piedāvājuma nodrošinājums 100,00 LVL;27.daļa - piedāvājuma nodrošinājums  300,00 LVL;28.daļa - piedāvājuma nodrošinājums  100,00 LVL;29.daļa - piedāvājuma nodrošinājums 190,00 LVL;30.daļa - piedāvājuma nodrošinājums  125,00 LVL;31.daļa - piedāvājuma nodrošinājums 200,00 LVL;32.daļa - piedāvājuma nodrošinājums  55,00 LVL;33.daļa - piedāvājuma nodrošinājums  50,00 LVL.Pēc iepirkuma līguma noslēgšanas izraudzītais pretendents 10 darba dienu laikā iesniedz pasūtītājam līguma nodrošinājumu 5% apmērā no līgumcenas (neieskaitot PVN) bankas garantijas veidā.</guarantee>
+<other_conditions>0</other_conditions>
+<businessman_requirements>3.1.1. pretendents vai persona, kurai ir pretendenta pārstāvības tiesības vai lēmuma pieņemšanas vai uzraudzības tiesības attiecībā uz šo pretendentu, ar tādu tiesas spriedumu vai prokurora priekšrakstu par sodu, kas stājies spēkā un kļuvis neapstrīdams, ir atzīta par vainīgu koruptīva rakstura noziedzīgos nodarījumos, krāpnieciskās darbībās finanšu jomā, noziedzīgi iegūtu līdzekļu legalizācijā vai līdzdalībā noziedzīgā organizācijā;3.1.2. pretendents ar tādu kompetentas institūcijas lēmumu vai tiesas spriedumu, kas stājies spēkā un kļuvis neapstrīdams, ir atzīts par vainīgu darba tiesību būtiskā pārkāpumā, kas izpaužas kā vienas personas nodarbināšana bez rakstveida darba līguma noslēgšanas, ja tā konstatēta atkārtoti gada laikā, vai divu vai vairāku personu vienlaicīga nodarbināšana bez rakstveida darba līguma noslēgšanas;3.1.3. pretendents ar tādu kompetentas institūcijas lēmumu vai tiesas spriedumu, kas stājies spēkā un kļuvis neapstrīdams, ir atzīts par vainīgu konkurences tiesību pārkāpumā, kas izpaužas kā vertikālā vienošanās, kuras mērķis ir ierobežot pircēja iespēju noteikt tālākpārdošanas cenu, vai horizontālā karteļa vienošanās, izņemot gadījumu, kad attiecīgā institūcija, konstatējot konkurences tiesību pārkāpumu, pretendentu ir atbrīvojusi no naudas soda;3.1.4. ir pasludināts pretendenta maksātnespējas process, apturēta vai pārtraukta pretendenta saimnieciskā darbība, uzsākta tiesvedība par pretendenta bankrotu vai tiek konstatēts, ka līdz paredzamajam līguma izpildes beigu termiņam pretendents būs likvidēts;3.1.5. pretendentam Latvijā un valstī, kurā tas reģistrēts vai kurā atrodas tā pastāvīgā dzīvesvieta (ja tas nav reģistrēts Latvijā vai tā pastāvīgā dzīvesvieta nav Latvijā), ir nodokļu parādi, tajā skaitā valsts sociālās apdrošināšanas obligāto iemaksu parādi, kas kopsummā katrā valstī pārsniedz 100 latus;3.1.6. pretendents ir sniedzis nepatiesu informāciju tā kvalifikācijas novērtēšanai vai vispār nav sniedzis pieprasīto informāciju;3.1.7. uz pretendenta norādīto personu, uz kuras iespējām pretendents balstās, lai apliecinātu, ka tā kvalifikācija atbilst paziņojumā par līgumu vai konkursa dokumentos noteiktajām prasībām, ir attiecināmi 3.1.1. - 3.1.6.apakšpunktos minētie nosacījumi.</businessman_requirements>
+<financial_requirements>kompetentas institūcijas izdotu dokumentu par pretendenta pārstāvības tiesībām, kā arī dokumentu, kas apliecina konkursa piedāvājumu parakstījušās personas tiesības pārstāvēt pretendentu, ja piedāvājumu neparaksta pretendenta likumiskais pārstāvis.</financial_requirements>
+<technical_requirements>ar preces ražotāja oriģinālu zīmogu  un vadītāja parakstu apliecinātu kompetentas institūcijas izsniegta dokumenta kopiju, kurā ražotājs deklarē un apstiprina produkcijas atbilstību Pircēja Tehniskajai specifikācijai (nolikuma pielikums Nr.2). Jāuzrāda atbilstības sertifikāts, kuru izdevusi sertifikācijas institūcija, par to, ka izmēģinājumu rezultāti, kas iegūti akreditētā izmēģinājumu centrā, atbilst platsliežu 1520 mm īpatnībām; ražotāja vai autorizēta vairumtirgotāja izsniegta dokumenta kopiju (licences, līgumi vai ražotāja vai autorizēta vairumtirgotāja apliecinājumi), kas apliecina pretendenta tiesības piegādāt konkursa priekšmetā minētās preces. Ja pretendents iesniedz vairumtirgotāja izsniegtu dokumentu, tad jāiesniedz arī vairumtirgotājam izsniegta ražotāja dokumenta kopiju par tirgotāja tiesībām piegādāt minētās preces;</technical_requirements>
+<reserved>0</reserved></supplement_3>
+<procedure>
+<proc_type>1</proc_type>
+<candidates_selected>0</candidates_selected></procedure>
+<criteria_list>0</criteria_list>
+<criteria_type>3</criteria_type>
+<auction>0</auction>
+<administrative_info>
+<oj_digital>1</oj_digital>
+<digital_access>0</digital_access>
+<urgent>0</urgent>
+<previous_publications_oj>0</previous_publications_oj>
+<previous_publications_other>0</previous_publications_other>
+<oj_list></oj_list>
+<submit_date>06/03/2013</submit_date>
+<submit_hour>10</submit_hour>
+<submit_minute>21</submit_minute>
+<submit_date_stamp>1362520800</submit_date_stamp>
+<document_request_date>06/03/2013</document_request_date>
+<document_request_hour>10</document_request_hour>
+<document_request_minute>21</document_request_minute>
+<payment>0</payment>
+<currency>1</currency>
+<language>11</language>
+<support_days>100</support_days>
+<tender_open_date>06/03/2013</tender_open_date>
+<tender_open_hour>10</tender_open_hour>
+<tender_open_minute>21</tender_open_minute>
+<tender_open_place>Rīga, Turgeņeva ielā 14, 532.kabinets</tender_open_place>
+<allowed>1</allowed>
+<allowed_persons>Visas ieinteresētās personas</allowed_persons></administrative_info>
+<submit_date>06/03/2013</submit_date>
+<submit_date_stamp>1362520800</submit_date_stamp>
+<submit_hour>10</submit_hour>
+<submit_minute>21</submit_minute>
+<additional_info>
+<eu_list></eu_list>
+<current>0</current>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<appeal_date>Saskaņā ar Sabiedrisko pakalpojumu sniedzēju iepirkumu likuma 77.panta trešo daļu</appeal_date>
+<appeal_name>Iepirkumu uzraudzības birojs</appeal_name>
+<appeal_reg_num>90001263305</appeal_reg_num>
+<appeal_address>Eksporta iela 6</appeal_address>
+<appeal_city>Rīga</appeal_city>
+<appeal_zip_code> LV-1010</appeal_zip_code>
+<appeal_country>1</appeal_country>
+<appeal_phone>+371 67326719</appeal_phone>
+<appeal_fax>+371 67326720</appeal_fax>
+<appeal_email>pasts@iub.gov.lv</appeal_email>
+<appeal_url>http://www.iub.gov.lv</appeal_url>
+<appeal_info_name>Iepirkumu uzraudzības birojs</appeal_info_name>
+<appeal_info_reg_num>90001263305</appeal_info_reg_num>
+<appeal_info_address>Eksporta iela 6</appeal_info_address>
+<appeal_info_city>Rīga</appeal_info_city>
+<appeal_info_zip_code> LV-1010</appeal_info_zip_code>
+<appeal_info_country>1</appeal_info_country>
+<appeal_info_phone>+371 67326719</appeal_info_phone>
+<appeal_info_fax>+371 67326720</appeal_info_fax>
+<appeal_info_email>pasts@iub.gov.lv</appeal_info_email>
+<appeal_info_url>http://www.iub.gov.lv</appeal_info_url>
+<notice_sent_date>07/01/2013</notice_sent_date></additional_info>
+<type>notice_contract_sps</type>
+<approval_date>07/01/2013</approval_date>
+<checker_id>23001</checker_id>
+<checking_started>08/01/2013 09:36:43</checking_started>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357630728</publication_date_stamp>
+<no_doc_ext>2013-000046</no_doc_ext>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

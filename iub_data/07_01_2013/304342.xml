@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304342</id>
+<general>
+<name>Juridisko pakalpojumu sniegšana</name>
+<procurement_id>RD DMV 2012/67</procurement_id>
+<authority_id>22994</authority_id>
+<authority_name>Rīgas domes Mājokļu un vides departaments</authority_name>
+<authority_reg_num>90000350215</authority_reg_num>
+<address>Brīvības iela 49/53</address>
+<city>Rīga</city>
+<zip_code>LV 1010</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<main_cpv>
+<code>79110000-8</code>
+<code_num>79110000</code_num>
+<type>3</type>
+<lv>Juridisko konsultāciju un pārstāvniecības pakalpojumi.</lv>
+<en>Legal advisory and representation services</en>
+<cpv_a>79</cpv_a>
+<cpv_b>110000-8</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>RD DMV 2012/67</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357547849</approval_date_stamp>
+<divided_in_parts>1</divided_in_parts>
+<parts>
+<part>
+<name>Par juridisko pakalpojumu sniegšanu civillietās</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>1</nr></part>
+<part>
+<name>Par juridisko pakalpojumu sniegšanu administratīvajās lietās</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>2</nr></part></parts>
+<part_5_list>
+<part_5>
+<contract_nr>1</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Par juridisko pakalpojumu sniegšanu civillietās</concluded_contract_name>
+<decision_date>30/11/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>9837</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>9837</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Evija Hmeļevska-Lagzdiņa</winner_name>
+<winner_reg_num></winner_reg_num>
+<winner_address>Viršu iela 20a</winner_address>
+<winner_city>Jūrmala</winner_city>
+<winner_zip_code>LV-2008</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>29411777</winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>2</contract_nr>
+<part_nr>2</part_nr>
+<concluded_contract_name>Par juridisko pakalpojumu sniegšanu administratīvajās lietās</concluded_contract_name>
+<decision_date>30/11/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>9837</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>9837</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Anita Šauriņa</winner_name>
+<winner_reg_num></winner_reg_num>
+<winner_address>Ēveles iela 14-1</winner_address>
+<winner_city>Rīga</winner_city>
+<winner_zip_code>LV-1013</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>67374868</winner_phone>
+<winner_fax>67374838</winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Rīgas domes Mājokļu un vides departaments</authority_name>
+<address>Brīvības iela 49/53</address>
+<authority_reg_num>90000350215</authority_reg_num>
+<zip_code>LV 1010</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357547223</creation_date_stamp>
+<authority_id>22994</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Rīgas domes Mājokļu un vides departaments</name>
+<short_name>RD DMV</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>912.telpa</place>
+<person>Kristīne Namniece</person>
+<phone>67105965</phone>
+<fax>67012471</fax>
+<email>kristine.namniece@riga.lv</email>
+<url>http://mvd.riga.lv</url>
+<url_client>http://mvd.riga.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<service_types>21</service_types>
+<place>Rīga</place>
+<region>1</region>
+<description>Juridisko pakalpojumu sniegšana</description>
+<price_exact>19674</price_exact>
+<currency>1</currency>
+<contract_name>Juridisko pakalpojumu sniegšana</contract_name>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357547849</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>27993.74</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>Evija Hmeļevska-Lagzdiņa,Anita Šauriņa</global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

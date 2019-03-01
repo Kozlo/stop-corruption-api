@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304399</id>
+<status>1</status>
+<approval_date>07/01/2013</approval_date>
+<approval_date_stamp>1357509600</approval_date_stamp>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357665738</creation_date_stamp>
+<authority_name>ZS &quot;Ceriņi&quot;</authority_name>
+<reg_num>44101001078</reg_num>
+<address>Ceriņi, Jeru pagasts, Rūjienas novads, LV-4234</address>
+<zip_code>4234</zip_code>
+<phone>29211183</phone>
+<subject>Piena mājas Ezernieki būvniecība</subject>
+<description>Piena mājas Ezernieki būvniecība</description>
+<invitation_publication_date>21/11/2012</invitation_publication_date>
+<decision_date>07/01/2013</decision_date>
+<winners>
+<winner>
+<firm>SIA &quot;Statio solutions&quot;</firm>
+<reg_num>40103325325</reg_num>
+<address>Bruņinieku iela 47-3-33, Rīga</address>
+<price>425287.68</price></winner></winners>
+<price_exact>425287.68</price_exact>
+<currency>1</currency>
+<other_notes>nav</other_notes>
+<send_date>08/01/2013</send_date>
+<general>
+<dummy>0</dummy>
+<main_cpv>
+<cpv_a></cpv_a>
+<cpv_b></cpv_b></main_cpv></general>
+<invitation_id>253872</invitation_id>
+<offers>
+<offer>
+<firm>SIA &quot;Statio solutions&quot;</firm>
+<reg_num>40103325325</reg_num>
+<address>Bruņinieku iela 47-3-33, Rīga</address>
+<firm>SIA &quot;RBC TRANS&quot;</firm>
+<reg_num>40003317726</reg_num>
+<address>Daugavgrīvas iela 99, Rīga</address></offer></offers>
+<checker_id>23001</checker_id>
+<checking_started>08/01/2013 19:22:30</checking_started>
+<type>notice_call_for_offer_results</type>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357665753</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>605133.3</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA "Statio solutions"</global_winner_title>
+<global_winner_reg_num>40103325325</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

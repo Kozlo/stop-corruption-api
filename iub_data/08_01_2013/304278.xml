@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304278</id>
+<general>
+<name>Mācību līdzekļu un mācību materiālu iegāde tālākizglītības programmu īstenošanai ieslodzījuma vietās 2012./2013.māc.gadam</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>01 ESF</procurement_id>
+<authority_id>22608</authority_id>
+<authority_name>Valsts izglītības attīstības aģentūra</authority_name>
+<authority_reg_num>90001800413</authority_reg_num>
+<address>Vaļņu iela 1</address>
+<city>Rīga</city>
+<zip_code>LV - 1050</zip_code>
+<country>1</country>
+<main_cpv>
+<code>39162200-7</code>
+<code_num>39162200</code_num>
+<type>1</type>
+<lv>Mācību līdzekļi un ierīces.</lv>
+<en>Training aids and devices</en>
+<cpv_a>39</cpv_a>
+<cpv_b>162200-7</cpv_b></main_cpv>
+<cpv_list>
+<cpv>
+<code>44500000-5</code>
+<lv>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes.</lv>
+<en>Tools, locks, keys, hinges, fasteners, chain and springs</en></cpv>
+<cpv>
+<code>31000000-6</code>
+<lv>Elektriskie mehānismi, aparāti, iekārtas un palīgmateriāli; apgaismojums.</lv>
+<en>Electrical machinery, apparatus, equipment and consumables; lighting</en></cpv>
+<cpv>
+<code>15000000-8</code>
+<lv>Pārtikas produkti, dzērieni, tabaka un saistītā produkcija.</lv>
+<en>Food, beverages, tobacco and related products</en></cpv></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>20000</price_from>
+<price_to>92053</price_to>
+<procurement_type>2</procurement_type>
+<procurement_code>VIAA 2013/01 ESF</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357304355</approval_date_stamp>
+<divided_in_parts>1</divided_in_parts>
+<parts>
+<part>
+<supply_types>1</supply_types>
+<name>Elektromateriāli un piederumi</name>
+<description>Elektromateriāli un piederumi</description>
+<main_cpv>
+<code>39162200-7</code>
+<code_num>39162200</code_num>
+<type>1</type>
+<lv>Mācību līdzekļi un ierīces.</lv>
+<en>Training aids and devices</en></main_cpv>
+<cpv_list>
+<cpv>
+<code>31000000-6</code>
+<lv>Elektriskie mehānismi, aparāti, iekārtas un palīgmateriāli; apgaismojums.</lv>
+<en>Electrical machinery, apparatus, equipment and consumables; lighting</en></cpv></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount>Elektromateriāli un piederumi</amount>
+<price_exact>4000</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>1</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>1</nr></part>
+<part>
+<supply_types>1</supply_types>
+<name>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes instrumenti kokapstrādei</name>
+<description>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes instrumenti kokapstrādei</description>
+<main_cpv>
+<code>39162200-7</code>
+<code_num>39162200</code_num>
+<type>1</type>
+<lv>Mācību līdzekļi un ierīces.</lv>
+<en>Training aids and devices</en></main_cpv>
+<cpv_list>
+<cpv>
+<code>44500000-5</code>
+<lv>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes.</lv>
+<en>Tools, locks, keys, hinges, fasteners, chain and springs</en></cpv></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes instrumenti kokapstrādei</amount>
+<price_exact>12000</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>1</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>2</nr></part>
+<part>
+<supply_types>1</supply_types>
+<name>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes instrumenti metālapstrādei</name>
+<description>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes instrumenti metālapstrādei</description>
+<main_cpv>
+<code>39162200-7</code>
+<code_num>39162200</code_num>
+<type>1</type>
+<lv>Mācību līdzekļi un ierīces.</lv>
+<en>Training aids and devices</en></main_cpv>
+<cpv_list>
+<cpv>
+<code>44500000-5</code>
+<lv>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes.</lv>
+<en>Tools, locks, keys, hinges, fasteners, chain and springs</en></cpv></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount>Instrumenti, slēdzenes, atslēgas, eņģes, aizbīdņi, ķēdes un atsperes instrumenti metālapstrādei</amount>
+<price_exact>18000</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>1</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>3</nr></part>
+<part>
+<supply_types>1</supply_types>
+<name>Pārtikas produkti</name>
+<description>Pārtikas produkti</description>
+<main_cpv>
+<code>39162200-7</code>
+<code_num>39162200</code_num>
+<type>1</type>
+<lv>Mācību līdzekļi un ierīces.</lv>
+<en>Training aids and devices</en></main_cpv>
+<cpv_list>
+<cpv>
+<code>15000000-8</code>
+<lv>Pārtikas produkti, dzērieni, tabaka un saistītā produkcija.</lv>
+<en>Food, beverages, tobacco and related products</en></cpv></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount>Pārtikas produkti</amount>
+<price_exact>2000</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>1</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>4</nr></part></parts>
+<info_places>1</info_places>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Valsts izglītības attīstības aģentūra</authority_name>
+<address>Vaļņu iela 1</address>
+<authority_reg_num>90001800413</authority_reg_num>
+<zip_code>LV - 1050</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<authority_id>22608</authority_id>
+<creation_date>04/01/2013</creation_date>
+<creation_date_stamp>1357301303</creation_date_stamp>
+<contract_expects>0</contract_expects>
+<middleman>0</middleman>
+<contract_name>Mācību līdzekļu un mācību materiālu iegāde tālākizglītības programmu īstenošanai ieslodzījuma vietās 2012./2013.māc.gadam</contract_name>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Valsts izglītības attīstības aģentūra</name>
+<short_name>VIAA</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Zigfrīda Annas Meierovica bulvāris 16-1, 5.stāvs </place>
+<person>Kristiāns Blumbergs </person>
+<phone> 67854773</phone>
+<fax>67854779</fax>
+<email>kristians.blumbergs@viaa.gov.lv</email>
+<url>http://www.viaa.gov.lv/lat/</url>
+<url_client>http://www.viaa.gov.lv/lat/viaa/valsts_iepirkumi/</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<supply_types>1</supply_types>
+<place>Jelgava, Jēkabpils, Rīga</place>
+<region>1</region>
+<basic_contract_sum_value>0</basic_contract_sum_value>
+<description>Mācību līdzekļu un mācību materiālu iegāde tālākizglītības programmu īstenošanai ieslodzījuma vietās 2012./2013.māc.gadam</description>
+<state_procurement>1</state_procurement>
+<tender_for_parts>1</tender_for_parts>
+<contract_amount>Mācību līdzekļu un mācību materiālu iegāde tālākizglītības programmu īstenošanai ieslodzījuma vietās 2012./2013.māc.gadam</contract_amount>
+<contract_price_exact>36000</contract_price_exact>
+<contract_price_from>0</contract_price_from>
+<contract_price_to>0</contract_price_to>
+<contract_currency>1</contract_currency>
+<options>0</options>
+<contract_months>1</contract_months>
+<supplement_3>
+<other_conditions>0</other_conditions>
+<businessman_requirements>Saskaņā ar atklāta konkursa nolikumu</businessman_requirements>
+<financial_requirements>Saskaņā ar atklāta konkursa nolikumu</financial_requirements>
+<financial_requirements_min>Saskaņā ar atklāta konkursa nolikumu</financial_requirements_min>
+<technical_requirements>Saskaņā ar atklāta konkursa nolikumu</technical_requirements>
+<technical_requirements_min>Saskaņā ar atklāta konkursa nolikumu</technical_requirements_min>
+<reserved>0</reserved></supplement_3>
+<procedure>
+<proc_type>1</proc_type>
+<candidates_selected>0</candidates_selected>
+<count_restrictions>0</count_restrictions>
+<tenderer_decrease>0</tenderer_decrease></procedure>
+<criteria_list></criteria_list>
+<criteria_type>3</criteria_type>
+<auction>0</auction>
+<variants>0</variants>
+<administrative_info>
+<oj_digital>0</oj_digital>
+<digital_access>1</digital_access>
+<url>http://www.viaa.gov.lv/lat/viaa/valsts_iepirkumi/</url>
+<previous_publications>0</previous_publications>
+<previous_publications_oj>0</previous_publications_oj>
+<previous_publications_other>0</previous_publications_other>
+<oj_list></oj_list>
+<publication_list></publication_list>
+<submit_date>04/02/2013</submit_date>
+<submit_hour>14</submit_hour>
+<submit_minute>1</submit_minute>
+<submit_date_stamp>1359928800</submit_date_stamp>
+<document_request_date>04/02/2013</document_request_date>
+<document_request_hour>14</document_request_hour>
+<document_request_minute>1</document_request_minute>
+<payment>0</payment>
+<currency>1</currency>
+<language>11</language>
+<tender_open_date>04/02/2013</tender_open_date>
+<tender_open_hour>14</tender_open_hour>
+<tender_open_minute>1</tender_open_minute>
+<tender_open_place>Zigfrīda Anna Meierovica bulvārī 16-1, Rīgā, 5.stāva zālē</tender_open_place>
+<allowed>1</allowed>
+<allowed_persons>Visas ieinteresētās personas</allowed_persons></administrative_info>
+<submit_date>04/02/2013</submit_date>
+<submit_date_stamp>1359928800</submit_date_stamp>
+<submit_hour>14</submit_hour>
+<submit_minute>1</submit_minute>
+<additional_info>
+<eu_list>
+<eu>
+<eu_short>ESF</eu_short>
+<eu_long>ESF projekts „Profesionālās izglītības programmu, pamatprasmju un kompetenču apguve izglītības un profesionālās karjeras turpināšanai” </eu_long></eu></eu_list>
+<current>0</current>
+<eu_fund>1</eu_fund>
+<environment_req>0</environment_req>
+<appeal_date>Saskaņā ar Publisko iepirkumu likuma 83. panta trešo daļu</appeal_date>
+<appeal_name>Iepirkumu uzraudzības birojs</appeal_name>
+<appeal_reg_num>90001263305</appeal_reg_num>
+<appeal_address>Eksporta iela 6</appeal_address>
+<appeal_city>Rīga</appeal_city>
+<appeal_zip_code> LV-1010</appeal_zip_code>
+<appeal_country>1</appeal_country>
+<appeal_phone>+371 67326719</appeal_phone>
+<appeal_fax>+371 67326720</appeal_fax>
+<appeal_email>pasts@iub.gov.lv</appeal_email>
+<appeal_url>http://www.iub.gov.lv</appeal_url>
+<appeal_info_name>Iepirkumu uzraudzības birojs</appeal_info_name>
+<appeal_info_reg_num>90001263305</appeal_info_reg_num>
+<appeal_info_address>Eksporta iela 6</appeal_info_address>
+<appeal_info_city>Rīga</appeal_info_city>
+<appeal_info_zip_code> LV-1010</appeal_info_zip_code>
+<appeal_info_country>1</appeal_info_country>
+<appeal_info_phone>+371 67326719</appeal_info_phone>
+<appeal_info_fax>+371 67326720</appeal_info_fax>
+<appeal_info_email>pasts@iub.gov.lv</appeal_info_email>
+<appeal_info_url>http://www.iub.gov.lv</appeal_info_url></additional_info>
+<type>notice_contract</type>
+<approval_date>04/01/2013</approval_date>
+<checker_id>23001</checker_id>
+<checking_started>07/01/2013 10:11:24</checking_started>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357623704</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

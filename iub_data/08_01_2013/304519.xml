@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304519</id>
+<source_notice>300578</source_notice>
+<status>1</status>
+<general>
+<procurement_code>INP 2012/37</procurement_code>
+<procurement_id>INP 2012/37</procurement_id>
+<main_cpv>
+<code>45000000-7</code>
+<code_num>45000000</code_num>
+<type>2</type>
+<lv>Celtniecības darbi.</lv>
+<en>Construction work</en>
+<cpv_a>45</cpv_a>
+<cpv_b>000000-7</cpv_b></main_cpv>
+<name>Ārējo siltumtīklu izbūve Brīvības ielā, Ilūkstē</name>
+<price_from>10000</price_from>
+<price_to>120000</price_to>
+<procurement_type>1</procurement_type>
+<authority_id>22734</authority_id>
+<authority_name>Ilūkstes novada pašvaldība</authority_name>
+<authority_reg_num>90000078782</authority_reg_num>
+<address>Brīvības ielā 7, Ilūkstē, LV - 5447</address>
+<city>Ilūkste</city>
+<zip_code>LV-5447</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list></general>
+<divided_in_parts>0</divided_in_parts>
+<contract_name>Ārējo siltumtīklu izbūve Brīvības ielā, Ilūkstē</contract_name>
+<place>Brīvības iela, Ilūkste, Ilūkstes novads</place>
+<region>5</region>
+<eu_fund>0</eu_fund>
+<environment_req>1</environment_req>
+<environment_req_detail>Saskaņā ar nolikumu</environment_req_detail>
+<approval_date_stamp>1357636323</approval_date_stamp>
+<parts></parts>
+<part_5_list>
+<part_5>
+<contract_nr>1</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Būvdarbu līgums</concluded_contract_name>
+<decision_date>19/12/2012</decision_date>
+<tender_num>5</tender_num>
+<initial_price>33822.61</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>33822.61</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA "Jēkabpils PMK"</winner_name>
+<winner_reg_num>45403003160</winner_reg_num>
+<winner_address>Madonas iela 27</winner_address>
+<winner_city>Jēkabpils</winner_city>
+<winner_zip_code>LV-5202</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>65237890</winner_phone>
+<winner_fax>65237890</winner_fax>
+<winner_email>maris.dimant@inbox.lv</winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Ilūkstes novada pašvaldība</authority_name>
+<address>Brīvības ielā 7, Ilūkstē, LV - 5447</address>
+<authority_reg_num>90000078782</authority_reg_num>
+<zip_code>LV-5447</zip_code>
+<city>Ilūkste</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357635881</creation_date_stamp>
+<authority_id>22734</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Ilūkstes novada pašvaldība</name>
+<short_name>INP</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Ilūkstes novada pašvaldība</place>
+<person>Andžela Gičevska-Studāne</person>
+<phone>65447850</phone>
+<fax>65462245</fax>
+<email>dome@ilukste.lv</email>
+<url>http://www.ilukste.lv</url>
+<url_client>http://www.ilukste.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<description>Ārējo siltumtīklu izbūve Brīvības ielā, Ilūkstē</description>
+<price_exact>33822.61</price_exact>
+<currency>1</currency>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<approval_date>08/01/2013</approval_date>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357636323</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>48125.51</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA Jēkabpils PMK</global_winner_title>
+<global_winner_reg_num>45403003160</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

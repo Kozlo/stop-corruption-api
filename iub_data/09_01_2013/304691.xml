@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304691</id>
+<general>
+<name>Olaines bīstamo atkritumu sadedzināšanas iekārtas materiālās vērtības novērtējums</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>1</procurement_id>
+<authority_id>23171</authority_id>
+<authority_name>Valsts sabiedrība ar ierobežotu atbildību Latvijas Vides, ģeoloģijas un meteoroloģijas centrs</authority_name>
+<authority_reg_num>50103237791</authority_reg_num>
+<address>Maskavas iela 165</address>
+<city>Rīga</city>
+<zip_code>LV-1019</zip_code>
+<country>1</country>
+<main_cpv>
+<code>71330000-0</code>
+<code_num>71330000</code_num>
+<type>3</type>
+<lv>Dažādi inženiertehniskie pakalpojumi.</lv>
+<en>Miscellaneous engineering services</en>
+<cpv_a>71</cpv_a>
+<cpv_b>330000-0</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>VSIA LVĢMC 2013/1</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357732182</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Valsts sabiedrība ar ierobežotu atbildību Latvijas Vides, ģeoloģijas un meteoroloģijas centrs</authority_name>
+<address>Maskavas iela 165</address>
+<authority_reg_num>50103237791</authority_reg_num>
+<zip_code>LV-1019</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<documentation_online>1</documentation_online>
+<authority_id>23171</authority_id>
+<creation_date>09/01/2013</creation_date>
+<creation_date_stamp>1357732036</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Valsts sabiedrība ar ierobežotu atbildību Latvijas Vides, ģeoloģijas un meteoroloģijas centrs</name>
+<short_name>VSIA LVĢMC</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Maskavas iela 165, Rīga</place>
+<person>Vineta Staškeviča</person>
+<phone>67032699</phone>
+<fax>67145154</fax>
+<email>lvgmc@lvgmc.lv</email>
+<url>http://www.meteo.lv</url>
+<url_client>http://www.meteo.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<middleman>0</middleman>
+<eu_list></eu_list>
+<type>notice_planned_contract</type>
+<language>11</language>
+<place>Maskavas iela 165, Rīga</place>
+<region>6</region>
+<service_type>Olaines bīstamo atkritumu sadedzināšanas iekārtas materiālās vērtības novērtējums</service_type>
+<months>3</months>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<tender_for_parts>0</tender_for_parts>
+<submit_date>21/01/2013</submit_date>
+<submit_date_stamp>1358719200</submit_date_stamp>
+<timelimits>
+<dok_req_date>21/01/2013</dok_req_date>
+<work_time>8.30.-17.00</work_time>
+<submit_hour>11</submit_hour>
+<submit_minute>1</submit_minute>
+<tender_open_date>21/01/2013</tender_open_date>
+<tender_open_hour>11</tender_open_hour>
+<tender_open_minute>1</tender_open_minute>
+<tender_open_place>Maskavas iela 165, Rīga, 403.telpa</tender_open_place>
+<submit_date>21/01/2013</submit_date>
+<submit_date_stamp>1358719200</submit_date_stamp></timelimits>
+<approval_date>09/01/2013</approval_date>
+<publication_date>09/01/2013</publication_date>
+<publication_date_stamp>1357732182</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

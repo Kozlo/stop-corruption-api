@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304686</id>
+<general>
+<name>Biroja preces BJC „Rīgas Skolēnu pils” vajadzībām 2013.gadam</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>1</procurement_id>
+<authority_id>94401</authority_id>
+<authority_name>Bērnu un jauniešu centrs "Rīgas Skolēnu pils"</authority_name>
+<authority_reg_num>9000001575</authority_reg_num>
+<address>Krišjāņa Barona 99</address>
+<city>Rīga</city>
+<zip_code>1012</zip_code>
+<country>1</country>
+<main_cpv>
+<code>30192000-1</code>
+<code_num>30192000</code_num>
+<type>1</type>
+<lv>Biroja piederumi.</lv>
+<en>Office supplies</en>
+<cpv_a>30</cpv_a>
+<cpv_b>192000-1</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>bjcRSP 2013/1</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357731732</approval_date_stamp>
+<divided_in_parts>1</divided_in_parts>
+<parts></parts>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Bērnu un jauniešu centrs "Rīgas Skolēnu pils"</authority_name>
+<address>Krišjāņa Barona 99</address>
+<authority_reg_num>9000001575</authority_reg_num>
+<zip_code>1012</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<documentation_online>1</documentation_online>
+<authority_id>94401</authority_id>
+<creation_date>09/01/2013</creation_date>
+<creation_date_stamp>1357730903</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Bērnu un jauniešu centrs "Rīgas Skolēnu pils"</name>
+<short_name>bjcRSP</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Bērnu un jauniešu centrs "Rīgas Skolēnu pils", Rīga, Kr.Barona 99 administrācija</place>
+<person>Iveta Freimane</person>
+<phone>67271025</phone>
+<fax>67279205</fax>
+<email>skolenupils@gmail.com</email>
+<url>http://www.rsp.lv</url>
+<url_client>http://www.rsp.lv/iepirkumi/</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<middleman>0</middleman>
+<eu_list></eu_list>
+<language>11</language>
+<place>Bērnu un jauniešu centrs „Rīgas Skolēnu pils”, Krišjāņa Barona ielā 99, Rīgā</place>
+<region>1</region>
+<service_type>Biroja preces BJC „Rīgas Skolēnu pils” vajadzībām 2013.gadam: 1.daļa tintes kasetes; toneri lāzerprinteriem, 2.daļa papīrs mācību materiālu kopēšanai un 3.daļa dažāda veida biroja preces mācību darba nodrošināšanai. Iepirkšana Interneta veikalā. Ar piegādi. Pēcapmaksa.</service_type>
+<start_date>28/01/2013</start_date>
+<end_date>31/12/2013</end_date>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<tender_for_parts>2</tender_for_parts>
+<submit_date>21/01/2013</submit_date>
+<submit_date_stamp>1358719200</submit_date_stamp>
+<timelimits>
+<dok_req_date>21/01/2013</dok_req_date>
+<work_time>09.00-18.00</work_time>
+<submit_hour>10</submit_hour>
+<submit_minute>18</submit_minute>
+<tender_open_date>22/01/2013</tender_open_date>
+<tender_open_hour>10</tender_open_hour>
+<tender_open_minute>12</tender_open_minute>
+<tender_open_place>Krišjāņa Barona ielā 99, Rīgā</tender_open_place>
+<submit_date>21/01/2013</submit_date>
+<submit_date_stamp>1358719200</submit_date_stamp></timelimits>
+<type>notice_planned_contract</type>
+<approval_date>09/01/2013</approval_date>
+<publication_date>09/01/2013</publication_date>
+<publication_date_stamp>1357731732</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

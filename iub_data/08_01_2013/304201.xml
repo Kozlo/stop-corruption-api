@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304201</id>
+<general>
+<name>Degvielas iegāde Malnavas koledžai 2013.gadam</name>
+<procurement_id>MK2012/5</procurement_id>
+<authority_id>23134</authority_id>
+<authority_name>Malnavas koledža</authority_name>
+<authority_reg_num>90000019505</authority_reg_num>
+<address>Malnava , Malnavas pagasts, Kārsavas novads</address>
+<city>Kārsava</city>
+<zip_code>LV 5750</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<main_cpv>
+<code>09100000-0</code>
+<code_num>9100000</code_num>
+<type>1</type>
+<lv>Degvielas.</lv>
+<en>Fuels</en>
+<cpv_a>09</cpv_a>
+<cpv_b>100000-0</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>MK2012/5</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357631626</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<part_5_list>
+<part_5>
+<contract_nr>1</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Degvielas iegāde Malnavas koledžai 2013.gadam</concluded_contract_name>
+<decision_date>17/12/2012</decision_date>
+<tender_num>2</tender_num>
+<initial_price>16705</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>16705</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>SIA RusLatNafta</winner_name>
+<winner_reg_num>40003497879</winner_reg_num>
+<winner_address>Jelgavas iela 2a</winner_address>
+<winner_city>Daugavpils</winner_city>
+<winner_zip_code>LV-5404</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>65407612</winner_phone>
+<winner_fax>65407620</winner_fax>
+<winner_email>office@daug.dinaz.lv</winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Malnavas koledža</authority_name>
+<address>Malnava , Malnavas pagasts, Kārsavas novads</address>
+<authority_reg_num>90000019505</authority_reg_num>
+<zip_code>LV 5750</zip_code>
+<city>Kārsava</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>08/01/2013</creation_date>
+<creation_date_stamp>1357631604</creation_date_stamp>
+<authority_id>23134</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Malnavas koledža</name>
+<short_name>MK</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Malnavas koledža</place>
+<person>Jurijs Morozovs</person>
+<phone>65733922</phone>
+<fax>65733100</fax>
+<email>iveta.malnava@inbox.lv</email>
+<url>http://www.malnava.lv</url>
+<url_client>http://www.malnava.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<place>Degvielas iegāde Malnavas koledžai 2013.gadam</place>
+<region>5</region>
+<description>Dīzeļdegviela līdz 15 tonnām, benzīns līdz 7 tonnām</description>
+<price_exact>16705</price_exact>
+<currency>1</currency>
+<contract_name>Degvielas iegāde Malnavas koledžai 2013.gadam</contract_name>
+<eu_list></eu_list>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<type>notice_concluded_contract</type>
+<approval_date>08/01/2013</approval_date>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357631626</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>23769.21</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>SIA RusLatNafta</global_winner_title>
+<global_winner_reg_num>40003497879</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

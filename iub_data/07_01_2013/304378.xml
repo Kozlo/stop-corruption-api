@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304378</id>
+<source_notice>251708</source_notice>
+<status>1</status>
+<general>
+<procurement_code>SDPP 2012/2</procurement_code>
+<procurement_id>SDPP 2012/2</procurement_id>
+<main_cpv>
+<code>90620000-9</code>
+<code_num>90620000</code_num>
+<type>3</type>
+<lv>Sniega tīrīšanas pakalpojumi.</lv>
+<en>Snow-clearing services</en>
+<cpv_a>90</cpv_a>
+<cpv_b>620000-9</cpv_b></main_cpv>
+<name>TUKUMA NOVADA SLAMPES UN DŽŪKSTES PAGASTU CEĻU MEHANIZĒTA TĪRĪŠANA ZIEMAS SEZONĀ</name>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<authority_id>22874</authority_id>
+<authority_name>Slampes un Džūkstes pagasta pārvalde</authority_name>
+<authority_reg_num>90000051222</authority_reg_num>
+<address>"Kultūras pils", Slampes pagasts</address>
+<city>Tukuma novads</city>
+<zip_code>3119</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list></general>
+<divided_in_parts>1</divided_in_parts>
+<contract_name>TUKUMA NOVADA SLAMPES UN DŽŪKSTES PAGASTU CEĻU MEHANIZĒTA TĪRĪŠANA ZIEMAS SEZONĀ</contract_name>
+<place>Tukuma novada Slampes un Džūkstes pagastu pārvalde</place>
+<region>7</region>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<approval_date_stamp>1357557609</approval_date_stamp>
+<parts>
+<part>
+<name>Džūkstes pagasta ceļu mehanizēta tīrīšana ziemas sezonā- ceļu saraksts Nr.2</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>2</nr></part>
+<part>
+<name>Džūkstes pagasta ceļu mehanizēta tīrīšana ziemas sezonā- ceļu saraksts Nr.3</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>3</nr></part>
+<part>
+<name>Slampes pagasta ceļu mehanizēta tīrīšana ziemas periodā – ceļu saraksts Nr.4</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>4</nr></part>
+<part>
+<name>Slampes pagasta ceļu mehanizēta tīrīšana ziemas periodā – ceļu saraksts Nr.5</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>5</nr></part>
+<part>
+<name>Slampes pagasta ceļu mehanizēta tīrīšana ziemas periodā – ceļu saraksts Nr.6</name>
+<description></description>
+<main_cpv>
+<code></code>
+<code_num>0</code_num>
+<type>1</type>
+<lv>Citi kopienas, sociālie un personālie pakalpojumi.</lv>
+<en>Other community, social and personal services</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact></price_exact>
+<price_from></price_from>
+<price_to></price_to>
+<currency></currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types></supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>6</nr></part></parts>
+<part_5_list>
+<part_5>
+<contract_nr>2</contract_nr>
+<part_nr>2</part_nr>
+<concluded_contract_name>Džūkstes pagasta ceļu mehanizēta tīrīšana ziemas sezonā- ceļu saraksts Nr.2</concluded_contract_name>
+<decision_date>21/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>1943.99</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>1943.99</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Z/S "ROŽLEJAS"</winner_name>
+<winner_reg_num>49201013505</winner_reg_num>
+<winner_address>"Rožlejas", Džūkstes pag.</winner_address>
+<winner_city>Tukuma novads</winner_city>
+<winner_zip_code>LV-3147</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone></winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>3</contract_nr>
+<part_nr>3</part_nr>
+<concluded_contract_name>Džūkstes pagasta ceļu mehanizēta tīrīšana ziemas sezonā- ceļu saraksts Nr.3</concluded_contract_name>
+<decision_date>21/12/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>2856</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>2856</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Z/S "Straumēni"</winner_name>
+<winner_reg_num>49201000750</winner_reg_num>
+<winner_address>"Straumēni", Džūkstes pagasts</winner_address>
+<winner_city>Tukuma novads</winner_city>
+<winner_zip_code>LV-3147</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone></winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>4</contract_nr>
+<part_nr>4</part_nr>
+<concluded_contract_name>Slampes pagasta ceļu mehanizēta tīrīšana ziemas periodā – ceļu saraksts Nr.4</concluded_contract_name>
+<decision_date>21/12/2012</decision_date>
+<tender_num>2</tender_num>
+<initial_price>6820</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>6820</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Jānis Šermuksītis</winner_name>
+<winner_reg_num></winner_reg_num>
+<winner_address>"Pļaviņas", Slampes pagasts</winner_address>
+<winner_city>Tukuma novads</winner_city>
+<winner_zip_code>LV-3119</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone></winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>5</contract_nr>
+<part_nr>5</part_nr>
+<concluded_contract_name>Slampes pagasta ceļu mehanizēta tīrīšana ziemas periodā – ceļu saraksts Nr.5</concluded_contract_name>
+<decision_date>21/12/2012</decision_date>
+<tender_num>3</tender_num>
+<initial_price>4800</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>4800</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Z/S "Reķi"</winner_name>
+<winner_reg_num>40001009401</winner_reg_num>
+<winner_address>„Zemdegās”-6, Slampes pagastā</winner_address>
+<winner_city>Tukuma novads</winner_city>
+<winner_zip_code>LV-3119</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone></winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5>
+<part_5>
+<contract_nr>6</contract_nr>
+<part_nr>6</part_nr>
+<concluded_contract_name>Slampes pagasta ceļu mehanizēta tīrīšana ziemas periodā – ceļu saraksts Nr.6</concluded_contract_name>
+<decision_date>21/12/2012</decision_date>
+<tender_num>2</tender_num>
+<initial_price>3580</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>3580</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Ģirts Mišinskis</winner_name>
+<winner_reg_num></winner_reg_num>
+<winner_address>„Kušķi”, Slampes pagasts</winner_address>
+<winner_city>Tukuma novads</winner_city>
+<winner_zip_code>LV-3119</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone></winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Slampes un Džūkstes pagasta pārvalde</authority_name>
+<address>"Kultūras pils", Slampes pagasts</address>
+<authority_reg_num>90000051222</authority_reg_num>
+<zip_code>3119</zip_code>
+<city>Tukuma novads</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357554401</creation_date_stamp>
+<authority_id>22874</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Slampes un Džūkstes pagastu pārvalde</name>
+<short_name>SDPP</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Slampes un Džūkstes pagastu pārvalde</place>
+<person>Vilnis Lācis</person>
+<phone>29450521</phone>
+<fax>63154651</fax>
+<email>vilnis.lacis@tukums.lv</email>
+<url>http://www.tukums.lv</url>
+<url_client>http://www.tukums.lv/novada-pasvaldiba/publiskie-iepirkumi</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<service_types>16</service_types>
+<description>Tukuma novada Slampes un Džūkstes pagastu ceļu mehanizēta tīrīšana ziemas sezonā saskaņā ar Tehnisko specifikāciju</description>
+<price_exact>19999.99</price_exact>
+<currency>1</currency>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357557609</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>28457.58</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>Z/S ROŽLEJAS,Z/S Straumēni,Jānis Šermuksītis,Z/S Reķi,Ģirts Mišinskis</global_winner_title>
+<global_winner_reg_num>49201013505,49201000750,,40001009401</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

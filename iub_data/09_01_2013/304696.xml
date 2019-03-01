@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304696</id>
+<source_notice>251528</source_notice>
+<status>1</status>
+<general>
+<procurement_code>LND 2012/55 ERAF</procurement_code>
+<procurement_id>LND 2012/55 ERAF</procurement_id>
+<main_cpv>
+<code>71247000-1</code>
+<code_num>71247000</code_num>
+<type>3</type>
+<lv>Būvdarbu uzraudzība.</lv>
+<en>Supervision of building work</en>
+<cpv_a>71</cpv_a>
+<cpv_b>247000-1</cpv_b></main_cpv>
+<name>Būvuzraudzības veikšana projektam „Autoostas uzgaidāmās zāles būvniecība un sabiedriskās tualetes siltināšana Dzelzceļa ielā 21b un Dzelzceļa ielā 21a, Līvānos, Līvānu novadā”</name>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<authority_id>22586</authority_id>
+<authority_name>Līvānu novada dome</authority_name>
+<authority_reg_num>90000065595</authority_reg_num>
+<address>Rīgas iela 77, Līvāni, LV - 5316</address>
+<city>Līvāni</city>
+<zip_code>LV 5316</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list></general>
+<divided_in_parts>0</divided_in_parts>
+<contract_name>Būvuzraudzības veikšana projektam „Autoostas uzgaidāmās zāles būvniecība un sabiedriskās tualetes siltināšana Dzelzceļa ielā 21b un Dzelzceļa ielā 21a, Līvānos, Līvānu novadā”</contract_name>
+<place>Līvāni</place>
+<region>5</region>
+<eu_fund>1</eu_fund>
+<environment_req>0</environment_req>
+<approval_date_stamp>1357732983</approval_date_stamp>
+<eu_list>
+<eu>
+<eu_short>ERAF</eu_short>
+<eu_long>„Līvānu novada pašvaldības ēku rekonstrukcija un energoefektivitātes uzlabošana – 2.kārta”</eu_long></eu></eu_list>
+<parts></parts>
+<part_5_list>
+<part_5>
+<contract_nr>LND/5-44.3/13/16</contract_nr>
+<part_nr>1</part_nr>
+<concluded_contract_name>Būvuzraudzības veikšana</concluded_contract_name>
+<decision_date>18/12/2012</decision_date>
+<tender_num>6</tender_num>
+<initial_price>1500</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>1500</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Uldis Bērziņš</winner_name>
+<winner_reg_num></winner_reg_num>
+<winner_address>Kalnozols, Dimanti, Jersikas agasts</winner_address>
+<winner_city>Līvānu novads</winner_city>
+<winner_zip_code>LV-5315</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone></winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Līvānu novada dome</authority_name>
+<address>Rīgas iela 77, Līvāni, LV - 5316</address>
+<authority_reg_num>90000065595</authority_reg_num>
+<zip_code>LV 5316</zip_code>
+<city>Līvāni</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>09/01/2013</creation_date>
+<creation_date_stamp>1357732785</creation_date_stamp>
+<authority_id>22586</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Līvānu novada dome</name>
+<short_name>LND</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Līvānu novada dome</place>
+<person>Ainārs Skromāns</person>
+<phone>65307272</phone>
+<fax>65307255</fax>
+<email>ainars.skromans@livani.lv</email>
+<url>http://www.livani.lv</url>
+<url_client>http://www.livani.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<service_types>12</service_types>
+<description>Būvuzraudzības veikšana objekta būvniecības laikā</description>
+<price_exact>1500</price_exact>
+<currency>1</currency>
+<type>notice_concluded_contract</type>
+<approval_date>09/01/2013</approval_date>
+<publication_date>09/01/2013</publication_date>
+<publication_date_stamp>1357732983</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>2134.32</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>Uldis Bērziņš</global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

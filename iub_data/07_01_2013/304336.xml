@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304336</id>
+<general>
+<name>Ķirbju un kāpostu piegāde VSAC „Rīga”</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>2</procurement_id>
+<authority_id>94159</authority_id>
+<authority_name>VALSTS SOCIĀLĀS APRŪPES CENTRS "RĪGA"</authority_name>
+<authority_reg_num>90009226487</authority_reg_num>
+<address>Pāles iela 12</address>
+<city>Rīga</city>
+<zip_code>LV-1024</zip_code>
+<country>1</country>
+<main_cpv>
+<code>15800000-6</code>
+<code_num>15800000</code_num>
+<type>1</type>
+<lv>Dažādi pārtikas produkti.</lv>
+<en>Miscellaneous food products</en>
+<cpv_a>15</cpv_a>
+<cpv_b>800000-6</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>VSAC " Rīga"  2013/2</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357544916</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>VALSTS SOCIĀLĀS APRŪPES CENTRS "RĪGA"</authority_name>
+<address>Pāles iela 12</address>
+<authority_reg_num>90009226487</authority_reg_num>
+<zip_code>LV-1024</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<documentation_online>1</documentation_online>
+<authority_id>94159</authority_id>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357544851</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Valsts sociālās aprūpes centrs " Rīga"</name>
+<short_name>VSAC " Rīga"</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>sekretariāts</place>
+<person>Zigita Paurniete</person>
+<phone>67436869; 22031014</phone>
+<fax>67522801</fax>
+<email>zigita.paurniete@vsacriga.gov.lv</email>
+<url>http://www.vsacriga.gov.lv</url>
+<url_client>http://www.vsacriga.gov.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<middleman>0</middleman>
+<eu_list></eu_list>
+<type>notice_planned_contract</type>
+<language>11</language>
+<place>VSAC "Rīga" filiāles</place>
+<region>6</region>
+<service_type>Ķirbju un kāpostu piegāde VSAC „Rīga”</service_type>
+<end_date>31/12/2013</end_date>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<tender_for_parts>0</tender_for_parts>
+<submit_date>18/01/2013</submit_date>
+<submit_date_stamp>1358460000</submit_date_stamp>
+<timelimits>
+<dok_req_date>18/01/2013</dok_req_date>
+<work_time>8:30-16:30</work_time>
+<submit_hour>16</submit_hour>
+<submit_minute>1</submit_minute>
+<tender_open_hour>0</tender_open_hour>
+<tender_open_minute>0</tender_open_minute>
+<submit_date>18/01/2013</submit_date>
+<submit_date_stamp>1358460000</submit_date_stamp></timelimits>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357544916</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304407</id>
+<general>
+<name>Otello izpildījums Allas Sigalovas baletā "Otello"</name>
+<procurement_id>LNO 2012/23</procurement_id>
+<authority_id>23030</authority_id>
+<authority_name>VSIA Latvijas Nacionālā opera</authority_name>
+<authority_reg_num>40103208907</authority_reg_num>
+<address>Aspazijas bulvāris 3</address>
+<city>Rīga</city>
+<zip_code>LV-1050</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<main_cpv>
+<code>92312200-3</code>
+<code_num>92312200</code_num>
+<type>3</type>
+<lv>Autoru, komponistu, tēlnieku, izklaides mākslinieku un citu individuālo mākslinieku sniegtie pakalpojumi.</lv>
+<en>Services provided by authors, composers, sculptors, entertainers and other individual artists</en>
+<cpv_a>92</cpv_a>
+<cpv_b>312200-3</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>LNO 2012/23</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357558567</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<part_5_list>
+<part_5>
+<contract_nr>L1212-0814</contract_nr>
+<part_nr></part_nr>
+<concluded_contract_name>Otello izpildījums Allas Sigalovas baletā "Otello"</concluded_contract_name>
+<decision_date>11/09/2012</decision_date>
+<tender_num>1</tender_num>
+<initial_price>7619.05</initial_price>
+<initial_currency>2</initial_currency>
+<contract_price_exact>7619.05</contract_price_exact>
+<exact_currency>2</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency></contract_currency>
+<subcontracts></subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency></subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown></subcontract_unknown>
+<value_description></value_description>
+<without_results></without_results>
+<interrupted></interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl>5354.70</contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>Serge Desroches</winner_name>
+<winner_reg_num></winner_reg_num>
+<winner_address>Steyrergasse 94</winner_address>
+<winner_city>Graz</winner_city>
+<winner_zip_code>A-8010</winner_zip_code>
+<winner_country>14</winner_country>
+<winner_phone></winner_phone>
+<winner_fax></winner_fax>
+<winner_email></winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>VSIA Latvijas Nacionālā opera</authority_name>
+<address>Aspazijas bulvāris 3</address>
+<authority_reg_num>40103208907</authority_reg_num>
+<zip_code>LV-1050</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<middleman>0</middleman>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357558372</creation_date_stamp>
+<authority_id>23030</authority_id>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>VSIA Latvijas Nacionālā opera</name>
+<short_name>LNO</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Rīga, Aspazijas bulvāris 3 - 103.kab.</place>
+<person>Elīna Lodīte</person>
+<phone>+371 67073844 (Elīna Lodīte)</phone>
+<fax></fax>
+<email>elina.lodite@opera.lv</email>
+<url>http://www.opera.lv</url>
+<url_client>http://www.opera.lv</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<service_types>26</service_types>
+<place>Aspazijas bulvāris 3, Rīga, Latvija</place>
+<region>6</region>
+<description>Otello izpildījums Allas Sigalovas baletā "Otello" saskaņā ar LNO darba uzdevumu</description>
+<price_exact>7619.05</price_exact>
+<currency>2</currency>
+<price_exact_lvl>5354.70</price_exact_lvl>
+<contract_name>Otello izpildījums Allas Sigalovas baletā "Otello"</contract_name>
+<eu_list></eu_list>
+<type>notice_concluded_contract</type>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<approval_date>07/01/2013</approval_date>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357558567</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<price_exact_eur>7619.05</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>Serge Desroches</global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

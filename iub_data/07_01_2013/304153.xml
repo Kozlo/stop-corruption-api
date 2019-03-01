@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304153</id>
+<general>
+<name>Zemsprieguma un vidsprieguma kabeļu gala apdaru un savienojuma uzmavu piegāde</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>1</procurement_id>
+<authority_id>94768</authority_id>
+<authority_name>Akciju sabiedrība "Latvenergo"</authority_name>
+<authority_reg_num>40003032949</authority_reg_num>
+<address>Pulkveža Brieža iela 12</address>
+<city>Rīga</city>
+<zip_code>LV-1230</zip_code>
+<country>1</country>
+<main_cpv>
+<code>44322000-3</code>
+<code_num>44322000</code_num>
+<type>1</type>
+<lv>Kabeļu piederumi.</lv>
+<en>Cable accessories</en>
+<cpv_a>44</cpv_a>
+<cpv_b>322000-3</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>283240</price_from>
+<procurement_type>3</procurement_type>
+<procurement_code>Latvenergo 2013/1</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357550573</approval_date_stamp>
+<divided_in_parts>1</divided_in_parts>
+<parts>
+<part>
+<name>Zemsprieguma gala apdares</name>
+<description>Zemsprieguma gala apdares piegāde AS „Sadales tīkls”</description>
+<main_cpv>
+<code>44322000-3</code>
+<code_num>44322000</code_num>
+<type>1</type>
+<lv>Kabeļu piederumi.</lv>
+<en>Cable accessories</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>1</nr></part>
+<part>
+<name>Zemsprieguma nozaruzmavas</name>
+<description>Zemsprieguma nozaruzmavu piegāde AS „Sadales tīkls”</description>
+<main_cpv>
+<code>44322000-3</code>
+<code_num>44322000</code_num>
+<type>1</type>
+<lv>Kabeļu piederumi.</lv>
+<en>Cable accessories</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>2</nr></part>
+<part>
+<name>Zemsprieguma savienojuma uzmavas un pārejuzmavas</name>
+<description>Zemsprieguma savienojuma uzmavu un pārejuzmavu piegāde AS „Sadales tīkls”</description>
+<main_cpv>
+<code>44322000-3</code>
+<code_num>44322000</code_num>
+<type>1</type>
+<lv>Kabeļu piederumi.</lv>
+<en>Cable accessories</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>3</nr></part>
+<part>
+<name>Vidsprieguma gala apdares un bezlodēšanas zemējuma pievienošanas sistēma un trīsdzīslu kabeļu galu sadalīšanas trīs viendzīslu kabeļos</name>
+<description>Vidsprieguma gala apdares un bezlodēšanas zemējuma pievienošanas sistēma un trīsdzīslu kabeļu galu sadalīšanas trīs viendzīslu kabeļos piegāde AS „Sadales tīkls”  </description>
+<main_cpv>
+<code>44322000-3</code>
+<code_num>44322000</code_num>
+<type>1</type>
+<lv>Kabeļu piederumi.</lv>
+<en>Cable accessories</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>4</nr></part>
+<part>
+<name>Vidsprieguma savienojuma uzmavas un pārejuzmavas</name>
+<description>Vidsprieguma savienojuma uzmavu un pārejuzmavu piegāde AS „Sadales tīkls”</description>
+<main_cpv>
+<code>44322000-3</code>
+<code_num>44322000</code_num>
+<type>1</type>
+<lv>Kabeļu piederumi.</lv>
+<en>Cable accessories</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>5</nr></part>
+<part>
+<name>Vidsprieguma 10 kv un 20 kv iekštipa plastmasas kabeļu gala adapteri pievienošanai elegāzes slēgiekārtām, trīsfāzu kabeļu galu pārveidošana trīs vienfāzu kabeļos materiālu komplektus ieskaitot</name>
+<description>Vidsprieguma 10 kv un 20 kv iekštipa plastmasas kabeļu gala adapteru pievienošanai elegāzes slēgiekārtām, trīsfāzu kabeļu galu pārveidošana trīs vienfāzu kabeļos materiālu komplektus ieskaitot piegāde AS „Sadales tīkls”</description>
+<main_cpv>
+<code>44322000-3</code>
+<code_num>44322000</code_num>
+<type>1</type>
+<lv>Kabeļu piederumi.</lv>
+<en>Cable accessories</en></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount></amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months></months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<notes></notes>
+<nr>6</nr></part></parts>
+<info_places>1</info_places>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Akciju sabiedrība "Latvenergo"</authority_name>
+<address>Pulkveža Brieža iela 12</address>
+<authority_reg_num>40003032949</authority_reg_num>
+<zip_code>LV-1230</zip_code>
+<city>Rīga</city>
+<country>1</country>
+<authority_id>94768</authority_id>
+<creation_date>07/01/2013</creation_date>
+<creation_date_stamp>1357550429</creation_date_stamp>
+<contract_expects>2</contract_expects>
+<contract_name>Zemsprieguma un vidsprieguma kabeļu gala apdaru un savienojuma uzmavu piegāde</contract_name>
+<new_scopes>2</new_scopes>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Akciju sabiedrība "Latvenergo"</name>
+<short_name>Latvenergo</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Pulkveža Brieža iela 12</place>
+<person>Mārtiņš Strods</person>
+<phone>+371 67728246</phone>
+<fax>+371 67728883</fax>
+<email>martins.strods@latvenergo.lv</email>
+<url>http://www.latvenergo.lv</url>
+<url_client></url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<supply_types>1</supply_types>
+<place>Rīga, Latvija</place>
+<region>1</region>
+<one_businessman>1</one_businessman>
+<basic_contract_sum_value>0</basic_contract_sum_value>
+<basic_contract_currency>1</basic_contract_currency>
+<description>Zemsprieguma un vidsprieguma kabeļu gala apdaru un savienojuma uzmavu piegāde AS „Sadales tīkls”</description>
+<state_procurement>1</state_procurement>
+<tender_for_parts>1</tender_for_parts>
+<variants>0</variants>
+<contract_price_exact>0</contract_price_exact>
+<contract_price_from>0</contract_price_from>
+<contract_price_to>0</contract_price_to>
+<contract_currency>1</contract_currency>
+<supplement_3>
+<guarantee>Pretendentam jāiesniedz piedāvājuma nodrošinājums par katru iesniegto iepirkuma priekšmeta daļu</guarantee>
+<financial_rules>Saskaņā ar nolikuma nosacījumiem</financial_rules>
+<groups>Saskaņā ar nolikuma nosacījumiem</groups>
+<other_conditions>0</other_conditions>
+<other_conditions_details>Pretendentam, kurš atzīts par iepirkuma procedūras uzvarētāju, 10 (desmit) darba dienu laikā pēc līguma noslēgšanas jāiesniedz tā saistību izpildes nodrošinājums </other_conditions_details>
+<businessman_requirements>Saskaņā ar nolikuma nosacījumiem</businessman_requirements>
+<financial_requirements>Saskaņā ar nolikuma nosacījumiem</financial_requirements>
+<technical_requirements>Saskaņā ar nolikuma nosacījumiem</technical_requirements>
+<reserved>0</reserved></supplement_3>
+<procedure>
+<proc_type>1</proc_type>
+<candidates_selected>0</candidates_selected></procedure>
+<criteria_list>0</criteria_list>
+<criteria_type>3</criteria_type>
+<auction>0</auction>
+<administrative_info>
+<oj_digital>1</oj_digital>
+<digital_access>0</digital_access>
+<urgent>0</urgent>
+<previous_publications_oj>0</previous_publications_oj>
+<previous_publications_other>0</previous_publications_other>
+<oj_list></oj_list>
+<submit_date>25/02/2013</submit_date>
+<submit_hour>14</submit_hour>
+<submit_minute>1</submit_minute>
+<submit_date_stamp>1361743200</submit_date_stamp>
+<document_request_date>25/02/2013</document_request_date>
+<document_request_hour>14</document_request_hour>
+<document_request_minute>1</document_request_minute>
+<payment>0</payment>
+<currency>1</currency>
+<language>5;11</language>
+<support_days>150</support_days>
+<tender_open_date>25/02/2013</tender_open_date>
+<tender_open_hour>14</tender_open_hour>
+<tender_open_minute>1</tender_open_minute>
+<tender_open_place>AS „Latvenergo”, Pulkveža Brieža ielā 12, Rīgā</tender_open_place>
+<allowed>1</allowed>
+<allowed_persons>Visas ieinteresētās personas</allowed_persons></administrative_info>
+<submit_date>25/02/2013</submit_date>
+<submit_date_stamp>1361743200</submit_date_stamp>
+<submit_hour>14</submit_hour>
+<submit_minute>1</submit_minute>
+<additional_info>
+<eu_list></eu_list>
+<current>0</current>
+<environment_req>0</environment_req>
+<eu_fund>0</eu_fund>
+<appeal_date>Saskaņā ar Sabiedrisko pakalpojumu sniedzēju iepirkumu likuma 77.panta trešo daļu</appeal_date>
+<appeal_name>Iepirkumu uzraudzības birojs</appeal_name>
+<appeal_reg_num>90001263305</appeal_reg_num>
+<appeal_address>Eksporta iela 6</appeal_address>
+<appeal_city>Rīga</appeal_city>
+<appeal_zip_code> LV-1010</appeal_zip_code>
+<appeal_country>1</appeal_country>
+<appeal_phone>+371 67326719</appeal_phone>
+<appeal_fax>+371 67326720</appeal_fax>
+<appeal_email>pasts@iub.gov.lv</appeal_email>
+<appeal_url>http://www.iub.gov.lv</appeal_url>
+<appeal_info_name>Iepirkumu uzraudzības birojs</appeal_info_name>
+<appeal_info_reg_num>90001263305</appeal_info_reg_num>
+<appeal_info_address>Eksporta iela 6</appeal_info_address>
+<appeal_info_city>Rīga</appeal_info_city>
+<appeal_info_zip_code> LV-1010</appeal_info_zip_code>
+<appeal_info_country>1</appeal_info_country>
+<appeal_info_phone>+371 67326719</appeal_info_phone>
+<appeal_info_fax>+371 67326720</appeal_info_fax>
+<appeal_info_email>pasts@iub.gov.lv</appeal_info_email>
+<appeal_info_url>http://www.iub.gov.lv</appeal_info_url>
+<notice_sent_date>07/01/2013</notice_sent_date></additional_info>
+<approval_date>07/01/2013</approval_date>
+<checker_id>23001</checker_id>
+<checking_started>07/01/2013 13:28:10</checking_started>
+<cancel_user>Linda Spurķe</cancel_user>
+<contract_months>21</contract_months>
+<type>notice_contract_sps</type>
+<publication_date>07/01/2013</publication_date>
+<publication_date_stamp>1357558259</publication_date_stamp>
+<no_doc_ext>2013-000030</no_doc_ext>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>

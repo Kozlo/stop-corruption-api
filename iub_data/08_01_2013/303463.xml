@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>303463</id>
+<source_notice>247078</source_notice>
+<status>1</status>
+<general>
+<procurement_code>VeA 2012/16/ERAF</procurement_code>
+<procurement_id>VeA 2012/16/ERAF</procurement_id>
+<main_cpv>
+<code_num>31711110</code_num>
+<type>1</type>
+<code>31711110-7</code>
+<lv>Raiduztvērēji.</lv>
+<en>Transceivers</en>
+<cpv_a>31</cpv_a>
+<cpv_b>711110-7</cpv_b></main_cpv>
+<name>Zinātniskās aparatūras un aprīkojuma iegādes 5.kārta projekta „(IKSA-CENTRS) Informācijas, komunikāciju un signālapstrādes tehnoloģiju valsts nozīmes pētniecības centra izveide” (vienošanās Nr.2011/0044/2DP/2.1.1.3.1/11/IPIA/ VIAA/006) ietvaros</name>
+<price_from>92053</price_from>
+<price_to></price_to>
+<procurement_type>3</procurement_type>
+<authority_id>93844</authority_id>
+<cpv_list>
+<cpv>
+<code>32343000-9</code>
+<lv>Pastiprinātāji.</lv>
+<en>Amplifiers</en></cpv>
+<cpv>
+<code>31731100-0</code>
+<lv>Moduļi.</lv>
+<en>Modules</en></cpv>
+<cpv>
+<code>32541000-7</code>
+<lv>Komutācijas iekārtas.</lv>
+<en>Switchboard equipment</en></cpv>
+<cpv>
+<code>34999200-8</code>
+<lv>Antenas signālu sadalītāji.</lv>
+<en>Aerial signal splitters</en></cpv>
+<cpv>
+<code>34999100-7</code>
+<lv>Signālu ģeneratori.</lv>
+<en>Signal generators</en></cpv>
+<cpv>
+<code>38433300-2</code>
+<lv>Spektra analizators.</lv>
+<en>Spectrum analyser</en></cpv>
+<cpv>
+<code>42512200-0</code>
+<lv>Pie sienas uzstādāmas gaisa kondicionēšanas ierīces.</lv>
+<en>Wall air-conditioning machines</en></cpv>
+<cpv>
+<code>38127000-1</code>
+<lv>Meteoroloģiskās stacijas.</lv>
+<en>Weather stations</en></cpv>
+<cpv>
+<code>32533000-8</code>
+<lv>Zemes satelītstacijas.</lv>
+<en>Satellite earth stations</en></cpv>
+<cpv>
+<code>42661100-8</code>
+<lv>Mīkstlodēšanas aprīkojums.</lv>
+<en>Soldering equipment</en></cpv>
+<cpv>
+<code>32582000-6</code>
+<lv>Datu nesēji.</lv>
+<en>Data carriers</en></cpv>
+<cpv>
+<code>38000000-5</code>
+<lv>Laboratorijas, optiskās un precīzijas ierīces (izņemot brilles).</lv>
+<en>Laboratory, optical and precision equipments (excl. glasses)</en></cpv>
+<cpv>
+<code>38342100-5</code>
+<lv>Oscilogrāfi.</lv>
+<en>Oscillographs</en></cpv>
+<cpv>
+<code>31712200-2</code>
+<lv>Mikrosistēmas.</lv>
+<en>Microsystems</en></cpv>
+<cpv>
+<code>30200000-1</code>
+<lv>Datoru iekārtas un piederumi.</lv>
+<en>Computer equipment and supplies</en></cpv>
+<cpv>
+<code>30100000-0</code>
+<lv>Biroja tehnika, aprīkojums un piederumi, izņemot datorus, printerus un mēbeles.</lv>
+<en>Office machinery, equipment and supplies except computers, printers and furniture</en></cpv>
+<cpv>
+<code>39130000-2</code>
+<lv>Biroju mēbeles.</lv>
+<en>Office furniture</en></cpv>
+<cpv>
+<code>39110000-6</code>
+<lv>Sēdekļi, krēsli un ar tiem saistīti izstrādājumi un to daļas.</lv>
+<en>Seats, chairs and related products, and associated parts</en></cpv></cpv_list>
+<authority_name>Ventspils Augstskola</authority_name>
+<authority_reg_num>90000362426</authority_reg_num>
+<address>Inženieru iela 101</address>
+<city>Ventspils</city>
+<zip_code>LV-3600</zip_code>
+<country>1</country>
+<procurement_year>2012</procurement_year>
+<additional_cpv_list></additional_cpv_list></general>
+<divided_in_parts>1</divided_in_parts>
+<contract_name>Zinātniskās aparatūras un aprīkojuma iegādes 5.kārta projekta „(IKSA-CENTRS) Informācijas, komunikāciju un signālapstrādes tehnoloģiju valsts nozīmes pētniecības centra izveide” (vienošanās Nr.2011/0044/2DP/2.1.1.3.1/11/IPIA/ VIAA/006) ietvaros</contract_name>
+<description>Zinātniskās aparatūras un aprīkojuma iegādes 5.kārta projekta „(IKSA-CENTRS) Informācijas, komunikāciju un signālapstrādes tehnoloģiju valsts nozīmes pētniecības centra izveide” (vienošanās Nr.2011/0044/2DP/2.1.1.3.1/11/IPIA/ VIAA/006) ietvaros</description>
+<place>„Viraki”, Irbene, Ances pagasts, Ventspils novads, Latvija (lotēm 1.-3., 5.-8., 10.-11.), Inženieru iela 101, Ventspils, LV-3601 (lotēm 4., 9., 12.-13.) </place>
+<region>1</region>
+<supply_types>1</supply_types>
+<state_procurement>1</state_procurement>
+<criteria_type>3</criteria_type>
+<proc_type>1</proc_type>
+<additional_info>
+<eu_fund>1</eu_fund>
+<environment_req>0</environment_req>
+<eu_list>
+<eu>
+<eu_short>ERAF</eu_short>
+<eu_long>Eiropas Reģionālās attīstības fonda līdzfinansēts projekts „(IKSA-CENTRS) Informācijas, komunikāciju un signālapstrādes tehnoloģiju valsts nozīmes pētniecības centra izveide” (vienošanās Nr.2011/0044/2DP/2.1.1.3.1/11/IPIA/ VIAA/006)</eu_long></eu></eu_list>
+<oj_digital>1</oj_digital>
+<notes>Rezultāts ir par 12.daļu "Zinātnisko darbinieku darbavietu aprīkojuma (datortehnika, biroja tehnika) iegāde, piegāde, uzstādīšana". Rezultāts par 8.daļu ir publicēts IUB 17.10.2012. Rezultāts par 11.daļu ir publicēts IUB 23.11.2012. Rezultāts par 13.daļu ir publicēts IUB 27.11.2012. Rezultāts par 6.daļu un 7.daļu ir publicēts IUB 30.11.2012. Rezultāts par 9.daļu ir publicēts IUB 07.12.2012. Rezultāts par 1.daļu, 2.daļu un 5.daļu ir publicēts IUB 18.12.2012. Rezultāts par 10.daļu ir publicēts IUB 27.12.2012. Par 3.daļu un 4.daļu lēmums vēl nav pieņemts.</notes>
+<appeal_info>Saskaņā ar Publisko iepirkumu likuma 83. panta otro daļu</appeal_info>
+<appeal_name>Iepirkumu uzraudzības birojs</appeal_name>
+<appeal_reg_num>90001263305</appeal_reg_num>
+<appeal_address>Eksporta iela 6</appeal_address>
+<appeal_city>Rīga</appeal_city>
+<appeal_zip_code> LV-1010</appeal_zip_code>
+<appeal_country>1</appeal_country>
+<appeal_phone>+371 67326719</appeal_phone>
+<appeal_fax>+371 67326720</appeal_fax>
+<appeal_email>pasts@iub.gov.lv</appeal_email>
+<appeal_url>http://www.iub.gov.lv</appeal_url>
+<appeal_info_name>Iepirkumu uzraudzības birojs</appeal_info_name>
+<appeal_info_reg_num>90001263305</appeal_info_reg_num>
+<appeal_info_address>Eksporta iela 6</appeal_info_address>
+<appeal_info_city>Rīga</appeal_info_city>
+<appeal_info_zip_code> LV-1010</appeal_info_zip_code>
+<appeal_info_country>1</appeal_info_country>
+<appeal_info_phone>+371 67326719</appeal_info_phone>
+<appeal_info_fax>+371 67326720</appeal_info_fax>
+<appeal_info_email>pasts@iub.gov.lv</appeal_info_email>
+<appeal_info_url>http://www.iub.gov.lv</appeal_info_url></additional_info>
+<approval_date_stamp>1357314671</approval_date_stamp>
+<parts>
+<part>
+<name>Zinātnisko darbinieku darbavietu aprīkojuma (datortehnika, biroja tehnika) iegāde, piegāde, uzstādīšana.</name>
+<description>Zinātnisko darbinieku darbavietu aprīkojuma (datortehnika, biroja tehnika) iegāde, piegāde, uzstādīšana.</description>
+<main_cpv>
+<code>30200000-1</code>
+<code_num>30200000</code_num>
+<type>1</type>
+<lv>Datoru iekārtas un piederumi.</lv>
+<en>Computer equipment and supplies</en></main_cpv>
+<cpv_list>
+<cpv>
+<code>30100000-0</code>
+<lv>Biroja tehnika, aprīkojums un piederumi, izņemot datorus, printerus un mēbeles.</lv>
+<en>Office machinery, equipment and supplies except computers, printers and furniture</en></cpv></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<amount>Zinātnisko darbinieku darbavietu aprīkojuma (datortehnika, biroja tehnika) iegāde, piegāde, uzstādīšana.</amount>
+<price_exact>0</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<currency>1</currency>
+<show_in_publication></show_in_publication>
+<procedure_start_date></procedure_start_date>
+<months>3</months>
+<days></days>
+<start_date></start_date>
+<end_date></end_date>
+<building_types></building_types>
+<supply_types>1</supply_types>
+<service_types></service_types>
+<notes></notes>
+<nr>12</nr></part></parts>
+<part_5_list>
+<part_5>
+<contract_nr>12</contract_nr>
+<part_nr>12</part_nr>
+<concluded_contract_name>Zinātnisko darbinieku darbavietu aprīkojuma (datortehnika, biroja tehnika) iegāde, piegāde, uzstādīšana.</concluded_contract_name>
+<decision_date>03/01/2013</decision_date>
+<tender_num>3</tender_num>
+<initial_price>0</initial_price>
+<initial_currency>1</initial_currency>
+<contract_price_exact>12924.94</contract_price_exact>
+<exact_currency>1</exact_currency>
+<contract_price_from></contract_price_from>
+<contract_price_to></contract_price_to>
+<contract_with_vat>0</contract_with_vat>
+<contract_vat_rate></contract_vat_rate>
+<contract_currency>1</contract_currency>
+<subcontracts>0</subcontracts>
+<subcontract_price></subcontract_price>
+<subcontract_currency>1</subcontract_currency>
+<subcontract_proportion></subcontract_proportion>
+<subcontract_unknown>0</subcontract_unknown>
+<value_description></value_description>
+<without_results>0</without_results>
+<interrupted>0</interrupted>
+<interrupt_info></interrupt_info>
+<lower_price></lower_price>
+<lower_currency></lower_currency>
+<contract_count></contract_count>
+<product_from_eu></product_from_eu>
+<product_country></product_country>
+<criteria_type></criteria_type>
+<winner_with_variants></winner_with_variants>
+<low_offers></low_offers>
+<years_expenses></years_expenses>
+<months_expenses></months_expenses>
+<contract_price_exact_lvl></contract_price_exact_lvl>
+<contract_price_exact_secret_lvl></contract_price_exact_secret_lvl>
+<contract_price_exact_secret></contract_price_exact_secret>
+<exact_currency_secret></exact_currency_secret>
+<publicate_winner></publicate_winner>
+<party_nr></party_nr>
+<party_nr_secret></party_nr_secret>
+<winner_list>
+<winner>
+<winner_name>A/S "Capital"</winner_name>
+<winner_reg_num>40003088497</winner_reg_num>
+<winner_address>Ganību dambis 23c</winner_address>
+<winner_city>Rīga</winner_city>
+<winner_zip_code>LV-1005</winner_zip_code>
+<winner_country>1</winner_country>
+<winner_phone>67517822</winner_phone>
+<winner_fax>67517820</winner_fax>
+<winner_email>info@capital.lv</winner_email>
+<winner_url></winner_url></winner></winner_list></part_5></part_5_list>
+<authority_name>Ventspils Augstskola</authority_name>
+<address>Inženieru iela 101</address>
+<authority_reg_num>90000362426</authority_reg_num>
+<zip_code>LV-3600</zip_code>
+<city>Ventspils</city>
+<country>1</country>
+<middleman>0</middleman>
+<authority_id>93844</authority_id>
+<creation_date>04/01/2013</creation_date>
+<creation_date_stamp>1357313435</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Ventspils Augstskola</name>
+<short_name>VeA</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Inženieru iela 101, A207.kabinets</place>
+<person>Anna Lāma</person>
+<phone>+371 29501436</phone>
+<fax>63629660</fax>
+<email>anna.lama@venta.lv</email>
+<url>http://www.venta.lv</url>
+<url_client>http://venta.lv/par-vea/iepirkumi</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<contract_expects>0</contract_expects>
+<price_exact>12924.94</price_exact>
+<price_from>0</price_from>
+<price_to>0</price_to>
+<with_vat>0</with_vat>
+<currency>1</currency>
+<previous_publications>1</previous_publications>
+<previous_publications_oj>1</previous_publications_oj>
+<previous_publications_other>0</previous_publications_other>
+<auction>0</auction>
+<criteria_list></criteria_list>
+<oj_list>
+<oj>
+<oj_num>2012/S 181-297418</oj_num>
+<oj_date>20/09/2012</oj_date>
+<oj_type>4</oj_type>
+<oj_num>2012/S 194-318051</oj_num>
+<oj_date>09/10/2012</oj_date>
+<oj_type>7</oj_type>
+<oj_num>2012/S 203-332659</oj_num>
+<oj_date>20/10/2012</oj_date>
+<oj_type>6</oj_type>
+<oj_num>2012/S 228-374645</oj_num>
+<oj_date>27/11/2012</oj_date>
+<oj_type>6</oj_type>
+<oj_num>2012/S 230-377935</oj_num>
+<oj_date>29/11/2012</oj_date>
+<oj_type>6</oj_type>
+<oj_num>2012/S 233-382614</oj_num>
+<oj_date>04/12/2012</oj_date>
+<oj_type>6</oj_type>
+<oj_num>2012/S 234-383647</oj_num>
+<oj_date>05/12/2012</oj_date>
+<oj_type>6</oj_type>
+<oj_num>2012/S 238-391254</oj_num>
+<oj_date>11/12/2012</oj_date>
+<oj_type>6</oj_type>
+<oj_num>2012/S 264-403693</oj_num>
+<oj_date>21/12/2012</oj_date>
+<oj_type>6</oj_type>
+<oj_num>2012/S 250-413285</oj_num>
+<oj_date>29/12/2012</oj_date>
+<oj_type>6</oj_type></oj></oj_list>
+<publication_list></publication_list>
+<type>notice_contract_rights</type>
+<approval_date>04/01/2013</approval_date>
+<checker_id>23001</checker_id>
+<checking_started>07/01/2013 10:04:33</checking_started>
+<publication_date>08/01/2013</publication_date>
+<publication_date_stamp>1357626394</publication_date_stamp>
+<no_doc_ext>2013-000041</no_doc_ext>
+<statistics_version>4</statistics_version>
+<price_exact_eur>18390.64</price_exact_eur>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title>A/S Capital</global_winner_title>
+<global_winner_reg_num>40003088497</global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<populate_iub_winners>3</populate_iub_winners>
+<archived>1</archived></document>

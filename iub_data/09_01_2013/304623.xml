@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><document>
+<id>304623</id>
+<general>
+<name>APVIENOTĀS JAUNAUCES UN RUBAS PAGASTU PĀRVALDES CEĻU UZTURĒŠANAS DARBI</name>
+<procurement_year>2013</procurement_year>
+<procurement_id>3</procurement_id>
+<authority_id>94232</authority_id>
+<authority_name>Apvienotā Jaunauces un Rubas pagastu pārvalde</authority_name>
+<authority_reg_num>90000017580</authority_reg_num>
+<address>"Pagastmāja", Rubas pagasts, Saldus novads</address>
+<city>Saldus novads</city>
+<zip_code>LV3894</zip_code>
+<country>1</country>
+<main_cpv>
+<code>50230000-6</code>
+<code_num>50230000</code_num>
+<type>3</type>
+<lv>Remonta, tehniskās apkopes un saistītie pakalpojumi attiecībā uz ceļiem un citām iekārtām.</lv>
+<en>Repair, maintenance and associated services related to roads and other equipment</en>
+<cpv_a>50</cpv_a>
+<cpv_b>230000-6</cpv_b></main_cpv>
+<cpv_list></cpv_list>
+<additional_cpv_list></additional_cpv_list>
+<price_from>3000</price_from>
+<price_to>20000</price_to>
+<procurement_type>1</procurement_type>
+<procurement_code>AJRPP 2013/3</procurement_code></general>
+<status>1</status>
+<approval_date_stamp>1357715100</approval_date_stamp>
+<divided_in_parts>0</divided_in_parts>
+<parts></parts>
+<doc_places>1</doc_places>
+<submit_places>1</submit_places>
+<authority_name>Apvienotā Jaunauces un Rubas pagastu pārvalde</authority_name>
+<address>"Pagastmāja", Rubas pagasts, Saldus novads</address>
+<authority_reg_num>90000017580</authority_reg_num>
+<zip_code>LV3894</zip_code>
+<city>Saldus novads</city>
+<country>1</country>
+<documentation_online>1</documentation_online>
+<authority_id>94232</authority_id>
+<creation_date>09/01/2013</creation_date>
+<creation_date_stamp>1357714833</creation_date_stamp>
+<contactplaces>
+<contactplace>
+<type>Galvenais kontaktpunkts</type>
+<name>Apvienotā Jaunauces un Rubas pagastu pārvalde</name>
+<short_name>AJRPP</short_name>
+<reg_num></reg_num>
+<address></address>
+<city></city>
+<zip_code></zip_code>
+<country></country>
+<place>Apvienotā Jaunauces un Rubas pagastu pārvalde</place>
+<person>Gunta Kalniņa</person>
+<phone>63825656</phone>
+<fax>63825656</fax>
+<email>jaunauce.ruba@saldus.lv</email>
+<url>http://www.saldus.lv</url>
+<url_client>http://www.saldus.lv/4798/iepirkumi4/apvienota-jaunauces-un-rubas-pagastu-parvalde/</url_client>
+<procurement_doc_url></procurement_doc_url>
+<tender_submit_url></tender_submit_url></contactplace></contactplaces>
+<middleman>0</middleman>
+<eu_list></eu_list>
+<type>notice_planned_contract</type>
+<language>11</language>
+<place>Apvienotā Jaunauces un Rubas pagastu pārvalde</place>
+<region>1</region>
+<service_type>APVIENOTĀS JAUNAUCES UN RUBAS PAGASTU PĀRVALDES CEĻU UZTURĒŠANAS DARBI</service_type>
+<start_date>01/03/2013</start_date>
+<end_date>31/12/2013</end_date>
+<eu_fund>0</eu_fund>
+<environment_req>0</environment_req>
+<tender_for_parts>0</tender_for_parts>
+<submit_date>21/01/2013</submit_date>
+<submit_date_stamp>1358719200</submit_date_stamp>
+<timelimits>
+<dok_req_date>21/01/2013</dok_req_date>
+<work_time>08.00-16.00</work_time>
+<submit_hour>10</submit_hour>
+<submit_minute>1</submit_minute>
+<tender_open_hour>0</tender_open_hour>
+<tender_open_minute>0</tender_open_minute>
+<submit_date>21/01/2013</submit_date>
+<submit_date_stamp>1358719200</submit_date_stamp></timelimits>
+<approval_date>09/01/2013</approval_date>
+<publication_date>09/01/2013</publication_date>
+<publication_date_stamp>1357715100</publication_date_stamp>
+<statistics_version>4</statistics_version>
+<eur_conv_version>2</eur_conv_version>
+<global_winner_title></global_winner_title>
+<global_winner_reg_num></global_winner_reg_num>
+<set_global_data_version>1</set_global_data_version>
+<archived>1</archived></document>
