@@ -119,13 +119,14 @@ module.exports = {
      */
     parseQueryParams(queryParams) {
         let {
-            filters = {},
-            sorters = {},
+            filters,
+            sorters,
             limit
         } = queryParams;
 
         limit = limit ? parseInt(limit, 10) : 0;
-        filters = filters ? JSON.parse(filters) : {};
+        filters = typeof filters === 'string' ? JSON.parse(filters) : {};
+        sorters = typeof filters === 'string' ? JSON.parse(filters) : {};
 
         return { filters, sorters, limit };
     },
