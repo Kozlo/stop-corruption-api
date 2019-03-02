@@ -125,6 +125,7 @@ module.exports = {
         } = queryParams;
 
         limit = limit ? parseInt(limit, 10) : 0;
+        filters = filters ? JSON.parse(filters) : {};
 
         return { filters, sorters, limit };
     },

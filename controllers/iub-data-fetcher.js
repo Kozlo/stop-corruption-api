@@ -50,13 +50,15 @@ function parseIUBXmlToJson(xmlPath) {
             contract_price_exact = {}, // Kopējā līgumcena
             exact_currency = {}, // Kopējā līgumcena – valūta.
             tender_num = {}, // Saņemto piedāvājumu skaits.
+            contract_name = {}, // Iepirkuma nosaukums
+            creation_date_stamp = {}, // "Attiecīgā datuma unix timestamp vērtība" - tehniskās dokumentācijas
           } = {},
         } = {},
         eu_fund,
       } = parsedData.document;
 
       if (!id || !id._text) {
-        console.log('No id found...');
+        // console.log('No id found...');
         return resolve(true);
       }
 
@@ -66,17 +68,22 @@ function parseIUBXmlToJson(xmlPath) {
           document_id: id._text,
           authority_name: authority_name ? authority_name._text : null,
           authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
-          main_cpv: {
-            lv: main_cpv && main_cpv.lv ? main_cpv.lv : null,
-            en: main_cpv && main_cpv.en ? main_cpv.en : null,
-          },
+          main_cpv: main_cpv ? {
+            lv: main_cpv.lv || null,
+            en: main_cpv.en || null,
+            code_num: main_cpv.code_num || null,
+            name: main_cpv.name || null,
+            authority_name: main_cpv.authority_name || null,
+          } : {},
           part_5_list: {
             part_5: {
-              decision_date: decision_date? decision_date._text : null,
+              decision_date: decision_date ? decision_date._text : null,
               contract_price_exact: contract_price_exact ? contract_price_exact._text : null,
-              exact_currency: exact_currency ? exact_currency._text: null,
+              exact_currency: exact_currency ? exact_currency._text : null,
               tender_num: tender_num ? tender_num._text : null,
-            },
+              contract_name: contract_name ? contract_name._text : null,
+              creation_date_stamp: creation_date_stamp ? creation_date_stamp._text : null,
+            }
           },
           eu_fund: eu_fund === '0' ? false : eu_fund === '1' ? true : undefined,
         },
@@ -101,7 +108,7 @@ function extractIUBFileData(filePath, ftpClient, year, month, day) {
   // Remove directory and extension for file name, so we can save it in a specific directory
   const fileName = filePath.replace(`${IUB.IUBLocalDataDirectory}/`, '').replace('.tar.gz', '');
 
-  console.log('extracting data...', filePath, fileName);
+  // console.log('extracting data...', filePath, fileName);
 
   // Decompress IUB .tar.gz files to our server
   targz.decompress({
@@ -109,7 +116,7 @@ function extractIUBFileData(filePath, ftpClient, year, month, day) {
     dest: `${IUB.IUBLocalDataDirectory}/${fileName}`
   }, err => {
     if (err) throw err;
-console.log('data extracted... decompressing...')
+// console.log('data extracted... decompressing...')
     // If there are no errors, we have successfully decompressed the files
     // First let's delete the .tar.gz file
     fs.unlinkSync(filePath);
@@ -117,7 +124,7 @@ console.log('data extracted... decompressing...')
     // Now let's read files in the extracted directory
     fs.readdir(`${IUB.IUBLocalDataDirectory}/${fileName}`, (err, files) => {
       if (err) throw err;
-console.log('directory read: ', `${IUB.IUBLocalDataDirectory}/${fileName}`)
+// console.log('directory read: ', `${IUB.IUBLocalDataDirectory}/${fileName}`)
       // Create promise array for the file parsing
       const IUBFileParsingPromises = [];
 
@@ -132,7 +139,7 @@ console.log('directory read: ', `${IUB.IUBLocalDataDirectory}/${fileName}`)
         // After all files are parsed, make sure that we delete directory with files
         fse.remove(`${IUB.IUBLocalDataDirectory}/${fileName}`, err => {
           if (err) throw err;
-          console.log('directory and files deleted...');
+          // console.log('directory and files deleted...');
           callNextIteration(ftpClient, year, month, day);
         });
       })
@@ -160,7 +167,7 @@ function callNextIteration(ftpClient, year, month, day) {
   // const todayDate = today.getDate();
   if (2018 === fetchedDateYear && fetchedDateMonth === 11 && fetchedDateDate === 31) {
     // Close FTP connection
-    console.log('toady reached, ending FTP...')
+    // console.log('toady reached, ending FTP...')
     return ftpClient.end();
   } else {
     const nextDay = new Date();
@@ -168,15 +175,15 @@ function callNextIteration(ftpClient, year, month, day) {
     nextDay.setMonth(parseInt(month) - 1);
     nextDay.setDate(fetchedDateDate + 1);
 
-    console.log(nextDay);
+    // console.log(nextDay);
     const nextDayMonth = nextDay.getMonth() + 1;
     const nextDayDate = nextDay.getDate();
     const nextDayParsedDate = nextDayDate < 10 ? `0${nextDayDate}` : nextDayDate.toString();
     const nextDayParsedMonth = nextDayMonth < 10 ? `0${nextDayMonth}` : nextDayMonth.toString();
     const nextDayYear = nextDay.getFullYear().toString();
 
-    console.log('fetching nextDay', nextDayYear, nextDayMonth, nextDayDate);
-    console.log('fetching nextDay (parsed)', nextDayYear, nextDayParsedMonth, nextDayParsedDate);
+    // console.log('fetching nextDay', nextDayYear, nextDayMonth, nextDayDate);
+    // console.log('fetching nextDay (parsed)', nextDayYear, nextDayParsedMonth, nextDayParsedDate);
     ftpClient.end();
     return fetchIUBData(nextDayYear, nextDayParsedMonth, nextDayParsedDate);
   }
@@ -190,7 +197,7 @@ function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
   // Get file stream from IUB FTP server
   ftpClient.get(fileToFetch.name, (err, stream) => {
     if (err) throw err;
-console.log('fetched:', fileToFetch.name)
+// console.log('fetched:', fileToFetch.name)
     // When ZIP file is saved, make sure to extract and save data
     stream.once('close', () => {
       // Save last fetched file data in the database
@@ -257,11 +264,11 @@ console.log('fetched:', fileToFetch.name)
  * @param {string} day string
  */
 function readIUBFtpStructure(ftpClient, year, month, day) {
-  console.log('readIUBFtpStructure', year, month, day)
+  // console.log('readIUBFtpStructure', year, month, day)
   // List all initial files/directories of IUB FTP
   ftpClient.list((err, rootList) => {
     if (err) throw err;
-console.log('ftp list success')
+// console.log('ftp list success')
     // Retrieve current directory
     ftpClient.pwd((err, currentDir) => {
       if (err) throw err;
@@ -297,7 +304,7 @@ console.log('ftp list success')
           ftpClient.cwd(`${currentDir}/${fetchYearDirectory.name}`, err => {
             if (err) throw err;
 
-            console.log('listing files...');
+            // console.log('listing files...');
             // List files in the year directory
             ftpClient.list((err, monthList) => {
               if (err) throw err;
@@ -306,13 +313,13 @@ console.log('ftp list success')
               // TODO: Later, when DB is hooked up, we can filter directories that have not yet been added to our db
               const fetchMonthDirectory = monthList.filter(item => item.type === 'd' && item.name == `${month}_${year}`)[0];
 
-              console.log('fetchMonthDirectory...', fetchMonthDirectory);
+              // console.log('fetchMonthDirectory...', fetchMonthDirectory);
 
               // Navigate inside the month directory
               ftpClient.cwd(`${currentDir}/${fetchYearDirectory.name}/${fetchMonthDirectory.name}`, err => {
                 if (err) throw err;
 
-                console.log('listing files in mont dir...', `${currentDir}/${fetchYearDirectory.name}/${fetchMonthDirectory.name}`);
+                // console.log('listing files in mont dir...', `${currentDir}/${fetchYearDirectory.name}/${fetchMonthDirectory.name}`);
                 // List the files in month directory
                 ftpClient.list((err, fileList) => {
                   if (err) throw err;
@@ -322,7 +329,7 @@ console.log('ftp list success')
                   let fileToFetch = fileList.filter(item => item.name.indexOf('.tar.gz') !== -1 && item.name === `${day}_${month}_${year}.tar.gz`)[0];
     
                   if (fileToFetch) {
-                    console.log('downloading data....')
+                    // console.log('downloading data....')
                     // Download the file and extract the data
                     downloadIUBData(ftpClient, fileToFetch, year, month, day);
                   } else {
@@ -330,7 +337,7 @@ console.log('ftp list success')
 
                     // Check if we have fetched anything
                     // if (IUBfetchData.length === 0) {
-                      console.log('data not fetched');
+                    //   console.log('data not fetched');
                       // We have not, let's insert a new entry
                       fetch.create({
                         year: year,

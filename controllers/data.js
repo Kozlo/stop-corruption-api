@@ -21,7 +21,7 @@ module.exports = {
    */
   getAll(req, res, next) {
     const { filters, sorters, limit } = helpers.parseQueryParams(req.query);
-
+console.log(typeof filters, filters)
     IubEntry.find(filters)
       .sort(sorters)
       .limit(limit)
