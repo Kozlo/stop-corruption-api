@@ -240,6 +240,10 @@ function readIUBFtpStructure(ftpClient) {
             year = date.getFullYear().toString();
             month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`;
             day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate().toString();
+
+            console.log('Extries exist, getting new ones...', `${year}/${month}/${day}`);
+          } else {
+            console.log('Initiating new fetch', `${year}/${month}/${day}`);
           }
 
           // Filter only year directories and exclude any files.
