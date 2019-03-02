@@ -59,7 +59,7 @@ function parseIUBXmlToJson(xmlPath) {
         { document_id: id._text },
         {
           document_id: id._text,
-          authority_name: authority_name ? authority_name['_text'] : undefined,
+          authority_name: authority_name ? authority_name._text : undefined,
           authority_reg_num: authority_reg_num._text,
           main_cpv: {
             lv: main_cpv.lv,
@@ -219,7 +219,7 @@ function readIUBFtpStructure(ftpClient) {
       fetch.find()
         .then(IUBfetchData => {
           // Declare year, month and day
-          let year = '2013';
+          let year = '2015';
           let month = '01';
           let day = '01';
 

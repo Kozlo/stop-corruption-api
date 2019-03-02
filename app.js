@@ -25,7 +25,7 @@ const iubDataFetcher = require('./controllers/iub-data-fetcher');
 // DB setup
 //=================
 
-const database = process.env.DB_URI;
+const database = process.env.MONGODB_URI;
 
 mongoose.Promise = global.Promise;
 mongoose.connect(database, { useNewUrlParser: true }, () => console.log(`Successfully connected to the DB: ${database}`));
