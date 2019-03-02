@@ -37,13 +37,13 @@ function parseIUBXmlToJson(xmlPath) {
         return resolve(true);
       }
 
-      const {
+      let {
         id, // PVS dokumenta ID
         authority_name = {}, // Iestādes nosaukums
         authority_reg_num = {}, // Iestādes reģistrācijas Nr.
-        general: { // Vispārējie paziņojuma parametri
-          main_cpv = {}, // Datu bloks satur iepirkuma galveno CPV kodu
-        } = {},
+        general = {}, // { // Vispārējie paziņojuma parametri
+          // main_cpv = {}, // Datu bloks satur iepirkuma galveno CPV kodu
+        // } = {},
         part_5_list: { // Līguma slēgšanas tiesību piešķiršana
           part_5: { // Saraksts var saturēt vienu vai vairākas paziņojuma par iepirkuma procedūras rezultātiem V daļas (paziņojuma par līguma slēgšanas tiesību piešķiršanu IV daļas) datu struktūras „part_5
             decision_date = {}, // Lēmuma pieņemšanas datums / Līguma slēgšanas datums
@@ -54,16 +54,42 @@ function parseIUBXmlToJson(xmlPath) {
             creation_date_stamp = {}, // "Attiecīgā datuma unix timestamp vērtība" - tehniskās dokumentācijas
           } = {},
         } = {},
+        main_cpv = {},
+        part_2 = {},
+        winner_list,
         eu_fund,
         additional_info: {
           approval_date = {},
+          approval_date_stamp = {},
+          update_date = {},
+          update_date_stamp = {},
         } = {},
+        publication_date = {},
+        publication_date_stamp = {},
       } = parsedData.document;
 
       if (!id || !id._text) {
-        // console.log('No id found...');
         return resolve(true);
       }
+
+
+      if (!winner_list || !winner_list.winner) {
+        if (
+          parsedData.document.part_5_list &&
+          parsedData.document.part_5_list.part_5 &&
+          parsedData.document.part_5_list.part_5.winner_list &&
+          parsedData.document.part_5_list.part_5.winner_list.winner
+        ) {
+          winner_list = {
+            winner: parsedData.document.part_5_list.part_5.winner_list.winner
+          };
+        } else {
+          console.log('no winner');
+          return resolve(true);
+        }
+      }
+
+      const { winner } = winner_list;
 
       IubEntry.findOneAndUpdate(
         { document_id: id._text },
@@ -71,13 +97,24 @@ function parseIUBXmlToJson(xmlPath) {
           document_id: id._text,
           authority_name: authority_name ? authority_name._text : null,
           authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
-          main_cpv: main_cpv ? {
-            lv: main_cpv.lv || null,
-            en: main_cpv.en || null,
-            code_num: main_cpv.code_num || null,
-            name: main_cpv.name || null,
-            authority_name: main_cpv.authority_name || null,
-          } : {},
+          // main_cpv:  {
+          //   lv: 'aaa',
+          //   en: main_cpv.en || null,
+          //   code_num: main_cpv.code_num || null,
+          //   name: main_cpv.name || null,
+          //   authority_name: main_cpv.authority_name || null,
+          // },
+          general: {
+            // main_cpv: general.main_cpv ? {
+              // lv: general.main_cpv.lv ? general.main_cpv.lv._text : null,
+              // en: main_cpv.en ? main_cpv.en._text : null,
+              // code_num: main_cpv.code_num ? main_cpv.code_num._text : null,
+              // name: main_cpv.name ? main_cpv.name._text : null,
+              // authority_name: main_cpv.authority_name ? main_cpv.authority_name._text : null,
+              // contract_price_exact: main_cpv.contract_price_exact ? main_cpv.contract_price_exact._text : null,
+              // approval_date: main_cpv.approval_date ? main_cpv.approval_date._text : null,
+            // } : {},
+          },
           part_5_list: {
             part_5: {
               decision_date: decision_date ? decision_date._text : null,
@@ -88,10 +125,30 @@ function parseIUBXmlToJson(xmlPath) {
               creation_date_stamp: creation_date_stamp ? creation_date_stamp._text : null,
             }
           },
+          part_2: {
+            price_exact: part_2.price_exact && !isNaN(parseFloat(part_2.price_exact._text)) ? parseFloat(part_2.price_exact._text) : null,
+            price_exact_eur: part_2.price_exact_eur && !isNaN(parseFloat(part_2.price_exact_eur._text)) ? parseFloat(part_2.price_exact_eur._text) : null,
+          },
           additional_info: {
             approval_date: approval_date ? approval_date._text : null,
+            approval_date_stamp: approval_date_stamp ? approval_date_stamp._text : null,
+            update_date: update_date ? update_date._text : null,
+            update_date_stamp: update_date_stamp ? update_date_stamp._text : null,
+
+          },
+          winner_list: {
+            winner: {
+              winner_name: winner.winner_name ? winner.winner_name._text : null,
+              winner_reg_num: winner.winner_reg_num ? winner.winner_reg_num._text : null,
+              winner_country: winner.winner_country ? winner.winner_country._text : null,
+              price_exact_eur: winner.price_exact_eur && !isNaN(parseFloat(winner.price_exact_eur._text)) ? parseFloat(winner.price_exact_eur._text) : null,
+              approval_date: winner.approval_date ? winner.approval_date._text : null,
+              publication_date: winner.publication_date ? winner.publication_date._text : null,
+            },
           },
           eu_fund: eu_fund === '0' ? false : eu_fund === '1' ? true : undefined,
+          publication_date: publication_date ? publication_date._text : null,
+          publication_date_stamp: publication_date_stamp ? publication_date_stamp._text : null,
         },
         {
           upsert: true, // insert if not found

@@ -1,5 +1,36 @@
 const mongoose = require('mongoose');
 
+// const WinnerList = {
+//     winner: {
+//         winner_name: String,
+//         winner_reg_num: String,
+//         winner_address: String,
+//         winner_city: String,
+//         winner_zip_code: String,
+//         winner_country: String,
+//         winner_phone: String,
+//         winner_fax: String,
+//         winner_email: String,
+//         winner_url: String,
+//         publication_date: String,
+//         price_exact_eur: Number,
+//     }
+// };
+//
+// const MainCpv = {
+//     code: String,
+//     code_num: String,
+//     type: String,
+//     lv: String,
+//     en: String,
+//     cpv_a: String,
+//     cpv_b: String,
+//     authority_name: String,
+//     contract_price_exact: Number,
+//     number_of_participant: Number,
+//     approval_date: String,
+// };
+
 /**
  * Schema properties.
  *
@@ -19,15 +50,19 @@ const properties = {
     general: {
         procurement_code: String,
         procurement_id: String,
-        main_cpv: {
-            code: String,
-            code_num: String,
-            type: String,
-            lv: String,
-            en: String,
-            cpv_a: String,
-            cpv_b: String,
-        },
+        // main_cpv: {
+        //     code: String,
+        //     code_num: String,
+        //     type: String,
+        //     lv: String,
+        //     en: String,
+        //     cpv_a: String,
+        //     cpv_b: String,
+        //     authority_name: String,
+        //     contract_price_exact: Number,
+        //     number_of_participant: Number,
+        //     approval_date: String,
+        // },
         name: String,
         price_from: Number,
         price_to: Number,
@@ -43,6 +78,19 @@ const properties = {
         cpv_list: String,
         additional_cpv_list: String,
     },
+    // main_cpv: {
+    //     code: String,
+    //     code_num: String,
+    //     type: String,
+    //     lv: String,
+    //     en: String,
+    //     cpv_a: String,
+    //     cpv_b: String,
+    //     authority_name: String,
+    //     contract_price_exact: Number,
+    //     number_of_participant: Number,
+    //     approval_date: String,
+    // },
     divided_in_parts: String,
     contract_name: String,
     place: String,
@@ -93,20 +141,22 @@ const properties = {
             publicate_winner: String,
             party_nr: String,
             party_nr_secret: String,
-            winner_list: {
-                winner: {
-                    winner_name: String,
-                    winner_reg_num: String,
-                    winner_address: String,
-                    winner_city: String,
-                    winner_zip_code: String,
-                    winner_country: String,
-                    winner_phone: String,
-                    winner_fax: String,
-                    winner_email: String,
-                    winner_url: String,
-                }
-            }
+            // winner_list: {
+            //     winner: {
+            //         winner_name: String,
+            //         winner_reg_num: String,
+            //         winner_address: String,
+            //         winner_city: String,
+            //         winner_zip_code: String,
+            //         winner_country: String,
+            //         winner_phone: String,
+            //         winner_fax: String,
+            //         winner_email: String,
+            //         winner_url: String,
+            //         publication_date: String,
+            //         price_exact_eur: Number,
+            //     }
+            // },
         }
     },
     authority_name: String,
@@ -161,7 +211,38 @@ const properties = {
         approval_date_stamp: String,
         update_date: String,
         update_date_stamp: String,
-    }
+    },
+    part_2: {
+        price_exact: Number,
+        price_exact_eur: Number,
+    },
+    winner_list: {
+        winner: {
+            winner_name: String,
+            winner_reg_num: String,
+            winner_address: String,
+            winner_city: String,
+            winner_zip_code: String,
+            winner_country: String,
+            winner_phone: String,
+            winner_fax: String,
+            winner_email: String,
+            winner_url: String,
+            publication_date: String,
+            price_exact_eur: Number,
+        }
+    },
+    // code: String,
+    // code_num: String,
+    // type: String,
+    // lv: String,
+    // en: String,
+    // cpv_a: String,
+    // cpv_b: String,
+    // authority_name: String,
+    contract_price_exact: Number,
+    number_of_participant: Number,
+    // approval_date: String,
 };
 
 const schema = new mongoose.Schema(properties);
