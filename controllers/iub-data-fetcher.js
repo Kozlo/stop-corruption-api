@@ -39,7 +39,7 @@ function parseIUBXmlToJson(xmlPath) {
 
       const {
         id, // PVS dokumenta ID
-        authority_name, // Iestādes nosaukums
+        authority_name = {}, // Iestādes nosaukums
         authority_reg_num = {}, // Iestādes reģistrācijas Nr.
         general: { // Vispārējie paziņojuma parametri
           main_cpv = {}, // Datu bloks satur iepirkuma galveno CPV kodu
@@ -55,22 +55,27 @@ function parseIUBXmlToJson(xmlPath) {
         eu_fund,
       } = parsedData.document;
 
+      if (!id || !id._text) {
+        console.log('No id found...');
+        return resolve(true);
+      }
+
       IubEntry.findOneAndUpdate(
         { document_id: id._text },
         {
           document_id: id._text,
-          authority_name: authority_name ? authority_name._text : undefined,
-          authority_reg_num: authority_reg_num._text,
+          authority_name: authority_name ? authority_name._text : null,
+          authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
           main_cpv: {
-            lv: main_cpv.lv,
-            en: main_cpv.en,
+            lv: main_cpv && main_cpv.lv ? main_cpv.lv : null,
+            en: main_cpv && main_cpv.en ? main_cpv.en : null,
           },
           part_5_list: {
             part_5: {
-              decision_date: decision_date._text,
-              contract_price_exact: contract_price_exact._text,
-              exact_currency: exact_currency._text,
-              tender_num: tender_num._text,
+              decision_date: decision_date? decision_date._text : null,
+              contract_price_exact: contract_price_exact ? contract_price_exact._text : null,
+              exact_currency: exact_currency ? exact_currency._text: null,
+              tender_num: tender_num ? tender_num._text : null,
             },
           },
           eu_fund: eu_fund === '0' ? false : eu_fund === '1' ? true : undefined,
