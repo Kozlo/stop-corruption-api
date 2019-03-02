@@ -15,6 +15,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 /**
  * Import custom controllers.
@@ -38,6 +39,7 @@ mongoose.connection.on('error', err => console.info(`Error: Could not connect to
 const app = express();
 // Express middleware
 app.use(helmet());
+app.use(cors());
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
 app.use(express.json());
