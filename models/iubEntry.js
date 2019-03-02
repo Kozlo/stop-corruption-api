@@ -60,7 +60,7 @@ const properties = {
             tender_num: String,
             initial_price: Number,
             initial_currency: String,
-            contract_price_exact: String,
+            contract_price_exact: Number,
             exact_currency: String,
             contract_price_from: Number,
             contract_price_to: Number,

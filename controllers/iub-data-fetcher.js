@@ -78,7 +78,7 @@ function parseIUBXmlToJson(xmlPath) {
           part_5_list: {
             part_5: {
               decision_date: decision_date ? decision_date._text : null,
-              contract_price_exact: contract_price_exact ? contract_price_exact._text : null,
+              contract_price_exact: contract_price_exact ? parseFloat(contract_price_exact._text) : null,
               exact_currency: exact_currency ? exact_currency._text : null,
               tender_num: tender_num ? tender_num._text : null,
               contract_name: contract_name ? contract_name._text : null,
