@@ -128,6 +128,12 @@ module.exports = {
         filters = typeof filters === 'string' ? JSON.parse(filters) : {};
         sorters = typeof filters === 'string' ? JSON.parse(filters) : {};
 
+        for (let prop in filters) {
+            if (typeof filters[prop] === 'string') {
+                filters[prop] = new RegExp(filters[prop]);
+            }
+        }
+
         return { filters, sorters, limit };
     },
 };

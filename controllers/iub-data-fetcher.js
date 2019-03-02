@@ -55,6 +55,9 @@ function parseIUBXmlToJson(xmlPath) {
           } = {},
         } = {},
         eu_fund,
+        additional_info: {
+          approval_date = {},
+        } = {},
       } = parsedData.document;
 
       if (!id || !id._text) {
@@ -78,12 +81,15 @@ function parseIUBXmlToJson(xmlPath) {
           part_5_list: {
             part_5: {
               decision_date: decision_date ? decision_date._text : null,
-              contract_price_exact: contract_price_exact ? parseFloat(contract_price_exact._text) : null,
+              contract_price_exact: contract_price_exact && !isNaN(contract_price_exact) ? parseFloat(contract_price_exact._text) : null,
               exact_currency: exact_currency ? exact_currency._text : null,
               tender_num: tender_num ? tender_num._text : null,
               contract_name: contract_name ? contract_name._text : null,
               creation_date_stamp: creation_date_stamp ? creation_date_stamp._text : null,
             }
+          },
+          additional_info: {
+            approval_date: approval_date ? approval_date._text : null,
           },
           eu_fund: eu_fund === '0' ? false : eu_fund === '1' ? true : undefined,
         },

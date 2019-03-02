@@ -156,6 +156,12 @@ const properties = {
     set_global_data_version: String,
     populate_iub_winners: String,
     archived: Boolean,
+    additional_info: {
+        approval_date: String,
+        approval_date_stamp: String,
+        update_date: String,
+        update_date_stamp: String,
+    }
 };
 
 const schema = new mongoose.Schema(properties);
