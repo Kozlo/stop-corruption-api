@@ -6,6 +6,7 @@ const config = require('../config');
 
 const IubEntry = require('../models/iubEntry');
 
+const helpers = require('../helpers');
 const { httpStatusCodes } = config;
 
 module.exports = {
@@ -19,7 +20,11 @@ module.exports = {
    * @param {Function} next Executes the next matching route
    */
   getAll(req, res, next) {
-    IubEntry.find()
+    const { filters, sorters, limit } = helpers.parseQueryParams(req.query);
+
+    IubEntry.find(filters)
+      .sort(sorters)
+      .limit(limit)
       .then(entries => res.status(httpStatusCodes.ok).json(entries))
       .catch(err => next(err));
   },

@@ -107,4 +107,25 @@ module.exports = {
 
         return parsedBody;
     },
+
+    /**
+     * Extracts filters, sorters and config from query params.
+     *
+     * Instantiates them to empty objects if they are not defined.
+     * Additionally parses the limit to an int if it's present or sets to 0 (i.e. get all resutls)
+     *
+     * @param {Object} queryParams Request query parameters.
+     * @returns {Object} Query parameters
+     */
+    parseQueryParams(queryParams) {
+        let {
+            filters = {},
+            sorters = {},
+            limit
+        } = queryParams;
+
+        limit = limit ? parseInt(limit, 10) : 0;
+
+        return { filters, sorters, limit };
+    },
 };
