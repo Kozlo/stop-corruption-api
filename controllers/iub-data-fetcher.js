@@ -93,8 +93,11 @@ function parseIUBXmlToJson(xmlPath) {
  * @param {Object} filePath - Path to the file which needs to be extracted.
  */
 function extractIUBFileData(filePath) {
+  console.log('extracting data...', filePath)
   // Remove directory and extension for file name, so we can save it in a specific directory
   const fileName = filePath.replace(`${IUB.IUBLocalDataDirectory}/`, '').replace('.tar.gz', '');
+
+  console.log('filename', fileName)
 
   // Decompress IUB .tar.gz files to our server
   targz.decompress({
