@@ -327,118 +327,53 @@ function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
  * @param {string} day string
  */
 function readIUBFtpStructure(ftpClient, year, month, day) {
-  // console.log('readIUBFtpStructure', year, month, day)
   // List all initial files/directories of IUB FTP
   ftpClient.list((err, rootList) => {
     if (err) throw err;
-// console.log('ftp list success')
+
+    // Find the year directories and exclude any files.
+    const directoryTypeName = 'd';
+    const fetchYearDirectoryName = rootList.find(item => item.type === directoryTypeName && item.name === year).name;
+
     // Retrieve current directory
     ftpClient.pwd((err, currentDir) => {
       if (err) throw err;
 
-      // Find last fetched data
-      fetch.find()
-        .then(IUBfetchData => {
-          // If there are fetched data, set information about next fetchable file
-          // if (IUBfetchData.length > 0) {
-          //   year = IUBfetchData[0].year;
-          //   month = IUBfetchData[0].month;
-          //   day = IUBfetchData[0].day;
+      const yearDirectoryPath = `${currentDir}/${fetchYearDirectoryName}`;
 
-            // Check if we 
-            // const date = new Date()
-            // date.setFullYear(parseInt(year, 10));
-            // date.setTime(date.getTime() + 86400000); // 86400000 is one day
-            //
-            // year = date.getFullYear().toString();
-            // month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`;
-            // day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate().toString();
+      // Navigate inside the year directory
+      ftpClient.cwd(yearDirectoryPath, err => {
+        if (err) throw err;
 
-            // console.log('Getting entries...', `${year}/${month}/${day}`);
-          // } else {
-          //   console.log('Initiating new fetch', `${year}/${month}/${day}`);
-          // }
+        // List files in the year directory
+        ftpClient.list((err, monthList) => {
+          if (err) throw err;
 
-          // Filter only year directories and exclude any files.
-          // TODO: Later, when DB is hooked up, we can filter directories that have not yet been added to our db
-          const fetchYearDirectory = rootList.filter(item => item.type === 'd' && item.name === year)[0];
-    
-          // Navigate inside the year directory
-          ftpClient.cwd(`${currentDir}/${fetchYearDirectory.name}`, err => {
+          // Filter out only month directories and exclude any files
+          const fetchMonthDirectoryName = monthList.find(item => item.type === 'd' && item.name == `${month}_${year}`).name;
+          const monthDirectoryName = `${currentDir}/${fetchYearDirectoryName}/${fetchMonthDirectoryName}`;
+
+          // Navigate inside the month directory
+          ftpClient.cwd(monthDirectoryName, err => {
             if (err) throw err;
 
-            // console.log('listing files...');
-            // List files in the year directory
-            ftpClient.list((err, monthList) => {
+            // List the files in month directory
+            ftpClient.list((err, fileList) => {
               if (err) throw err;
-    
-              // Filter out only month directories and exclude any files
-              // TODO: Later, when DB is hooked up, we can filter directories that have not yet been added to our db
-              const fetchMonthDirectory = monthList.filter(item => item.type === 'd' && item.name == `${month}_${year}`)[0];
 
-              // console.log('fetchMonthDirectory...', fetchMonthDirectory);
+              // Filter out only tar.gz files
+              let fileToFetch = fileList.find(item => item.name.indexOf('.tar.gz') !== -1 && item.name === `${day}_${month}_${year}.tar.gz`);
 
-              // Navigate inside the month directory
-              ftpClient.cwd(`${currentDir}/${fetchYearDirectory.name}/${fetchMonthDirectory.name}`, err => {
-                if (err) throw err;
-
-                // console.log('listing files in mont dir...', `${currentDir}/${fetchYearDirectory.name}/${fetchMonthDirectory.name}`);
-                // List the files in month directory
-                ftpClient.list((err, fileList) => {
-                  if (err) throw err;
-    
-                  // Filter out only tar.gz files
-                  // TODO: Later, when DB is hooked up, we can filter ZIP files that have not yet been added to our db
-                  let fileToFetch = fileList.filter(item => item.name.indexOf('.tar.gz') !== -1 && item.name === `${day}_${month}_${year}.tar.gz`)[0];
-    
-                  if (fileToFetch) {
-                    // console.log('downloading data....')
-                    // Download the file and extract the data
-                    downloadIUBData(ftpClient, fileToFetch, year, month, day);
-                  } else {
-                    callNextIteration(ftpClient, year, month, day);
-
-                    // Check if we have fetched anything
-                    // if (IUBfetchData.length === 0) {
-                    //   console.log('data not fetched');
-                      // We have not, let's insert a new entry
-                      fetch.create({
-                        year: year,
-                        month: month,
-                        day: day,
-                        fetchedAt: new Date().toISOString()
-                      })
-                      .then(() => {
-                        // Close FTP connection
-                        ftpClient.end();
-                      })
-                      .catch(err => {
-                        if (err) throw err;
-                      });
-                    // } else {
-                    //   console.log('we already have data');
-                    //
-                    //   // We have already inserted, let's update it
-                    //   fetch.findByIdAndUpdate(IUBfetchData[0]._id, {
-                    //     year: year,
-                    //     month: month,
-                    //     day: day,
-                    //     fetchedAt: new Date().toISOString()
-                    //   }, { 'new': true, runValidators: true })
-                    //   .then(() => ftpClient.end())
-                    //   .catch(err => {
-                    //     if (err) throw err;
-                    //   });
-                    // }
-                  }
-                });
-              });
+              if (fileToFetch) {
+                // Download the file and extract the data
+                downloadIUBData(ftpClient, fileToFetch, year, month, day);
+              } else {
+                callNextIteration(ftpClient, year, month, day);
+              }
             });
           });
-        })
-        .catch(err => {
-          if (err) throw err;
         });
+      });
     });
   });
 }

@@ -63,3 +63,10 @@ typings/
 # other
 .idea
 start.sh
+
+
+# exclude everything in the IUB folder expect for 1 file that is needed to maintain the folder inside the project
+iub_data/*
+
+# exception to the rule
+!iub_data/.gitkeep
