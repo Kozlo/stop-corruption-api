@@ -7,12 +7,12 @@ const fse = require('fs-extra');
 const targz = require('targz');
 const xmlParser = require('xml-js');
 const IubEntry = require('../models/iubEntry');
-const fetch = require('../models/fetch');
 
 /**
- * Include configuration
+ * Include configuration and helpers
  */
 const { IUB } = require('../config');
+const helpers = require('../helpers');
 
 /**
  * Parses XML file to JSON string.
@@ -166,12 +166,15 @@ function parseIUBXmlToJson(xmlPath) {
 /**
  * Extracts a specific .tar.gz file and saves the files to the database.
  * @param {Object} filePath - Path to the file which needs to be extracted.
+ * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
+ * @param {string} year Year string (e.g. '2014')
+ * @param {string} month Month string (e.g. '01')
+ * @param {string} day Date string (e.g. '31')
  */
 function extractIUBFileData(filePath, ftpClient, year, month, day) {
   // Remove directory and extension for file name, so we can save it in a specific directory
   const fileName = filePath.replace(`${IUB.IUBLocalDataDirectory}/`, '').replace('.tar.gz', '');
-
-  // console.log('extracting data...', filePath, fileName);
+  const fileDirectoryPath = `${IUB.IUBLocalDataDirectory}/${fileName}`;
 
   // Decompress IUB .tar.gz files to our server
   targz.decompress({
@@ -179,75 +182,67 @@ function extractIUBFileData(filePath, ftpClient, year, month, day) {
     dest: `${IUB.IUBLocalDataDirectory}/${fileName}`
   }, err => {
     if (err) throw err;
-// console.log('data extracted... decompressing...')
+
     // If there are no errors, we have successfully decompressed the files
     // First let's delete the .tar.gz file
     fs.unlinkSync(filePath);
 
     // Now let's read files in the extracted directory
-    fs.readdir(`${IUB.IUBLocalDataDirectory}/${fileName}`, (err, files) => {
+    fs.readdir(fileDirectoryPath, (err, files) => {
       if (err) throw err;
-// console.log('directory read: ', `${IUB.IUBLocalDataDirectory}/${fileName}`)
+
       // Create promise array for the file parsing
       const IUBFileParsingPromises = [];
 
       // Go through each of the files
       files.forEach(file => {
         // Add each file to promise
-        IUBFileParsingPromises.push(parseIUBXmlToJson(`${IUB.IUBLocalDataDirectory}/${fileName}/${file}`));
+        IUBFileParsingPromises.push(parseIUBXmlToJson(`${fileDirectoryPath}/${file}`));
       });
 
       // Wait for all files are parsed
-      return Promise.all(IUBFileParsingPromises).then(() => {
-        // After all files are parsed, make sure that we delete directory with files
-        fse.remove(`${IUB.IUBLocalDataDirectory}/${fileName}`, err => {
-          if (err) throw err;
-          // console.log('directory and files deleted...');
-          callNextIteration(ftpClient, year, month, day);
+      return Promise.all(IUBFileParsingPromises)
+        .then(() => {
+          // After all files are parsed, make sure that we delete directory with files
+          fse.remove(`${IUB.IUBLocalDataDirectory}/${fileName}`, err => {
+            if (err) throw err;
+
+            return callNextIteration(ftpClient, year, month, day);
+          });
+        })
+        .catch(err => {
+          throw err
         });
-      })
-      .catch(err => {
-        throw err
-      });
     });
   });
 }
 
 function callNextIteration(ftpClient, year, month, day) {
   const fetchedDate = new Date();
+
   fetchedDate.setFullYear(year);
   fetchedDate.setMonth(parseInt(month) - 1);
   fetchedDate.setDate(day);
-  const fetchedDateMonth = fetchedDate.getMonth() + 1;
-  const fetchedDateDate = fetchedDate.getDate();
-  const parsedDate = fetchedDateDate < 10 ? `0${fetchedDateDate}` : fetchedDateDate.toString();
-  const parsedMonth = fetchedDateMonth < 10 ? `0${fetchedDateMonth}` : fetchedDateMonth.toString();
-  const fetchedDateYear = fetchedDate.getFullYear();
 
-  // const today = new Date();
-  // const todayYear = today.getFullYear();
-  // const todayMonth = today.getMonth();
-  // const todayDate = today.getDate();
-  if (2018 === fetchedDateYear && fetchedDateMonth === 11 && fetchedDateDate === 31) {
+  if (helpers.isToday(fetchedDate)) {
     // Close FTP connection
-    // console.log('toady reached, ending FTP...')
+
     return ftpClient.end();
   } else {
     const nextDay = new Date();
+
     nextDay.setFullYear(year);
     nextDay.setMonth(parseInt(month) - 1);
-    nextDay.setDate(fetchedDateDate + 1);
+    nextDay.setDate(fetchedDate.getDate() + 1);
 
-    // console.log(nextDay);
     const nextDayMonth = nextDay.getMonth() + 1;
     const nextDayDate = nextDay.getDate();
     const nextDayParsedDate = nextDayDate < 10 ? `0${nextDayDate}` : nextDayDate.toString();
     const nextDayParsedMonth = nextDayMonth < 10 ? `0${nextDayMonth}` : nextDayMonth.toString();
     const nextDayYear = nextDay.getFullYear().toString();
 
-    // console.log('fetching nextDay', nextDayYear, nextDayMonth, nextDayDate);
-    // console.log('fetching nextDay (parsed)', nextDayYear, nextDayParsedMonth, nextDayParsedDate);
     ftpClient.end();
+
     return fetchIUBData(nextDayYear, nextDayParsedMonth, nextDayParsedDate);
   }
 }
@@ -255,63 +250,22 @@ function callNextIteration(ftpClient, year, month, day) {
  * Downloads a specific file from the IUB Database.
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
  * @param {Object} fileToFetch - Object of the current file that needs to be fetched.
+ * @param {string} year Year string (e.g. '2014')
+ * @param {string} month Month string (e.g. '01')
+ * @param {string} day Date string (e.g. '31')
  */
 function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
   // Get file stream from IUB FTP server
   ftpClient.get(fileToFetch.name, (err, stream) => {
     if (err) throw err;
-// console.log('fetched:', fileToFetch.name)
+
     // When ZIP file is saved, make sure to extract and save data
     stream.once('close', () => {
-      // Save last fetched file data in the database
-      fetch.find()
-        .then(IUBfetchData => {
-          // Let's retrieve data that we are going to save
-          const dateForFile = fileToFetch.name.replace('.tar.gz', '').split('_');
+      // Close FTP connection
+      ftpClient.end();
 
-          // Check if we have fetched anything
-          if (IUBfetchData.length === 0) {
-            // We have not, let's insert a new entry
-            fetch.create({
-              year: dateForFile[2],
-              month: dateForFile[1],
-              day: dateForFile[0],
-              fetchedAt: new Date().toISOString()
-            })
-            .then(() => {
-              // Close FTP connection
-              ftpClient.end();
-
-              // Extract IUB File
-              extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`, ftpClient, year, month, day);
-            })
-            .catch(err => {
-              if (err) throw err;
-            });
-          } else {
-            // We have already inserted, let's update it
-            fetch.findByIdAndUpdate(IUBfetchData[0]._id, {
-              year: dateForFile[2],
-              month: dateForFile[1],
-              day: dateForFile[0],
-              fetchedAt: new Date().toISOString()
-            }, { 'new': true, runValidators: true })
-            .then(() => {
-              // Close FTP connection
-              ftpClient.end();
-
-              // Extract IUB File
-              extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`, ftpClient, year, month, day);
-            })
-            .catch(err => {
-              if (err) throw err;
-            });
-          }
-        })
-        .catch(err => {
-          if (err) throw err;
-        });
-
+      // Extract IUB File
+      extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`, ftpClient, year, month, day);
     });
 
     // Save the file to local system
@@ -322,9 +276,9 @@ function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
 /**
  * Reads IUB FTP structure.
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
- * @param {string} year string
- * @param {string} month string
- * @param {string} day string
+ * @param {string} year Year string (e.g. '2014')
+ * @param {string} month Month string (e.g. '01')
+ * @param {string} day Date string (e.g. '31')
  */
 function readIUBFtpStructure(ftpClient, year, month, day) {
   // List all initial files/directories of IUB FTP
@@ -378,12 +332,22 @@ function readIUBFtpStructure(ftpClient, year, month, day) {
   });
 }
 
+/**
+ * Initializes a new FTP client instance and initiates fetching on ready.
+ *
+ * @param {string} year Year string (e.g. '2014')
+ * @param {string} month Month string (e.g. '01')
+ * @param {string} day Date string (e.g. '31')
+ */
 function fetchIUBData(year, month, day) {
   // Initialize ftp client
   const ftpClient = new ftpClientInstance();
 
   // Retrieve directory list
-  ftpClient.on('ready', () => readIUBFtpStructure(ftpClient, year, month, day));
+  ftpClient.on('ready', () => {
+    console.log(`Fetching: ${year}/${month}/${day}`);
+    readIUBFtpStructure(ftpClient, year, month, day);
+  });
 
   // Connect to the IUB FTP
   ftpClient.connect({

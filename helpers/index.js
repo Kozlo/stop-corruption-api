@@ -136,4 +136,22 @@ module.exports = {
 
         return { filters, sorters, limit };
     },
+
+    /**
+     * Checks if the
+     * @param {Date} dateToCheck Date to check against
+     * @returns {boolean} Flag showing if the fetched date is today
+     */
+    isToday(dateToCheck) {
+        const fetchedDateDate = dateToCheck.getDate();
+        const fetchedDateMonth = dateToCheck.getMonth() + 1;
+        const fetchedDateYear = dateToCheck.getFullYear();
+
+        const today = new Date();
+        const todayYear = today.getFullYear();
+        const todayMonth = today.getMonth();
+        const todayDate = today.getDate();
+
+        return fetchedDateYear === todayYear && fetchedDateMonth === todayMonth && fetchedDateDate === todayDate;
+    },
 };
