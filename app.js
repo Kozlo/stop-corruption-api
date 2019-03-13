@@ -60,7 +60,7 @@ app.use('/', routes);
 //=================
 
 // Fetch IUB data
-iubDataFetcher.fetchIUBData('2016', '12', '1');
+iubDataFetcher.fetchIUBData('2013', '01', '01');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

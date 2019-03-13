@@ -154,4 +154,39 @@ module.exports = {
 
         return fetchedDateYear === todayYear && fetchedDateMonth === todayMonth && fetchedDateDate === todayDate;
     },
+    propNameFinder,
 };
+
+/**
+ * Checks for missing properties in found date by comparing an existing object.
+ *
+ * Skips objects with _text properties as those are just string.
+ * Skips empty objects.
+ *
+ * @param obj
+ * @param comparisonObj
+ * @param parentProp
+ * @returns {*}
+ */
+function propNameFinder(obj, comparisonObj, parentProp = '') {
+    for (const prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            const val = obj[prop];
+            const compVal = comparisonObj[prop];
+
+            if (prop === '_text') {
+                return;
+            }
+
+            if (compVal === undefined) {
+                console.log(`Property ${parentProp}."${prop}" undefined:`, val);
+            } else if (typeof val === 'object' && typeof val._text !== 'string' && JSON.stringify(val) !== JSON.stringify({})) {
+                if (typeof compVal !== 'object') {
+                    return console.log(`Property ${parentProp}.${prop} is an object ${JSON.stringify(val)}, but the comparison value is not:`, compVal);
+                } else {
+                    return propNameFinder(val, comparisonObj[prop], `${parentProp}.${prop}`);
+                }
+            }
+        }
+    }
+}
