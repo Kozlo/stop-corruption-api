@@ -8,11 +8,29 @@ const targz = require('targz');
 const xmlParser = require('xml-js');
 const IubEntry = require('../models/iubEntry');
 
+const config = require('../config');
+
 /**
  * Include configuration and helpers
  */
-const { IUB } = require('../config');
+const { httpStatusCodes, monthStrings, dayStrings, IUB } = config;
 const helpers = require('../helpers');
+
+const allowedTypes = [
+  'notice_concluded_contract', // Informatīvs paziņojums par noslēgto līgumu
+  'notice_contract_rights', // Paziņojums par līguma slēgšanas tiesību piešķiršanu
+  'notice_exante', // Brīvprātīgs paziņojums par iepirkuma rezultātiem
+  'notice_soc_results', // Paziņojums par sociālajiem un citiem īpašiem paklapojumiem - paziņojums par līguma slēgšanas tiesību piešķiršanu
+  'notice_contract_rights_sps', // Paziņojums par līguma slēgšanas tiesību piešķiršanu - sabiedriskie pakalpojumi
+  'sps_notice_exante', // Brīvprātīgs paziņojums par iepirkuma rezultātiem - sabiedriskie pakalpojumi
+  'sps_soc_results', // Paziņojums par sociālajiem un citiem īpašiem paklapojumiem - paziņojums par līguma slēgšanas tiesību piešķiršanu (sabiedriskie pakalpojumi)
+  'notice_contract_rights_81', // Paziņojums par iepirkuma procedūras rezultātiem aizsardzības un drošības jomā
+  'notice_exante_81', // Brīvprātīgs paziņojums par iepirkuma rezultātiem aizsardzības un drošības jomā
+  'notice_concession_results', // Paziņojums par koncesijas piešķiršanu
+  'notice_concession_exante', // Brīvprātīgs paziņojums par koncesijas procedūras rezultātiem
+  'concession_soc_results', // Paziņojums par koncesijas piešķiršanu sociālajiem un citiem īpašiem pakalpojumiem
+  'notice_299_results', // Paziņojums par finansējuma saņēmēja iepirkuma procedūras rezultātiem
+];
 
 /**
  * Parses XML file to JSON string.
@@ -28,126 +46,114 @@ function parseIUBXmlToJson(xmlPath) {
       if (err) reject(err);
 
       // Parse XML to JSON
-      let parsedData;
+      let document;
 
       try {
-        parsedData = JSON.parse(xmlParser.xml2json(data, { compact: true, spaces: 4 }));
+        document = JSON.parse(xmlParser.xml2json(data, { compact: true, spaces: 4 })).document;
       } catch (e) {
         // console.error(e);
         return resolve(true);
       }
 
+      let price, parsedWinners = [];
       let {
         id, // PVS dokumenta ID
-        authority_name = {}, // Iestādes nosaukums
-        authority_reg_num = {}, // Iestādes reģistrācijas Nr.
+        type, // Dokumenta tips (paziņojums,lēmums utt.)
+        authority_name, // Iestādes nosaukums
+        authority_reg_num, // Iestādes reģistrācijas Nr.
+        eu_fund, // vai iepirkums saistīts ar ES fondu piesaisti
+        currency,
+        decision_date,
+        contract_price_exact,
         general = {}, // { // Vispārējie paziņojuma parametri
-          // main_cpv = {}, // Datu bloks satur iepirkuma galveno CPV kodu
-        // } = {},
         part_5_list: { // Līguma slēgšanas tiesību piešķiršana
-          part_5: { // Saraksts var saturēt vienu vai vairākas paziņojuma par iepirkuma procedūras rezultātiem V daļas (paziņojuma par līguma slēgšanas tiesību piešķiršanu IV daļas) datu struktūras „part_5
-            decision_date = {}, // Lēmuma pieņemšanas datums / Līguma slēgšanas datums
-            contract_price_exact = {}, // Kopējā līgumcena
-            exact_currency = {}, // Kopējā līgumcena – valūta.
-            tender_num = {}, // Saņemto piedāvājumu skaits.
-            contract_name = {}, // Iepirkuma nosaukums
-            creation_date_stamp = {}, // "Attiecīgā datuma unix timestamp vērtība" - tehniskās dokumentācijas
-          } = {},
+          part_5 = {},
         } = {},
-        main_cpv = {},
-        part_2 = {},
         winner_list,
-        eu_fund,
-        additional_info: {
-          approval_date = {},
-          approval_date_stamp = {},
-          update_date = {},
-          update_date_stamp = {},
-        } = {},
-        publication_date = {},
-        publication_date_stamp = {},
-      } = parsedData.document;
+        winners,
+        price_exact_eur,
+      } = document;
 
       if (!id || !id._text) {
+        console.log('No ID found, skipping...', JSON.stringify(document));
         return resolve(true);
       }
 
-      if (!winner_list || !winner_list.winner) {
-        if (
-          parsedData.document.part_5_list &&
-          parsedData.document.part_5_list.part_5 &&
-          parsedData.document.part_5_list.part_5.winner_list &&
-          parsedData.document.part_5_list.part_5.winner_list.winner
-        ) {
-          winner_list = {
-            winner: parsedData.document.part_5_list.part_5.winner_list.winner
-          };
-        } else {
-          console.log('no winner');
-          return resolve(true);
-        }
+      if (!type || !type._text) {
+        console.log('No type found, skipping...', JSON.stringify(document));
+        return resolve(true);
       }
 
-      const { winner } = winner_list;
+      // skip the document if it's type is not allowed
+      if (allowedTypes.indexOf(type._text) === -1) {
+        // console.log(`Type '${type._text}' is not allowed. Skipping...`);
+        return resolve(true);
+      }
 
-      IubEntry.findOneAndUpdate(
+      // try to extract the winner as for different types it is located in different places
+      if (winner_list) {
+        if (Array.isArray(winner_list)) {
+          winner_list.forEach(({ winner_name, winner_reg_num }) => {
+            parsedWinners.push({ winner_name, winner_reg_num });
+          });
+        } else if (winner_list.winner) {
+          parsedWinners.push({
+            winner_name: winner_list.winner.winner_name,
+            winner_reg_num: winner_list.winner.winner_reg_num,
+          });
+        } else {
+          console.error('winner_list defined but failed parsing it...', JSON.stringify(document));
+        }
+      } else if (winners) {
+        if (Array.isArray(winners)) {
+          winners.forEach(({ winner_name, winner_reg_num }) => {
+            winners.push({ winner_name, winner_reg_num });
+          });
+        } else if (winners.winner) {
+          parsedWinners.push({
+            winner_name: winners.winner.firm,
+            winner_reg_num: winners.winner.reg_num,
+          });
+        } else {
+          console.error('winners defined but failed parsing it...', JSON.stringify(document));
+        }
+      } else if (part_5.winner_list) {
+        if (Array.isArray(part_5.winner_list)) {
+          part_5.winner_list.forEach(({ winner_name, winner_reg_num }) => {
+            parsedWinners.push({ winner_name, winner_reg_num });
+          });
+        } else if (part_5.winner_list.winner) {
+          parsedWinners.push({
+            winner_name: part_5.winner_list.winner.winner_name,
+            winner_reg_num: part_5.winner_list.winner.winner_reg_num,
+          });
+        } else {
+          console.error('part_5.winner_list defined but failed parsing it...', JSON.stringify(document));
+        }
+      } else if (Array.isArray(part_5)) {
+        console.log(`${document.id._text} part 5 is an array, skipping for now...`);
+        return resolve(true);
+      } else {
+        console.error('no winner found', JSON.stringify(document));
+      }
+
+      authority_name = authority_name || general.authority_name;
+      authority_reg_num = authority_reg_num || general.authority_reg_num;
+      price = contract_price_exact || part_5.contract_price_exact || price_exact_eur;
+      decision_date = decision_date || part_5.decision_date;
+
+      return IubEntry.findOneAndUpdate(
         { document_id: id._text },
         {
           document_id: id._text,
           authority_name: authority_name ? authority_name._text : null,
           authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
-          // main_cpv:  {
-          //   lv: 'aaa',
-          //   en: main_cpv.en || null,
-          //   code_num: main_cpv.code_num || null,
-          //   name: main_cpv.name || null,
-          //   authority_name: main_cpv.authority_name || null,
-          // },
-          general: {
-            // main_cpv: general.main_cpv ? {
-              // lv: general.main_cpv.lv ? general.main_cpv.lv._text : null,
-              // en: main_cpv.en ? main_cpv.en._text : null,
-              // code_num: main_cpv.code_num ? main_cpv.code_num._text : null,
-              // name: main_cpv.name ? main_cpv.name._text : null,
-              // authority_name: main_cpv.authority_name ? main_cpv.authority_name._text : null,
-              // contract_price_exact: main_cpv.contract_price_exact ? main_cpv.contract_price_exact._text : null,
-              // approval_date: main_cpv.approval_date ? main_cpv.approval_date._text : null,
-            // } : {},
-          },
-          part_5_list: {
-            part_5: {
-              decision_date: decision_date ? decision_date._text : null,
-              contract_price_exact: contract_price_exact && !isNaN(parseFloat(contract_price_exact._text)) ? parseFloat(contract_price_exact._text) : null,
-              exact_currency: exact_currency ? exact_currency._text : null,
-              tender_num: tender_num ? tender_num._text : null,
-              contract_name: contract_name ? contract_name._text : null,
-              creation_date_stamp: creation_date_stamp ? creation_date_stamp._text : null,
-            }
-          },
-          part_2: {
-            price_exact: part_2.price_exact && !isNaN(parseFloat(part_2.price_exact._text)) ? parseFloat(part_2.price_exact._text) : null,
-            price_exact_eur: part_2.price_exact_eur && !isNaN(parseFloat(part_2.price_exact_eur._text)) ? parseFloat(part_2.price_exact_eur._text) : null,
-          },
-          additional_info: {
-            approval_date: approval_date ? approval_date._text : null,
-            approval_date_stamp: approval_date_stamp ? approval_date_stamp._text : null,
-            update_date: update_date ? update_date._text : null,
-            update_date_stamp: update_date_stamp ? update_date_stamp._text : null,
-
-          },
-          winner_list: {
-            winner: {
-              winner_name: winner.winner_name ? winner.winner_name._text : null,
-              winner_reg_num: winner.winner_reg_num ? winner.winner_reg_num._text : null,
-              winner_country: winner.winner_country ? winner.winner_country._text : null,
-              price_exact_eur: winner.price_exact_eur && !isNaN(parseFloat(winner.price_exact_eur._text)) ? parseFloat(winner.price_exact_eur._text) : null,
-              approval_date: winner.approval_date ? winner.approval_date._text : null,
-              publication_date: winner.publication_date ? winner.publication_date._text : null,
-            },
-          },
-          eu_fund: eu_fund === '0' ? false : eu_fund === '1' ? true : undefined,
-          publication_date: publication_date ? publication_date._text : null,
-          publication_date_stamp: publication_date_stamp ? publication_date_stamp._text : null,
+          tender_num: part_5.tender_num ? parseInt(part_5.tender_num._text, 10) : null,
+          decision_date: decision_date ? decision_date._text: null,
+          price: !isNaN(price) ? price : null,
+          currency: currency ? currency._text: null,
+          eu_fund: eu_fund ? !!parseInt(eu_fund._text, 10) : false,
+          winners,
         },
         {
           upsert: true, // insert if not found
@@ -354,6 +360,46 @@ function fetchIUBData(year, month, day) {
   });
 }
 
+
+/**
+ * Fetches data from IUB.
+ *
+ * @public
+ * @param {Object} req Request object
+ * @param {Object} res Response object
+ * @param {Function} next Executes the next matching route
+ */
+function fetchData(req, res, next) {
+  const { year, month, day } = req.query;
+  const parsedYear = parseInt(year, 10);
+  const parsedMonth = monthStrings[month];
+  const parsedDay = parseInt(day, 10);
+  const parsedDate = new Date(parsedYear, parsedMonth.num, parsedDay, 0, 0, 0, 0);
+  const today = new Date();
+  const todayYear = today.getFullYear();
+
+  if (parsedYear < IUB.minYear) {
+    return res.status(httpStatusCodes.badRequest).json(`Min year is ${IUB.minYear}. ${year} is invalid.`);
+  }
+
+  if (parsedYear > todayYear) {
+    return res.status(httpStatusCodes.badRequest).json(`Max year is ${todayYear}. ${year} is invalid.`);
+  }
+
+  if (!parsedMonth) {
+    return res.status(httpStatusCodes.badRequest).json(`Month ${month} is invalid. Pass one of the following: ${Object.keys(monthStrings).sort()}`);
+  }
+
+  if (dayStrings.indexOf(day) === -1) {
+    return res.status(httpStatusCodes.badRequest).json(`Day ${day} is invalid. Pass one of the following: ${dayStrings}`);
+  }
+
+  fetchIUBData(year, month, day);
+
+  res.status(httpStatusCodes.ok).json(`Data fetching for ${year}/${month}/${day} (YYYY/MM/DD) initiated successfully!`);
+}
+
+
 /**
  * Modules that are exported from the controller.
  */
@@ -361,5 +407,5 @@ module.exports = {
   /**
    * Fetches data from the IUB data.
    */
-  fetchIUBData
+  fetchIUBData, fetchData
 };

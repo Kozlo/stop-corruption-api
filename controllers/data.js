@@ -28,4 +28,5 @@ module.exports = {
       .then(entries => res.status(httpStatusCodes.ok).json(entries))
       .catch(err => next(err));
   },
+  
 };

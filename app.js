@@ -59,9 +59,6 @@ app.use('/', routes);
 // Error handling
 //=================
 
-// Fetch IUB data
-iubDataFetcher.fetchIUBData('2013', '01', '01');
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
