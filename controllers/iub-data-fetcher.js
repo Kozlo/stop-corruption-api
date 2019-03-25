@@ -55,7 +55,7 @@ function parseIUBXmlToJson(xmlPath) {
         return resolve(true);
       }
 
-      let price, parsedWinners = [];
+      let parsedPrice, parsedWinners = [];
       let {
         id, // PVS dokumenta ID
         type, // Dokumenta tips (paziņojums,lēmums utt.)
@@ -63,8 +63,15 @@ function parseIUBXmlToJson(xmlPath) {
         authority_reg_num, // Iestādes reģistrācijas Nr.
         eu_fund, // vai iepirkums saistīts ar ES fondu piesaisti
         currency,
+        exact_currency,
+        contract_currency,
         decision_date,
+        price,
+        price_exact_lvl,
         contract_price_exact,
+        contract_price_exact_lvl,
+        contract_price_from,
+        contract_price_to,
         general = {}, // { // Vispārējie paziņojuma parametri
         part_5_list: { // Līguma slēgšanas tiesību piešķiršana
           part_5 = {},
@@ -94,12 +101,14 @@ function parseIUBXmlToJson(xmlPath) {
       if (winner_list) {
         if (Array.isArray(winner_list)) {
           winner_list.forEach(({ winner_name, winner_reg_num }) => {
-            parsedWinners.push({ winner_name, winner_reg_num });
+            parsedWinners.push({
+              winner_name: winner_name._text,
+              winner_reg_num: winner_reg_num._text });
           });
         } else if (winner_list.winner) {
           parsedWinners.push({
-            winner_name: winner_list.winner.winner_name,
-            winner_reg_num: winner_list.winner.winner_reg_num,
+            winner_name: winner_list.winner.winner_name._text,
+            winner_reg_num: winner_list.winner.winner_reg_num._text,
           });
         } else {
           console.error('winner_list defined but failed parsing it...', JSON.stringify(document));
@@ -107,53 +116,69 @@ function parseIUBXmlToJson(xmlPath) {
       } else if (winners) {
         if (Array.isArray(winners)) {
           winners.forEach(({ winner_name, winner_reg_num }) => {
-            winners.push({ winner_name, winner_reg_num });
+            winners.push({
+              winner_name: winner_name._text,
+              winner_reg_num: winner_reg_num._text,
+            });
           });
         } else if (winners.winner) {
           parsedWinners.push({
-            winner_name: winners.winner.firm,
-            winner_reg_num: winners.winner.reg_num,
+            winner_name: winners.winner.firm ? winners.winner.firm._text: null,
+            winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num._text: null,
           });
         } else {
-          console.error('winners defined but failed parsing it...', JSON.stringify(document));
+          console.error('winners defined but failed parsing it...', id, winners);
         }
       } else if (part_5.winner_list) {
         if (Array.isArray(part_5.winner_list)) {
           part_5.winner_list.forEach(({ winner_name, winner_reg_num }) => {
-            parsedWinners.push({ winner_name, winner_reg_num });
+            parsedWinners.push({
+              winner_name: winner_name._text,
+              winner_reg_num: winner_reg_num._text
+            });
           });
         } else if (part_5.winner_list.winner) {
           parsedWinners.push({
-            winner_name: part_5.winner_list.winner.winner_name,
-            winner_reg_num: part_5.winner_list.winner.winner_reg_num,
+            winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name._text : null,
+            winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num._text : null,
           });
         } else {
-          console.error('part_5.winner_list defined but failed parsing it...', JSON.stringify(document));
+          // console.error('part_5.winner_list defined but failed parsing it...', id, part_5.winner_list);
+          return resolve(true);
         }
       } else if (Array.isArray(part_5)) {
-        console.log(`${document.id._text} part 5 is an array, skipping for now...`);
+        // console.log(`${document.id._text} part 5 is an array, skipping for now...`);
         return resolve(true);
       } else {
-        console.error('no winner found', JSON.stringify(document));
+        // console.error('no winner found', JSON.stringify(document));
+        return resolve(true);
       }
 
       authority_name = authority_name || general.authority_name;
       authority_reg_num = authority_reg_num || general.authority_reg_num;
-      price = contract_price_exact || part_5.contract_price_exact || price_exact_eur;
+      parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
       decision_date = decision_date || part_5.decision_date;
+      currency = currency || exact_currency || contract_currency || part_5.contract_currency;
+      contract_price_from = contract_price_from || part_5.contract_price_from;
+      contract_price_to = contract_price_to || part_5.contract_price_to;
 
+      if (parsedWinners.length > 1) {
+        console.log(document)
+      }
       return IubEntry.findOneAndUpdate(
         { document_id: id._text },
         {
           document_id: id._text,
           authority_name: authority_name ? authority_name._text : null,
           authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
-          tender_num: part_5.tender_num ? parseInt(part_5.tender_num._text, 10) : null,
+          tender_num: part_5.tender_num && !isNaN(parseInt(part_5.tender_num._text, 10)) ? parseInt(part_5.tender_num._text, 10) : null,
           decision_date: decision_date ? decision_date._text: null,
-          price: !isNaN(price) ? price : null,
-          currency: currency ? currency._text: null,
-          eu_fund: eu_fund ? !!parseInt(eu_fund._text, 10) : false,
-          winners,
+          price: parsedPrice && !isNaN(parseInt(parsedPrice._text, 10)) ? parseInt(parsedPrice._text, 10) : null,
+          price_from: contract_price_from && !isNaN(parseInt(contract_price_from._text, 10)) ? parseInt(contract_price_from._text, 10): null,
+          price_to: contract_price_to && !isNaN(parseInt(contract_price_to._text, 10)) ? parseInt(contract_price_to._text, 10): null,
+          currency: currency && !isNaN(parseInt(currency._text, 10)) ? parseInt(currency._text, 10): null,
+          eu_fund: eu_fund && !isNaN(parseInt(eu_fund._text, 10)) ? !!parseInt(eu_fund._text, 10) : false,
+          winners: parsedWinners,
         },
         {
           upsert: true, // insert if not found
@@ -222,12 +247,21 @@ function extractIUBFileData(filePath, ftpClient, year, month, day) {
   });
 }
 
+/**
+ * Calls the next iteration if today has not been reached yet.
+ *
+ * @param {*} ftpClient
+ * @param {string} year
+ * @param {string} month
+ * @param {string} day
+ * @returns {*}
+ */
 function callNextIteration(ftpClient, year, month, day) {
   const fetchedDate = new Date();
 
-  fetchedDate.setFullYear(year);
+  fetchedDate.setFullYear(parseInt(year));
   fetchedDate.setMonth(parseInt(month) - 1);
-  fetchedDate.setDate(day);
+  fetchedDate.setDate(parseInt(day));
 
   if (helpers.isToday(fetchedDate)) {
     // Close FTP connection
@@ -236,7 +270,7 @@ function callNextIteration(ftpClient, year, month, day) {
   } else {
     const nextDay = new Date();
 
-    nextDay.setFullYear(year);
+    nextDay.setFullYear(parseInt(year, 10));
     nextDay.setMonth(parseInt(month) - 1);
     nextDay.setDate(fetchedDate.getDate() + 1);
 
@@ -373,8 +407,6 @@ function fetchData(req, res, next) {
   const { year, month, day } = req.query;
   const parsedYear = parseInt(year, 10);
   const parsedMonth = monthStrings[month];
-  const parsedDay = parseInt(day, 10);
-  const parsedDate = new Date(parsedYear, parsedMonth.num, parsedDay, 0, 0, 0, 0);
   const today = new Date();
   const todayYear = today.getFullYear();
 

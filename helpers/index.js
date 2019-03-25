@@ -126,7 +126,7 @@ module.exports = {
 
         limit = limit ? parseInt(limit, 10) : 0;
         filters = typeof filters === 'string' ? JSON.parse(filters) : {};
-        sorters = typeof filters === 'string' ? JSON.parse(filters) : {};
+        sorters = typeof sorters === 'string' ? JSON.parse(sorters) : {};
 
         for (let prop in filters) {
             if (typeof filters[prop] === 'string') {
@@ -144,7 +144,7 @@ module.exports = {
      */
     isToday(dateToCheck) {
         const fetchedDateDate = dateToCheck.getDate();
-        const fetchedDateMonth = dateToCheck.getMonth() + 1;
+        const fetchedDateMonth = dateToCheck.getMonth();
         const fetchedDateYear = dateToCheck.getFullYear();
 
         const today = new Date();

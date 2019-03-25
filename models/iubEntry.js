@@ -18,9 +18,11 @@ const properties = {
   authority_name: String, // authority_name OR general.authority_name TODO: ask if this is correct or can this be under something else
   authority_reg_num: String, // authority_reg_num OR general.authority_reg_num
   price: Number, // contract_price_exact OR part_5_list.part_5.contract_price_exact OR price_exact_eur (maybe also save currency if this one is taken)
+  price_from: Number,
+  price_to: Number,
   decision_date: String, // under decision_date OR part_5_list.part_5.decision_date
   tender_num: Number, // part_5_list.part_5.tender_num TODO: ask if this can be found elsewhere as well
-  currency: String, // currency TODO: figure out if/how to add this as it might be needed for older tenders that were in LVL
+  currency: Number, // currency
   eu_fund: Boolean,
   winners: [
     {
