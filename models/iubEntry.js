@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const properties = {
   document_id: {
     type: String,
-    unique: true,
+    unique: false, // since there can be procuremetns with several 'stages' the document ID can be duplicated
     required: true,
   },
   type: String, // only certain types are allowed

@@ -55,142 +55,165 @@ function parseIUBXmlToJson(xmlPath) {
         return resolve(true);
       }
 
-      let parsedPrice, parsedWinners = [];
-      let {
-        id, // PVS dokumenta ID
-        type, // Dokumenta tips (paziņojums,lēmums utt.)
-        authority_name, // Iestādes nosaukums
-        authority_reg_num, // Iestādes reģistrācijas Nr.
-        eu_fund, // vai iepirkums saistīts ar ES fondu piesaisti
-        currency,
-        exact_currency,
-        contract_currency,
-        decision_date,
-        price,
-        price_exact_lvl,
-        contract_price_exact,
-        contract_price_exact_lvl,
-        contract_price_from,
-        contract_price_to,
-        general = {}, // { // Vispārējie paziņojuma parametri
-        part_5_list: { // Līguma slēgšanas tiesību piešķiršana
-          part_5 = {},
-        } = {},
-        winner_list,
-        winners,
-        price_exact_eur,
-      } = document;
+      saveData(document);
 
-      if (!id || !id._text) {
-        console.log('No ID found, skipping...', JSON.stringify(document));
-        return resolve(true);
-      }
-
-      if (!type || !type._text) {
-        console.log('No type found, skipping...', JSON.stringify(document));
-        return resolve(true);
-      }
-
-      // skip the document if it's type is not allowed
-      if (allowedTypes.indexOf(type._text) === -1) {
-        // console.log(`Type '${type._text}' is not allowed. Skipping...`);
-        return resolve(true);
-      }
-
-      // try to extract the winner as for different types it is located in different places
-      if (winner_list) {
-        if (Array.isArray(winner_list)) {
-          winner_list.forEach(({ winner_name, winner_reg_num }) => {
-            parsedWinners.push({
-              winner_name: winner_name._text,
-              winner_reg_num: winner_reg_num._text });
-          });
-        } else if (winner_list.winner) {
-          parsedWinners.push({
-            winner_name: winner_list.winner.winner_name._text,
-            winner_reg_num: winner_list.winner.winner_reg_num._text,
-          });
-        } else {
-          console.error('winner_list defined but failed parsing it...', JSON.stringify(document));
-        }
-      } else if (winners) {
-        if (Array.isArray(winners)) {
-          winners.forEach(({ winner_name, winner_reg_num }) => {
-            winners.push({
-              winner_name: winner_name._text,
-              winner_reg_num: winner_reg_num._text,
-            });
-          });
-        } else if (winners.winner) {
-          parsedWinners.push({
-            winner_name: winners.winner.firm ? winners.winner.firm._text: null,
-            winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num._text: null,
-          });
-        } else {
-          console.error('winners defined but failed parsing it...', id, winners);
-        }
-      } else if (part_5.winner_list) {
-        if (Array.isArray(part_5.winner_list)) {
-          part_5.winner_list.forEach(({ winner_name, winner_reg_num }) => {
-            parsedWinners.push({
-              winner_name: winner_name._text,
-              winner_reg_num: winner_reg_num._text
-            });
-          });
-        } else if (part_5.winner_list.winner) {
-          parsedWinners.push({
-            winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name._text : null,
-            winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num._text : null,
-          });
-        } else {
-          // console.error('part_5.winner_list defined but failed parsing it...', id, part_5.winner_list);
-          return resolve(true);
-        }
-      } else if (Array.isArray(part_5)) {
-        // console.log(`${document.id._text} part 5 is an array, skipping for now...`);
-        return resolve(true);
-      } else {
-        // console.error('no winner found', JSON.stringify(document));
-        return resolve(true);
-      }
-
-      authority_name = authority_name || general.authority_name;
-      authority_reg_num = authority_reg_num || general.authority_reg_num;
-      parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
-      decision_date = decision_date || part_5.decision_date;
-      currency = currency || exact_currency || contract_currency || part_5.contract_currency;
-      contract_price_from = contract_price_from || part_5.contract_price_from;
-      contract_price_to = contract_price_to || part_5.contract_price_to;
-
-      if (parsedWinners.length > 1) {
-        console.log(document)
-      }
-      return IubEntry.findOneAndUpdate(
-        { document_id: id._text },
-        {
-          document_id: id._text,
-          authority_name: authority_name ? authority_name._text : null,
-          authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
-          tender_num: part_5.tender_num && !isNaN(parseInt(part_5.tender_num._text, 10)) ? parseInt(part_5.tender_num._text, 10) : null,
-          decision_date: decision_date ? decision_date._text: null,
-          price: parsedPrice && !isNaN(parseInt(parsedPrice._text, 10)) ? parseInt(parsedPrice._text, 10) : null,
-          price_from: contract_price_from && !isNaN(parseInt(contract_price_from._text, 10)) ? parseInt(contract_price_from._text, 10): null,
-          price_to: contract_price_to && !isNaN(parseInt(contract_price_to._text, 10)) ? parseInt(contract_price_to._text, 10): null,
-          currency: currency && !isNaN(parseInt(currency._text, 10)) ? parseInt(currency._text, 10): null,
-          eu_fund: eu_fund && !isNaN(parseInt(eu_fund._text, 10)) ? !!parseInt(eu_fund._text, 10) : false,
-          winners: parsedWinners,
-        },
-        {
-          upsert: true, // insert if not found
-        }
-      )
-      .then(() => resolve(true))
-      .catch(err => {
-        console.log(err);
-        reject(err);
-      });
+      resolve(true);
     });
   });
+}
+
+function saveData(document) {
+  let parsedPrice, parsedWinners = [];
+  let {
+    id, // PVS dokumenta ID
+    type, // Dokumenta tips (paziņojums,lēmums utt.)
+    authority_name, // Iestādes nosaukums
+    authority_reg_num, // Iestādes reģistrācijas Nr.
+    eu_fund, // vai iepirkums saistīts ar ES fondu piesaisti
+    currency,
+    exact_currency,
+    contract_currency,
+    decision_date,
+    price,
+    price_exact_lvl,
+    contract_price_exact,
+    contract_price_exact_lvl,
+    contract_price_from,
+    contract_price_to,
+    general = {}, // { // Vispārējie paziņojuma parametri
+    part_5_list: { // Līguma slēgšanas tiesību piešķiršana
+      part_5 = {},
+    } = {},
+    winner_list,
+    winners,
+    price_exact_eur,
+  } = document;
+
+  if (!id || !id._text) {
+    console.log('No ID found, skipping...', JSON.stringify(document));
+    return;
+  }
+
+  if (!type || !type._text) {
+    console.log('No type found, skipping...', JSON.stringify(document));
+    return;
+  }
+
+  // skip the document if it's type is not allowed
+  if (allowedTypes.indexOf(type._text) === -1) {
+    // console.log(`Type '${type._text}' is not allowed. Skipping...`);
+    return;
+  }
+
+  // try to extract the winner as for different types it is located in different places
+  if (winner_list) {
+    if (Array.isArray(winner_list)) {
+      winner_list.forEach(({ winner_name, winner_reg_num }) => {
+        parsedWinners.push({
+          winner_name: winner_name._text,
+          winner_reg_num: winner_reg_num._text });
+      });
+    } else if (winner_list.winner) {
+      parsedWinners.push({
+        winner_name: winner_list.winner.winner_name._text,
+        winner_reg_num: winner_list.winner.winner_reg_num._text,
+      });
+    } else if (JSON.stringify(winner_list) === JSON.stringify({})) {
+      console.log('winner_list is an empty object');
+      return;
+    } else {
+      console.error('winner_list defined but failed parsing it...', JSON.stringify(document));
+    }
+  } else if (winners) {
+    if (Array.isArray(winners)) {
+      winners.forEach(({ winner_name, winner_reg_num }) => {
+        winners.push({
+          winner_name: winner_name._text,
+          winner_reg_num: winner_reg_num._text,
+        });
+      });
+    } else if (winners.winner) {
+      parsedWinners.push({
+        winner_name: winners.winner.firm ? winners.winner.firm._text: null,
+        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num._text: null,
+      });
+    } else if (JSON.stringify(winners) === JSON.stringify({})) {
+      console.log('winners is an empty object');
+      return;
+    } else {
+      console.error('winners defined but failed parsing it...', id);
+    }
+  } else if (part_5.winner_list) {
+    if (Array.isArray(part_5.winner_list)) {
+      part_5.winner_list.forEach(({ winner_name, winner_reg_num }) => {
+        parsedWinners.push({
+          winner_name: winner_name._text,
+          winner_reg_num: winner_reg_num._text
+        });
+      });
+    } else if (part_5.winner_list.winner) {
+      parsedWinners.push({
+        winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name._text : null,
+        winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num._text : null,
+      });
+    } else if (JSON.stringify(part_5.winner_list) === JSON.stringify({})) {
+      // console.log('winner_list is an empty object');
+      return;
+    } else {
+      console.error('part_5.winner_list defined but failed parsing it...', id);
+      return;
+    }
+  } else if (Array.isArray(part_5)) {
+    // console.log(`${document.id._text} part 5 is an array, splitting up`);
+
+    // split up
+    part_5.forEach((part_5_item, index) => {
+      const subProcurement = {
+        ...document,
+      };
+
+      subProcurement.part_5_list.part_5 = part_5[index];
+
+      saveData(subProcurement);
+    });
+
+    return;
+  } else {
+    console.error('no winner found', id); //JSON.stringify(document));
+    return;
+  }
+
+  authority_name = authority_name || general.authority_name;
+  authority_reg_num = authority_reg_num || general.authority_reg_num;
+  parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
+  decision_date = decision_date || part_5.decision_date;
+  currency = currency || exact_currency || contract_currency || part_5.contract_currency;
+  contract_price_from = contract_price_from || part_5.contract_price_from;
+  contract_price_to = contract_price_to || part_5.contract_price_to;
+
+  if (parsedWinners.length > 1) {
+    console.log(document)
+  }
+  return IubEntry.findOneAndUpdate(
+    { document_id: id._text },
+    {
+      document_id: id._text,
+      authority_name: authority_name ? authority_name._text : null,
+      authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
+      tender_num: part_5.tender_num && !isNaN(parseInt(part_5.tender_num._text, 10)) ? parseInt(part_5.tender_num._text, 10) : null,
+      decision_date: decision_date ? decision_date._text: null,
+      price: parsedPrice && !isNaN(parseInt(parsedPrice._text, 10)) ? parseInt(parsedPrice._text, 10) : null,
+      price_from: contract_price_from && !isNaN(parseInt(contract_price_from._text, 10)) ? parseInt(contract_price_from._text, 10): null,
+      price_to: contract_price_to && !isNaN(parseInt(contract_price_to._text, 10)) ? parseInt(contract_price_to._text, 10): null,
+      currency: currency && !isNaN(parseInt(currency._text, 10)) ? parseInt(currency._text, 10): null,
+      eu_fund: eu_fund && !isNaN(parseInt(eu_fund._text, 10)) ? !!parseInt(eu_fund._text, 10) : false,
+      winners: parsedWinners,
+    },
+    {
+      upsert: true, // insert if not found
+    }
+  )
+    .catch(console.error);
 }
 
 /**
