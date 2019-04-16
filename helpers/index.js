@@ -154,7 +154,22 @@ module.exports = {
 
         return fetchedDateYear === todayYear && fetchedDateMonth === todayMonth && fetchedDateDate === todayDate;
     },
+    /**
+     * Gets the date for the fetcher in it's format.
+     * @param {int} days Days back in past to subtract.
+     */
+    getFetcherDate(days) {
+        const date = new Date();
+        date.setDate(date.getDate() - days);
+
+        return {
+          day: getParsedDateNumber(date.getDate()),
+          month: getParsedDateNumber(date.getMonth() + 1),
+          year: date.getFullYear().toString(),
+        };
+    },
     propNameFinder,
+    getParsedDateNumber,
 };
 
 /**
@@ -189,4 +204,14 @@ function propNameFinder(obj, comparisonObj, parentProp = '') {
             }
         }
     }
+}
+
+/**
+ * Converts the date pr month number to a date string (e.g. 01 or 30).
+ *
+ * @param {int} dateNumber Date number
+ * @returns {string} Date string
+ */
+function getParsedDateNumber(dateNumber) {
+    return dateNumber < 10 ? `0${dateNumber}` : dateNumber.toString();
 }

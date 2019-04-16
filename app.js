@@ -20,7 +20,14 @@ const cors = require('cors');
 /**
  * Import custom controllers.
  */
-const iubDataFetcher = require('./controllers/iub-data-fetcher');
+const { fetchIUBData } = require('./controllers/iub-data-fetcher');
+const { getFetcherDate } = require('./helpers');
+
+/**
+ * Other constants
+ */
+const FETCHER_DAYS = 7; // how many days in the past should the fetcher check entries for
+const FETCH_TIMEOUT = 86400000; // wait 1 day until fetching again
 
 //=================
 // DB setup
@@ -69,5 +76,12 @@ const { logErrors, clientErrorHandler, errorHandler } = require('./errorHandlers
 app.use(logErrors);
 app.use(clientErrorHandler);
 app.use(errorHandler);
+
+
+// fetch data for the last week on start-up as well as every day
+const { year, month, day } = getFetcherDate(FETCHER_DAYS);
+
+fetchIUBData(year, month, day);
+setInterval(() => fetchIUBData(year, month, day), FETCH_TIMEOUT);
 
 module.exports = app;

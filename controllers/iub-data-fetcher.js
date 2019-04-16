@@ -299,8 +299,8 @@ function callNextIteration(ftpClient, year, month, day) {
 
     const nextDayMonth = nextDay.getMonth() + 1;
     const nextDayDate = nextDay.getDate();
-    const nextDayParsedDate = nextDayDate < 10 ? `0${nextDayDate}` : nextDayDate.toString();
-    const nextDayParsedMonth = nextDayMonth < 10 ? `0${nextDayMonth}` : nextDayMonth.toString();
+    const nextDayParsedDate = helpers.getParsedDateNumber(nextDayDate);
+    const nextDayParsedMonth = helpers.getParsedDateNumber(nextDayMonth);
     const nextDayYear = nextDay.getFullYear().toString();
 
     ftpClient.end();
