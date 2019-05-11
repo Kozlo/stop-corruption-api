@@ -7,6 +7,7 @@ const fse = require('fs-extra');
 const targz = require('targz');
 const xmlParser = require('xml-js');
 const IubEntry = require('../models/iubEntry');
+const { execFile } = require('child_process');
 
 const config = require('../config');
 
@@ -63,30 +64,22 @@ function parseIUBXmlToJson(xmlPath) {
 }
 
 function saveData(document) {
-  let parsedPrice, parsedWinners = [];
+  let parsedPrice, parsedWinners;
   let {
     id, // PVS dokumenta ID
     type, // Dokumenta tips (paziņojums,lēmums utt.)
     authority_name, // Iestādes nosaukums
     authority_reg_num, // Iestādes reģistrācijas Nr.
     eu_fund, // vai iepirkums saistīts ar ES fondu piesaisti
-    currency,
-    exact_currency,
-    contract_currency,
+    currency, exact_currency, contract_currency,
     decision_date,
-    price,
-    price_exact_lvl,
-    contract_price_exact,
-    contract_price_exact_lvl,
-    contract_price_from,
-    contract_price_to,
+    price, price_exact_lvl, price_exact_eur,
+    contract_price_exact, contract_price_exact_lvl,
+    contract_price_from, contract_price_to,
     general = {}, // { // Vispārējie paziņojuma parametri
     part_5_list: { // Līguma slēgšanas tiesību piešķiršana
       part_5 = {},
     } = {},
-    winner_list,
-    winners,
-    price_exact_eur,
   } = document;
 
   if (!id || !id._text) {
@@ -105,13 +98,99 @@ function saveData(document) {
     return;
   }
 
+  parsedWinners = getWinnerList(document,);
+
+  // don't save the data if there are no winners
+  if (!parsedWinners) {
+    return;
+  }
+
+  const winnerRegNumbers = parsedWinners.map(({ winner_reg_num }) => winner_reg_num);
+
+  // execute script that loads company data from Lursoft
+  execFile('python',
+    ['./python/lursoft.py',
+      process.env.LURSOFT_USERNAME,
+      process.env.LURSOFT_UPASSWORD,
+      JSON.stringify(winnerRegNumbers)
+    ],
+    (error, stdout, stderr) => {
+      if (error) {
+        console.error(error);
+      } else if (stderr) {
+        const errorMessage = "Child process error occurred!";
+
+        console.error(errorMessage, stderr);
+      } else {
+        // try to get company data from Lursfot request results
+        try {
+          const winnerData = JSON.parse(stdout);
+
+          parsedWinners.forEach(({ winner_reg_num }, index) => {
+            parsedWinners[index].winner_reg_date = winnerData[winner_reg_num] ? winnerData[winner_reg_num].winner_reg_date : undefined;
+          });
+        } catch (e) {
+          console.error('Failed to get company data from Lursoft script', e);
+        }
+      }
+
+      authority_name = authority_name || general.authority_name;
+      authority_reg_num = authority_reg_num || general.authority_reg_num;
+      parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
+      decision_date = decision_date || part_5.decision_date;
+      currency = currency || exact_currency || contract_currency || part_5.contract_currency;
+      contract_price_from = contract_price_from || part_5.contract_price_from;
+      contract_price_to = contract_price_to || part_5.contract_price_to;
+
+      const companyData = {
+        document_id: id._text,
+        authority_name: authority_name ? authority_name._text : null,
+        authority_reg_num: authority_reg_num ? authority_reg_num._text : null,
+        tender_num: part_5.tender_num && !isNaN(parseInt(part_5.tender_num._text, 10)) ? parseInt(part_5.tender_num._text, 10) : null,
+        decision_date: decision_date ? decision_date._text : null,
+        price: parsedPrice && !isNaN(parseInt(parsedPrice._text, 10)) ? parseInt(parsedPrice._text, 10) : null,
+        price_from: contract_price_from && !isNaN(parseInt(contract_price_from._text, 10)) ? parseInt(contract_price_from._text, 10) : null,
+        price_to: contract_price_to && !isNaN(parseInt(contract_price_to._text, 10)) ? parseInt(contract_price_to._text, 10) : null,
+        currency: currency && !isNaN(parseInt(currency._text, 10)) ? parseInt(currency._text, 10) : null,
+        eu_fund: eu_fund && !isNaN(parseInt(eu_fund._text, 10)) ? !!parseInt(eu_fund._text, 10) : false,
+        winners: parsedWinners,
+      };
+
+      IubEntry.findOneAndUpdate(
+        { document_id: id._text },
+        companyData,
+        {
+          upsert: true, // insert if not found
+        }
+      )
+        .catch(console.error);
+    }
+  );
+}
+
+/**
+ * Gets winner list form the procurement.
+ *
+ * @param {*} document IUB procurement full data
+ * @returns {*}
+ */
+function getWinnerList(document) {
+  const {
+    winner_list, winners,
+    part_5_list: {
+      part_5 = {},
+    } = {},
+  } = document;
+  const parsedWinners = [];
+
   // try to extract the winner as for different types it is located in different places
   if (winner_list) {
     if (Array.isArray(winner_list)) {
       winner_list.forEach(({ winner_name, winner_reg_num }) => {
         parsedWinners.push({
           winner_name: winner_name._text,
-          winner_reg_num: winner_reg_num._text });
+          winner_reg_num: winner_reg_num._text
+        });
       });
     } else if (winner_list.winner) {
       parsedWinners.push({
@@ -134,8 +213,8 @@ function saveData(document) {
       });
     } else if (winners.winner) {
       parsedWinners.push({
-        winner_name: winners.winner.firm ? winners.winner.firm._text: null,
-        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num._text: null,
+        winner_name: winners.winner.firm ? winners.winner.firm._text : null,
+        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num._text : null,
       });
     } else if (JSON.stringify(winners) === JSON.stringify({})) {
       console.log('winners is an empty object');
@@ -183,37 +262,7 @@ function saveData(document) {
     return;
   }
 
-  authority_name = authority_name || general.authority_name;
-  authority_reg_num = authority_reg_num || general.authority_reg_num;
-  parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
-  decision_date = decision_date || part_5.decision_date;
-  currency = currency || exact_currency || contract_currency || part_5.contract_currency;
-  contract_price_from = contract_price_from || part_5.contract_price_from;
-  contract_price_to = contract_price_to || part_5.contract_price_to;
-
-  if (parsedWinners.length > 1) {
-    console.log(document)
-  }
-  return IubEntry.findOneAndUpdate(
-    { document_id: id._text },
-    {
-      document_id: id._text,
-      authority_name: authority_name ? authority_name._text : null,
-      authority_reg_num: authority_reg_num ? authority_reg_num._text: null,
-      tender_num: part_5.tender_num && !isNaN(parseInt(part_5.tender_num._text, 10)) ? parseInt(part_5.tender_num._text, 10) : null,
-      decision_date: decision_date ? decision_date._text: null,
-      price: parsedPrice && !isNaN(parseInt(parsedPrice._text, 10)) ? parseInt(parsedPrice._text, 10) : null,
-      price_from: contract_price_from && !isNaN(parseInt(contract_price_from._text, 10)) ? parseInt(contract_price_from._text, 10): null,
-      price_to: contract_price_to && !isNaN(parseInt(contract_price_to._text, 10)) ? parseInt(contract_price_to._text, 10): null,
-      currency: currency && !isNaN(parseInt(currency._text, 10)) ? parseInt(currency._text, 10): null,
-      eu_fund: eu_fund && !isNaN(parseInt(eu_fund._text, 10)) ? !!parseInt(eu_fund._text, 10) : false,
-      winners: parsedWinners,
-    },
-    {
-      upsert: true, // insert if not found
-    }
-  )
-    .catch(console.error);
+  return parsedWinners;
 }
 
 /**
@@ -308,6 +357,7 @@ function callNextIteration(ftpClient, year, month, day) {
     return fetchIUBData(nextDayYear, nextDayParsedMonth, nextDayParsedDate);
   }
 }
+
 /**
  * Downloads a specific file from the IUB Database.
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
