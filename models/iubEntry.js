@@ -28,6 +28,7 @@ const properties = {
     {
       winner_name: String, // winner_list.winner.winner_name OR winners.winner.firm
       winner_reg_num: String, // winner_list.winner.winner_reg_num OR winners.winner.reg_num
+      winner_reg_date: String, // winner_list.winner.winner_reg_num OR winners.winner.reg_num
     }
   ],
 };

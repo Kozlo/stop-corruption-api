@@ -70,3 +70,6 @@ iub_data/*
 
 # exception to the rule
 !iub_data/.gitkeep
+
+# python files
+/venv
