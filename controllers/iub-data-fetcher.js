@@ -5,9 +5,8 @@ const ftpClientInstance = require('ftp');
 const fs = require('fs');
 const fse = require('fs-extra');
 const targz = require('targz');
-const xmlParser = require('xml-js');
+const xmlParser = require('xml2json');
 const IubEntry = require('../models/iubEntry');
-const { execFile } = require('child_process');
 
 const config = require('../config');
 
@@ -16,6 +15,11 @@ const config = require('../config');
  */
 const { httpStatusCodes, monthStrings, dayStrings, IUB } = config;
 const helpers = require('../helpers');
+
+// CONSTANTS
+const REG_REQ = (
+    sessionId, regNr, mode = 'A'
+) => `${config.IUB.lursoftBaseUrl}?ACT=URPERSON_XML&SessionId=${sessionId}&code=${regNr}&userperscode=${process.env.LURSOFT_USER_CODE}&part=${mode}`;
 
 const allowedTypes = [
   'notice_concluded_contract', // Informatīvs paziņojums par noslēgto līgumu
@@ -38,9 +42,10 @@ const allowedTypes = [
  *
  * If an entry already exists based on the ID then update it, otherwise create a new one.
  *
+ * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {string} xmlPath - Path to the XML file which needs to be parsed to JSON.
  */
-function parseIUBXmlToJson(xmlPath) {
+function parseIUBXmlToJson(lursoftSessionId, xmlPath) {
   return new Promise((resolve, reject) => {
     // Read the file
     fs.readFile(xmlPath, 'utf8', (err, data) => {
@@ -50,20 +55,28 @@ function parseIUBXmlToJson(xmlPath) {
       let document;
 
       try {
-        document = JSON.parse(xmlParser.xml2json(data, { compact: true, spaces: 4 })).document;
+        document = JSON.parse(xmlParser.toJson(data)).document;
       } catch (e) {
         // console.error(e);
         return resolve(true);
       }
 
-      saveData(document);
+      saveData(lursoftSessionId, document);
 
       resolve(true);
     });
   });
 }
 
-function saveData(document) {
+/**
+ * Saves docuemnt data to the DB.
+ *
+ * Also request company info from the Lursoft Database.
+ *
+ * @param {string} lursoftSessionId - Lursoft session ID.
+ * @param {*} document
+ */
+function saveData(lursoftSessionId, document) {
   let parsedPrice, parsedWinners;
   let {
     id, // PVS dokumenta ID
@@ -82,99 +95,113 @@ function saveData(document) {
     } = {},
   } = document;
 
-  if (!id || !id._text) {
+  if (!id) {
+    console.log(id)
     console.log('No ID found, skipping...', JSON.stringify(document));
     return;
   }
 
-  if (!type || !type._text) {
+  if (!type) {
     console.log('No type found, skipping...', JSON.stringify(document));
     return;
   }
 
   // skip the document if it's type is not allowed
-  if (allowedTypes.indexOf(type._text) === -1) {
-    // console.log(`Type '${type._text}' is not allowed. Skipping...`);
+  if (allowedTypes.indexOf(type) === -1) {
+    console.log(`Type '${type}' is not allowed. Skipping...`);
     return;
   }
 
-  parsedWinners = getWinnerList(document,);
+  parsedWinners = getWinnerList(lursoftSessionId, document);
 
   // don't save the data if there are no winners
   if (!parsedWinners) {
     return;
   }
 
-  const winnerRegNumbers = parsedWinners.map(({ winner_reg_num }) => winner_reg_num);
+  // const winnerRegNumbers = parsedWinners.map(({ winner_reg_num }) => winner_reg_num);
 
   // execute script that loads company data from Lursoft
-  execFile('python',
-    ['./python/lursoft.py',
-      process.env.LURSOFT_USERNAME,
-      process.env.LURSOFT_UPASSWORD,
-      JSON.stringify(winnerRegNumbers)
-    ],
-    (error, stdout, stderr) => {
-      if (error) {
-        console.error(error);
-      } else if (stderr) {
-        const errorMessage = "Child process error occurred!";
+  const uniqueWinners = {};
 
-        console.error(errorMessage, stderr);
-      } else {
-        // try to get company data from Lursfot request results
-        try {
-          const winnerData = JSON.parse(stdout);
-
-          parsedWinners.forEach(({ winner_reg_num }, index) => {
-            parsedWinners[index].winner_reg_date = winnerData[winner_reg_num] ? winnerData[winner_reg_num].winner_reg_date : undefined;
-          });
-        } catch (e) {
-          console.error('Failed to get company data from Lursoft script', e);
-        }
-      }
-
-      authority_name = authority_name || general.authority_name;
-      authority_reg_num = authority_reg_num || general.authority_reg_num;
-      parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
-      decision_date = decision_date || part_5.decision_date;
-      currency = currency || exact_currency || contract_currency || part_5.contract_currency;
-      contract_price_from = contract_price_from || part_5.contract_price_from;
-      contract_price_to = contract_price_to || part_5.contract_price_to;
-
-      const companyData = {
-        document_id: id._text,
-        authority_name: authority_name ? authority_name._text : null,
-        authority_reg_num: authority_reg_num ? authority_reg_num._text : null,
-        tender_num: part_5.tender_num && !isNaN(parseInt(part_5.tender_num._text, 10)) ? parseInt(part_5.tender_num._text, 10) : null,
-        decision_date: decision_date ? decision_date._text : null,
-        price: parsedPrice && !isNaN(parseInt(parsedPrice._text, 10)) ? parseInt(parsedPrice._text, 10) : null,
-        price_from: contract_price_from && !isNaN(parseInt(contract_price_from._text, 10)) ? parseInt(contract_price_from._text, 10) : null,
-        price_to: contract_price_to && !isNaN(parseInt(contract_price_to._text, 10)) ? parseInt(contract_price_to._text, 10) : null,
-        currency: currency && !isNaN(parseInt(currency._text, 10)) ? parseInt(currency._text, 10) : null,
-        eu_fund: eu_fund && !isNaN(parseInt(eu_fund._text, 10)) ? !!parseInt(eu_fund._text, 10) : false,
-        winners: parsedWinners,
-      };
-
-      IubEntry.findOneAndUpdate(
-        { document_id: id._text },
-        companyData,
-        {
-          upsert: true, // insert if not found
-        }
-      )
-        .catch(console.error);
+  // get unique winners from the winner list (there can several winners for the same item)
+  parsedWinners.forEach(winner => {
+    if (!uniqueWinners[winner.winner_reg_num]) {
+      uniqueWinners[winner.winner_reg_num] = '';
     }
-  );
+  });
+
+  let getPersonNextTimeout = 0; // how long should wait until the next iteration
+  const winnerInfo = Object.keys(uniqueWinners).map(winnerRegNum => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        console.log('getting person....', winnerRegNum);
+        if (helpers.isValidLVRegNum(winnerRegNum)) {
+          resolve(
+              getPerson(lursoftSessionId, winnerRegNum)
+                  .then(data => {
+                    uniqueWinners[winnerRegNum] = data.registered || '';
+                  })
+                  .catch(console.error)
+          );
+        } else {
+          resolve();
+        }
+      }, getPersonNextTimeout);
+      const oneSecondInMS = 1000;
+      getPersonNextTimeout += (oneSecondInMS / config.IUB.lursoftCallsPerSecond);
+    });
+  });
+
+  Promise.all(winnerInfo)
+      .then(() => {
+        // console.log('Unique winners:', uniqueWinners);
+        // assign the found winner registration numbers to the parsed winner list
+        parsedWinners.forEach(winner => {
+          winner.winner_reg_date = uniqueWinners[winner.winner_reg_num];
+        });
+        // console.log('PARSED WINNERS', parsedWinners)
+        authority_name = authority_name || general.authority_name;
+        authority_reg_num = authority_reg_num || general.authority_reg_num;
+        parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
+        decision_date = decision_date || part_5.decision_date;
+        currency = currency || exact_currency || contract_currency || part_5.contract_currency;
+        contract_price_from = contract_price_from || part_5.contract_price_from;
+        contract_price_to = contract_price_to || part_5.contract_price_to;
+
+        const companyData = {
+          document_id: id,
+          authority_name: authority_name || null,
+          authority_reg_num: authority_reg_num || null,
+          tender_num: !isNaN(parseInt(part_5.tender_num, 10)) ? parseInt(part_5.tender_num, 10) : null,
+          decision_date: decision_date || null,
+          price: !isNaN(parseInt(parsedPrice, 10)) ? parseInt(parsedPrice, 10) : null,
+          price_from: !isNaN(parseInt(contract_price_from, 10)) ? parseInt(contract_price_from, 10) : null,
+          price_to: !isNaN(parseInt(contract_price_to, 10)) ? parseInt(contract_price_to, 10) : null,
+          currency: !isNaN(parseInt(currency, 10)) ? parseInt(currency, 10) : null,
+          eu_fund: !isNaN(parseInt(eu_fund, 10)) ? !!parseInt(eu_fund, 10) : false,
+          winners: parsedWinners,
+        };
+
+        return IubEntry.findOneAndUpdate(
+            { document_id: id },
+            companyData,
+            {
+              upsert: true, // insert if not found
+            }
+        )
+      })
+      .catch(console.error);
 }
 
 /**
  * Gets winner list form the procurement.
  *
+ * @param {string} lursoftSessionId Lursoft session ID
  * @param {*} document IUB procurement full data
  * @returns {*}
  */
-function getWinnerList(document) {
+function getWinnerList(lursoftSessionId, document) {
   const {
     winner_list, winners,
     part_5_list: {
@@ -188,14 +215,14 @@ function getWinnerList(document) {
     if (Array.isArray(winner_list)) {
       winner_list.forEach(({ winner_name, winner_reg_num }) => {
         parsedWinners.push({
-          winner_name: winner_name._text,
-          winner_reg_num: winner_reg_num._text
+          winner_name,
+          winner_reg_num
         });
       });
     } else if (winner_list.winner) {
       parsedWinners.push({
-        winner_name: winner_list.winner.winner_name._text,
-        winner_reg_num: winner_list.winner.winner_reg_num._text,
+        winner_name: winner_list.winner.winner_name,
+        winner_reg_num: winner_list.winner.winner_reg_num,
       });
     } else if (JSON.stringify(winner_list) === JSON.stringify({})) {
       console.log('winner_list is an empty object');
@@ -207,14 +234,14 @@ function getWinnerList(document) {
     if (Array.isArray(winners)) {
       winners.forEach(({ winner_name, winner_reg_num }) => {
         winners.push({
-          winner_name: winner_name._text,
-          winner_reg_num: winner_reg_num._text,
+          winner_name: winner_name,
+          winner_reg_num: winner_reg_num,
         });
       });
     } else if (winners.winner) {
       parsedWinners.push({
-        winner_name: winners.winner.firm ? winners.winner.firm._text : null,
-        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num._text : null,
+        winner_name: winners.winner.firm ? winners.winner.firm : null,
+        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num : null,
       });
     } else if (JSON.stringify(winners) === JSON.stringify({})) {
       console.log('winners is an empty object');
@@ -226,14 +253,14 @@ function getWinnerList(document) {
     if (Array.isArray(part_5.winner_list)) {
       part_5.winner_list.forEach(({ winner_name, winner_reg_num }) => {
         parsedWinners.push({
-          winner_name: winner_name._text,
-          winner_reg_num: winner_reg_num._text
+          winner_name,
+          winner_reg_num
         });
       });
     } else if (part_5.winner_list.winner) {
       parsedWinners.push({
-        winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name._text : null,
-        winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num._text : null,
+        winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name : null,
+        winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num : null,
       });
     } else if (JSON.stringify(part_5.winner_list) === JSON.stringify({})) {
       // console.log('winner_list is an empty object');
@@ -243,8 +270,9 @@ function getWinnerList(document) {
       return;
     }
   } else if (Array.isArray(part_5)) {
-    // console.log(`${document.id._text} part 5 is an array, splitting up`);
+    console.log(`${document.id} part 5 is an array, splitting up`);
 
+    let saveDataNextTimeout = 0; // how long should wait until the next iteration
     // split up
     part_5.forEach((part_5_item, index) => {
       const subProcurement = {
@@ -252,8 +280,16 @@ function getWinnerList(document) {
       };
 
       subProcurement.part_5_list.part_5 = part_5[index];
+      new Promise(resolve => {
+        setTimeout(() => {
+          console.log('saving sub procurement....', subProcurement.id);
+          resolve(
+              saveData(lursoftSessionId, subProcurement)
+          );
+        }, saveDataNextTimeout);
 
-      saveData(subProcurement);
+        saveDataNextTimeout += config.IUB.lursoftCallTimeoutIncrement;
+      });
     });
 
     return;
@@ -267,13 +303,15 @@ function getWinnerList(document) {
 
 /**
  * Extracts a specific .tar.gz file and saves the files to the database.
+ *
  * @param {Object} filePath - Path to the file which needs to be extracted.
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
+ * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function extractIUBFileData(filePath, ftpClient, year, month, day) {
+function extractIUBFileData(filePath, ftpClient, lursoftSessionId, year, month, day) {
   // Remove directory and extension for file name, so we can save it in a specific directory
   const fileName = filePath.replace(`${IUB.IUBLocalDataDirectory}/`, '').replace('.tar.gz', '');
   const fileDirectoryPath = `${IUB.IUBLocalDataDirectory}/${fileName}`;
@@ -297,24 +335,35 @@ function extractIUBFileData(filePath, ftpClient, year, month, day) {
       const IUBFileParsingPromises = [];
 
       // Go through each of the files
+      let parseXMLTimeout = 0;
       files.forEach(file => {
         // Add each file to promise
-        IUBFileParsingPromises.push(parseIUBXmlToJson(`${fileDirectoryPath}/${file}`));
+        IUBFileParsingPromises.push(
+            new Promise(resolve => {
+                setTimeout(() => {
+                    console.log('parsing xml....', `${fileDirectoryPath}/${file}`)
+                    resolve(
+                        parseIUBXmlToJson(lursoftSessionId, `${fileDirectoryPath}/${file}`)
+                    );
+                }, parseXMLTimeout);
+                parseXMLTimeout += config.IUB.lursoftCallTimeoutIncrement;
+            })
+        );
       });
 
       // Wait for all files are parsed
       return Promise.all(IUBFileParsingPromises)
-        .then(() => {
-          // After all files are parsed, make sure that we delete directory with files
-          fse.remove(`${IUB.IUBLocalDataDirectory}/${fileName}`, err => {
-            if (err) throw err;
+          .then(() => {
+            // After all files are parsed, make sure that we delete directory with files
+            fse.remove(`${IUB.IUBLocalDataDirectory}/${fileName}`, err => {
+              if (err) throw err;
 
-            return callNextIteration(ftpClient, year, month, day);
+              return callNextIteration(ftpClient, lursoftSessionId, year, month, day);
+            });
+          })
+          .catch(err => {
+            throw err
           });
-        })
-        .catch(err => {
-          throw err
-        });
     });
   });
 }
@@ -323,12 +372,13 @@ function extractIUBFileData(filePath, ftpClient, year, month, day) {
  * Calls the next iteration if today has not been reached yet.
  *
  * @param {*} ftpClient
+ * @param {string} lursoftSessionId Lursoft session ID
  * @param {string} year
  * @param {string} month
  * @param {string} day
  * @returns {*}
  */
-function callNextIteration(ftpClient, year, month, day) {
+function callNextIteration(ftpClient, lursoftSessionId, year, month, day) {
   const fetchedDate = new Date();
 
   fetchedDate.setFullYear(parseInt(year));
@@ -354,19 +404,21 @@ function callNextIteration(ftpClient, year, month, day) {
 
     ftpClient.end();
 
-    return fetchIUBData(nextDayYear, nextDayParsedMonth, nextDayParsedDate);
+    return fetchIUBData(lursoftSessionId, nextDayYear, nextDayParsedMonth, nextDayParsedDate);
   }
 }
 
 /**
  * Downloads a specific file from the IUB Database.
+ *
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
+ * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {Object} fileToFetch - Object of the current file that needs to be fetched.
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
+function downloadIUBData(ftpClient, lursoftSessionId, fileToFetch, year, month, day) {
   // Get file stream from IUB FTP server
   ftpClient.get(fileToFetch.name, (err, stream) => {
     if (err) throw err;
@@ -377,7 +429,7 @@ function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
       ftpClient.end();
 
       // Extract IUB File
-      extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`, ftpClient, year, month, day);
+      extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`, ftpClient, lursoftSessionId, year, month, day);
     });
 
     // Save the file to local system
@@ -387,12 +439,14 @@ function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
 
 /**
  * Reads IUB FTP structure.
+ *
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
+ * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function readIUBFtpStructure(ftpClient, year, month, day) {
+function readIUBFtpStructure(ftpClient, lursoftSessionId, year, month, day) {
   // List all initial files/directories of IUB FTP
   ftpClient.list((err, rootList) => {
     if (err) throw err;
@@ -432,9 +486,9 @@ function readIUBFtpStructure(ftpClient, year, month, day) {
 
               if (fileToFetch) {
                 // Download the file and extract the data
-                downloadIUBData(ftpClient, fileToFetch, year, month, day);
+                downloadIUBData(ftpClient, lursoftSessionId, fileToFetch, year, month, day);
               } else {
-                callNextIteration(ftpClient, year, month, day);
+                callNextIteration(ftpClient, lursoftSessionId, year, month, day);
               }
             });
           });
@@ -447,18 +501,19 @@ function readIUBFtpStructure(ftpClient, year, month, day) {
 /**
  * Initializes a new FTP client instance and initiates fetching on ready.
  *
+ * @param {string} lursoftSessionId Lursoft session ID
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function fetchIUBData(year, month, day) {
+function fetchIUBData(lursoftSessionId, year, month, day) {
   // Initialize ftp client
   const ftpClient = new ftpClientInstance();
 
   // Retrieve directory list
   ftpClient.on('ready', () => {
     console.log(`Fetching: ${year}/${month}/${day}`);
-    readIUBFtpStructure(ftpClient, year, month, day);
+    readIUBFtpStructure(ftpClient, lursoftSessionId, year, month, day);
   });
 
   // Connect to the IUB FTP
@@ -477,7 +532,12 @@ function fetchIUBData(year, month, day) {
  * @param {Function} next Executes the next matching route
  */
 function fetchData(req, res, next) {
-  const { year, month, day } = req.query;
+  const { year, month, day, passkey } = req.query;
+
+  if (passkey !== process.env.PASSKEY) {
+    return res.status(httpStatusCodes.forbidden)
+  }
+
   const parsedYear = parseInt(year, 10);
   const parsedMonth = monthStrings[month];
   const today = new Date();
@@ -499,9 +559,26 @@ function fetchData(req, res, next) {
     return res.status(httpStatusCodes.badRequest).json(`Day ${day} is invalid. Pass one of the following: ${dayStrings}`);
   }
 
-  fetchIUBData(year, month, day);
+  helpers.getLursoftSession(helpers.getLursoftSessionRequestUrl())
+      .then(lursoftSessionId => {
+          fetchIUBData(lursoftSessionId, year, month, day);
+      })
+      .catch(console.error);
 
   res.status(httpStatusCodes.ok).json(`Data fetching for ${year}/${month}/${day} (YYYY/MM/DD) initiated successfully!`);
+}
+
+/**
+ * Gets a person (copmany) from the Lursoft Database.
+ *
+ * @param {string} sessionId Lursoft session ID
+ * @param {string} regNr Company registration number
+ * @returns {PromiseLike<Promise.response>}
+ */
+function getPerson(sessionId, regNr) {
+  return helpers.soapRequest(REG_REQ(sessionId, regNr))
+      .then(data => data['soap:Body'])
+      .then((data) => data.answer.person);
 }
 
 

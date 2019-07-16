@@ -3,6 +3,8 @@
  */
 
 const config = require('../config');
+const axios = require('axios');
+const xmlParser = require('xml2json');
 
 const { httpStatusCodes } = config;
 const mongoError = 'MongoError';
@@ -163,14 +165,76 @@ module.exports = {
         date.setDate(date.getDate() - days);
 
         return {
-          day: getParsedDateNumber(date.getDate()),
-          month: getParsedDateNumber(date.getMonth() + 1),
-          year: date.getFullYear().toString(),
+            day: getParsedDateNumber(date.getDate()),
+            month: getParsedDateNumber(date.getMonth() + 1),
+            year: date.getFullYear().toString(),
         };
     },
+    /**
+     * Gets a Lursoft session ID.
+     *
+     * @param {string} url Lursoft login URL
+     * @returns {PromiseLike<Promise.response>}
+     */
+    getLursoftSession(url) {
+        return soapRequest(url)
+            .then(data => data['soap:Header']['Lursoft:SessionId'])
+    },
+    /**
+     * Retrieves URL needed for getting a Lursoft session.
+     * @returns {string}
+     */
+    getLursoftSessionRequestUrl() {
+        return `${config.IUB.lursoftBaseUrl}?act=LOGINXML&Userid=${process.env.LURSOFT_USERNAME}&Password=${process.env.LURSOFT_UPASSWORD}`;
+    },
+    /**
+     * Checks if the passed value is a valid registration number for a Latvian Company.
+     *
+     * The regex checks if there are exactly 11 numbers in the string.
+     * @param {string} regNum
+     * @returns {boolean}
+     */
+    isValidLVRegNum(regNum) {
+        return !!regNum && new RegExp('^\\d{11}$').test(regNum);
+    },
+    soapRequest,
     propNameFinder,
     getParsedDateNumber,
 };
+
+/**
+ * @author Caleb Lemoine
+ * @param {string} url endpoint URL
+ * @param {int} timeout Milliseconds before timing out request
+ * @promise response
+ * @reject {error}
+ * @fulfill {body,statusCode}
+ * @returns {Promise.response}
+ */
+function soapRequest(url, timeout = 10000) {
+    // console.log('REQUEST:', url)
+    return new Promise((resolve, reject) => {
+        axios({
+            method: 'get',
+            url,
+        })
+            .then(response => response.data)
+            .then(data => xmlParser.toJson(data))
+            .then(data => JSON.parse(data))
+            .then(jsonData => jsonData['soap:Envelope'])
+            .then(data => resolve(data))
+            .catch((error) => {
+                console.log('FAILED URL:', url);
+                if (error.response) {
+                    console.log(`SOAP FAIL: ${error}`);
+                    reject(error.response.data);
+                } else {
+                    console.log(`SOAP FAIL: ${error}`);
+                    reject(error);
+                }
+            });
+    });
+}
 
 /**
  * Checks for missing properties in found date by comparing an existing object.
