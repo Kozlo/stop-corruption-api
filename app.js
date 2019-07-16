@@ -21,12 +21,12 @@ const cors = require('cors');
  * Import custom controllers.
  */
 const { fetchIUBData } = require('./controllers/iub-data-fetcher');
-const { getFetcherDate } = require('./helpers');
+const { getFetcherDate, getLursoftSession, getLursoftSessionRequestUrl } = require('./helpers');
 
 /**
  * Other constants
  */
-const FETCHER_DAYS = 7; // how many days in the past should the fetcher check entries for
+const FETCHER_DAYS = 1; // how many days in the past should the fetcher check entries for
 const FETCH_TIMEOUT = 86400000; // wait 1 day until fetching again
 
 //=================
@@ -80,8 +80,16 @@ app.use(errorHandler);
 
 // fetch data for the last week on start-up as well as every day
 const { year, month, day } = getFetcherDate(FETCHER_DAYS);
+const lursoftSessionRequestUrl = getLursoftSessionRequestUrl();
 
-fetchIUBData(year, month, day);
-setInterval(() => fetchIUBData(year, month, day), FETCH_TIMEOUT);
+getLursoftSession(lursoftSessionRequestUrl)
+    .then(lursoftSessionId => fetchIUBData(lursoftSessionId, year, month, day))
+    .catch(console.error);
+
+setInterval(() => {
+  getLursoftSession(lursoftSessionRequestUrl)
+      .then(lursoftSessionId => fetchIUBData(lursoftSessionId, year, month, day))
+      .catch(console.error);
+}, FETCH_TIMEOUT);
 
 module.exports = app;
