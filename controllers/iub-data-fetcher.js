@@ -5,7 +5,7 @@ const ftpClientInstance = require('ftp');
 const fs = require('fs');
 const fse = require('fs-extra');
 const targz = require('targz');
-const xmlParser = require('xml-js');
+const xmlParser = require('xml2json');
 const IubEntry = require('../models/iubEntry');
 
 const config = require('../config');
@@ -55,7 +55,7 @@ function parseIUBXmlToJson(lursoftSessionId, xmlPath) {
       let document;
 
       try {
-        document = JSON.parse(xmlParser.xml2json(data, { compact: true, spaces: 4 })).document;
+        document = JSON.parse(xmlParser.toJson(data)).document;
       } catch (e) {
         // console.error(e);
         return resolve(true);
@@ -95,19 +95,20 @@ function saveData(lursoftSessionId, document) {
     } = {},
   } = document;
 
-  if (!id || !id._text) {
+  if (!id) {
+    console.log(id)
     console.log('No ID found, skipping...', JSON.stringify(document));
     return;
   }
 
-  if (!type || !type._text) {
+  if (!type) {
     console.log('No type found, skipping...', JSON.stringify(document));
     return;
   }
 
   // skip the document if it's type is not allowed
-  if (allowedTypes.indexOf(type._text) === -1) {
-    // console.log(`Type '${type._text}' is not allowed. Skipping...`);
+  if (allowedTypes.indexOf(type) === -1) {
+    console.log(`Type '${type}' is not allowed. Skipping...`);
     return;
   }
 
@@ -139,7 +140,7 @@ function saveData(lursoftSessionId, document) {
           resolve(
               getPerson(lursoftSessionId, winnerRegNum)
                   .then(data => {
-                    uniqueWinners[winnerRegNum] = data.registered ? data.registered._text : '';
+                    uniqueWinners[winnerRegNum] = data.registered || '';
                   })
                   .catch(console.error)
           );
@@ -154,12 +155,12 @@ function saveData(lursoftSessionId, document) {
 
   Promise.all(winnerInfo)
       .then(() => {
-        console.log('Unique winners:', uniqueWinners);
+        // console.log('Unique winners:', uniqueWinners);
         // assign the found winner registration numbers to the parsed winner list
         parsedWinners.forEach(winner => {
           winner.winner_reg_date = uniqueWinners[winner.winner_reg_num];
         });
-console.log('PARSED WINNERS', parsedWinners)
+        // console.log('PARSED WINNERS', parsedWinners)
         authority_name = authority_name || general.authority_name;
         authority_reg_num = authority_reg_num || general.authority_reg_num;
         parsedPrice = price || contract_price_exact || part_5.contract_price_exact || price_exact_eur || contract_price_exact_lvl || part_5.contract_price_exact_lvl || price_exact_lvl;
@@ -169,21 +170,21 @@ console.log('PARSED WINNERS', parsedWinners)
         contract_price_to = contract_price_to || part_5.contract_price_to;
 
         const companyData = {
-          document_id: id._text,
-          authority_name: authority_name ? authority_name._text : null,
-          authority_reg_num: authority_reg_num ? authority_reg_num._text : null,
-          tender_num: part_5.tender_num && !isNaN(parseInt(part_5.tender_num._text, 10)) ? parseInt(part_5.tender_num._text, 10) : null,
-          decision_date: decision_date ? decision_date._text : null,
-          price: parsedPrice && !isNaN(parseInt(parsedPrice._text, 10)) ? parseInt(parsedPrice._text, 10) : null,
-          price_from: contract_price_from && !isNaN(parseInt(contract_price_from._text, 10)) ? parseInt(contract_price_from._text, 10) : null,
-          price_to: contract_price_to && !isNaN(parseInt(contract_price_to._text, 10)) ? parseInt(contract_price_to._text, 10) : null,
-          currency: currency && !isNaN(parseInt(currency._text, 10)) ? parseInt(currency._text, 10) : null,
-          eu_fund: eu_fund && !isNaN(parseInt(eu_fund._text, 10)) ? !!parseInt(eu_fund._text, 10) : false,
+          document_id: id,
+          authority_name: authority_name || null,
+          authority_reg_num: authority_reg_num || null,
+          tender_num: !isNaN(parseInt(part_5.tender_num, 10)) ? parseInt(part_5.tender_num, 10) : null,
+          decision_date: decision_date || null,
+          price: !isNaN(parseInt(parsedPrice, 10)) ? parseInt(parsedPrice, 10) : null,
+          price_from: !isNaN(parseInt(contract_price_from, 10)) ? parseInt(contract_price_from, 10) : null,
+          price_to: !isNaN(parseInt(contract_price_to, 10)) ? parseInt(contract_price_to, 10) : null,
+          currency: !isNaN(parseInt(currency, 10)) ? parseInt(currency, 10) : null,
+          eu_fund: !isNaN(parseInt(eu_fund, 10)) ? !!parseInt(eu_fund, 10) : false,
           winners: parsedWinners,
         };
 
         return IubEntry.findOneAndUpdate(
-            { document_id: id._text },
+            { document_id: id },
             companyData,
             {
               upsert: true, // insert if not found
@@ -214,14 +215,14 @@ function getWinnerList(lursoftSessionId, document) {
     if (Array.isArray(winner_list)) {
       winner_list.forEach(({ winner_name, winner_reg_num }) => {
         parsedWinners.push({
-          winner_name: winner_name._text,
-          winner_reg_num: winner_reg_num._text
+          winner_name,
+          winner_reg_num
         });
       });
     } else if (winner_list.winner) {
       parsedWinners.push({
-        winner_name: winner_list.winner.winner_name._text,
-        winner_reg_num: winner_list.winner.winner_reg_num._text,
+        winner_name: winner_list.winner.winner_name,
+        winner_reg_num: winner_list.winner.winner_reg_num,
       });
     } else if (JSON.stringify(winner_list) === JSON.stringify({})) {
       console.log('winner_list is an empty object');
@@ -233,14 +234,14 @@ function getWinnerList(lursoftSessionId, document) {
     if (Array.isArray(winners)) {
       winners.forEach(({ winner_name, winner_reg_num }) => {
         winners.push({
-          winner_name: winner_name._text,
-          winner_reg_num: winner_reg_num._text,
+          winner_name: winner_name,
+          winner_reg_num: winner_reg_num,
         });
       });
     } else if (winners.winner) {
       parsedWinners.push({
-        winner_name: winners.winner.firm ? winners.winner.firm._text : null,
-        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num._text : null,
+        winner_name: winners.winner.firm ? winners.winner.firm : null,
+        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num : null,
       });
     } else if (JSON.stringify(winners) === JSON.stringify({})) {
       console.log('winners is an empty object');
@@ -252,14 +253,14 @@ function getWinnerList(lursoftSessionId, document) {
     if (Array.isArray(part_5.winner_list)) {
       part_5.winner_list.forEach(({ winner_name, winner_reg_num }) => {
         parsedWinners.push({
-          winner_name: winner_name._text,
-          winner_reg_num: winner_reg_num._text
+          winner_name,
+          winner_reg_num
         });
       });
     } else if (part_5.winner_list.winner) {
       parsedWinners.push({
-        winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name._text : null,
-        winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num._text : null,
+        winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name : null,
+        winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num : null,
       });
     } else if (JSON.stringify(part_5.winner_list) === JSON.stringify({})) {
       // console.log('winner_list is an empty object');
@@ -269,7 +270,7 @@ function getWinnerList(lursoftSessionId, document) {
       return;
     }
   } else if (Array.isArray(part_5)) {
-    // console.log(`${document.id._text} part 5 is an array, splitting up`);
+    console.log(`${document.id} part 5 is an array, splitting up`);
 
     let saveDataNextTimeout = 0; // how long should wait until the next iteration
     // split up

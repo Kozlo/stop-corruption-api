@@ -4,7 +4,7 @@
 
 const config = require('../config');
 const axios = require('axios');
-const xmlParser = require('xml-js');
+const xmlParser = require('xml2json');
 
 const { httpStatusCodes } = config;
 const mongoError = 'MongoError';
@@ -178,7 +178,7 @@ module.exports = {
      */
     getLursoftSession(url) {
         return soapRequest(url)
-            .then(data => data['soap:Header']['Lursoft:SessionId']._text)
+            .then(data => data['soap:Header']['Lursoft:SessionId'])
     },
     /**
      * Retrieves URL needed for getting a Lursoft session.
@@ -212,14 +212,14 @@ module.exports = {
  * @returns {Promise.response}
  */
 function soapRequest(url, timeout = 10000) {
-    console.log('REQUEST:', url)
+    // console.log('REQUEST:', url)
     return new Promise((resolve, reject) => {
         axios({
             method: 'get',
             url,
         })
             .then(response => response.data)
-            .then(data => xmlParser.xml2json(data, { compact: true, spaces: 4 }))
+            .then(data => xmlParser.toJson(data))
             .then(data => JSON.parse(data))
             .then(jsonData => jsonData['soap:Envelope'])
             .then(data => resolve(data))
