@@ -26,7 +26,7 @@ const { getFetcherDate, getLursoftSession, getLursoftSessionRequestUrl } = requi
 /**
  * Other constants
  */
-const FETCHER_DAYS = 1; // how many days in the past should the fetcher check entries for
+const FETCHER_DAYS = 0; // how many days in the past should the fetcher check entries for
 const FETCH_TIMEOUT = 86400000; // wait 1 day until fetching again
 
 //=================

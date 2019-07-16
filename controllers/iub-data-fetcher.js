@@ -532,7 +532,12 @@ function fetchIUBData(lursoftSessionId, year, month, day) {
  * @param {Function} next Executes the next matching route
  */
 function fetchData(req, res, next) {
-  const { year, month, day } = req.query;
+  const { year, month, day, passkey } = req.query;
+
+  if (passkey !== process.env.PASSKEY) {
+    return res.status(httpStatusCodes.forbidden)
+  }
+
   const parsedYear = parseInt(year, 10);
   const parsedMonth = monthStrings[month];
   const today = new Date();
