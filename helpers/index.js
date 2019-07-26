@@ -185,7 +185,7 @@ module.exports = {
      * @returns {string}
      */
     getLursoftSessionRequestUrl() {
-        return `${config.IUB.lursoftBaseUrl}?act=LOGINXML&Userid=${process.env.LURSOFT_USERNAME}&Password=${process.env.LURSOFT_UPASSWORD}`;
+        return `${config.IUB.lursoftBaseUrl}?act=LOGINXML&Userid=${process.env.LURSOFT_USERNAME}&Password=${process.env.LURSOFT_PASSWORD}`;
     },
     /**
      * Checks if the passed value is a valid registration number for a Latvian Company.
