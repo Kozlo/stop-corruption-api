@@ -9,9 +9,6 @@ const IUB = {
   ftpHostname: 'open.iub.gov.lv',
   IUBLocalDataDirectory: `${__dirname}/iub_data`,
   minYear: '2013',
-  lursoftCallTimeoutIncrement: 3000, // the time neededbefore calling the next iteration in order to avoid call overload
-  lursoftCallsPerSecond: 3, // the amount of allowed calls per second for Lursoft database
-  lursoftBaseUrl: 'https://www.lursoft.lv/server3',
 };
 
 /**

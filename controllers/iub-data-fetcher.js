@@ -17,10 +17,6 @@ const { httpStatusCodes, monthStrings, dayStrings, IUB } = config;
 const helpers = require('../helpers');
 
 // CONSTANTS
-const REG_REQ = (
-    sessionId, regNr, mode = 'A'
-) => `${config.IUB.lursoftBaseUrl}?ACT=URPERSON_XML&SessionId=${sessionId}&code=${regNr}&userperscode=${process.env.LURSOFT_USER_CODE}&part=${mode}`;
-
 const allowedTypes = [
   'notice_concluded_contract', // Informatīvs paziņojums par noslēgto līgumu
   'notice_contract_rights', // Paziņojums par līguma slēgšanas tiesību piešķiršanu
@@ -42,10 +38,9 @@ const allowedTypes = [
  *
  * If an entry already exists based on the ID then update it, otherwise create a new one.
  *
- * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {string} xmlPath - Path to the XML file which needs to be parsed to JSON.
  */
-function parseIUBXmlToJson(lursoftSessionId, xmlPath) {
+function parseIUBXmlToJson(xmlPath) {
   return new Promise((resolve, reject) => {
     // Read the file
     fs.readFile(xmlPath, 'utf8', (err, data) => {
@@ -61,7 +56,7 @@ function parseIUBXmlToJson(lursoftSessionId, xmlPath) {
         return resolve(true);
       }
 
-      saveData(lursoftSessionId, document);
+      saveData(document);
 
       resolve(true);
     });
@@ -71,12 +66,9 @@ function parseIUBXmlToJson(lursoftSessionId, xmlPath) {
 /**
  * Saves docuemnt data to the DB.
  *
- * Also request company info from the Lursoft Database.
- *
- * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {*} document
  */
-function saveData(lursoftSessionId, document) {
+function saveData(document) {
   let parsedPrice, parsedWinners;
   let {
     id, // PVS dokumenta ID
@@ -112,7 +104,7 @@ function saveData(lursoftSessionId, document) {
     return;
   }
 
-  parsedWinners = getWinnerList(lursoftSessionId, document);
+  parsedWinners = getWinnerList(document);
 
   // don't save the data if there are no winners
   if (!parsedWinners) {
@@ -121,7 +113,6 @@ function saveData(lursoftSessionId, document) {
 
   // const winnerRegNumbers = parsedWinners.map(({ winner_reg_num }) => winner_reg_num);
 
-  // execute script that loads company data from Lursoft
   const uniqueWinners = {};
 
   // get unique winners from the winner list (there can several winners for the same item)
@@ -131,25 +122,20 @@ function saveData(lursoftSessionId, document) {
     }
   });
 
-  let getPersonNextTimeout = 0; // how long should wait until the next iteration
   const winnerInfo = Object.keys(uniqueWinners).map(winnerRegNum => {
     return new Promise(resolve => {
-      setTimeout(() => {
-        // console.log('getting person....', winnerRegNum);
-        if (helpers.isValidLVRegNum(winnerRegNum)) {
-          resolve(
-              getPerson(lursoftSessionId, winnerRegNum)
-                  .then(data => {
-                    uniqueWinners[winnerRegNum] = data.registered || '';
-                  })
-                  .catch(console.error)
-          );
-        } else {
-          resolve();
-        }
-      }, getPersonNextTimeout);
-      const oneSecondInMS = 1000;
-      getPersonNextTimeout += (oneSecondInMS / config.IUB.lursoftCallsPerSecond);
+      // console.log('getting person....', winnerRegNum);
+      if (helpers.isValidLVRegNum(winnerRegNum)) {
+        resolve(
+            getPerson(winnerRegNum)
+                .then(data => {
+                  uniqueWinners[winnerRegNum] = data.registered || '';
+                })
+                .catch(console.error)
+        );
+      } else {
+        resolve();
+      }
     });
   });
 
@@ -197,11 +183,10 @@ function saveData(lursoftSessionId, document) {
 /**
  * Gets winner list form the procurement.
  *
- * @param {string} lursoftSessionId Lursoft session ID
  * @param {*} document IUB procurement full data
  * @returns {*}
  */
-function getWinnerList(lursoftSessionId, document) {
+function getWinnerList(document) {
   const {
     winner_list, winners,
     part_5_list: {
@@ -280,15 +265,12 @@ function getWinnerList(lursoftSessionId, document) {
       };
 
       subProcurement.part_5_list.part_5 = part_5[index];
+      // TODO: check if the promise is still necessary
       new Promise(resolve => {
-        setTimeout(() => {
           // console.log('saving sub procurement....', subProcurement.id);
           resolve(
-              saveData(lursoftSessionId, subProcurement)
+              saveData(subProcurement)
           );
-        }, saveDataNextTimeout);
-
-        saveDataNextTimeout += config.IUB.lursoftCallTimeoutIncrement;
       });
     });
 
@@ -306,12 +288,11 @@ function getWinnerList(lursoftSessionId, document) {
  *
  * @param {Object} filePath - Path to the file which needs to be extracted.
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
- * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function extractIUBFileData(filePath, ftpClient, lursoftSessionId, year, month, day) {
+function extractIUBFileData(filePath, ftpClient, year, month, day) {
   // Remove directory and extension for file name, so we can save it in a specific directory
   const fileName = filePath.replace(`${IUB.IUBLocalDataDirectory}/`, '').replace('.tar.gz', '');
   const fileDirectoryPath = `${IUB.IUBLocalDataDirectory}/${fileName}`;
@@ -335,18 +316,15 @@ function extractIUBFileData(filePath, ftpClient, lursoftSessionId, year, month, 
       const IUBFileParsingPromises = [];
 
       // Go through each of the files
-      let parseXMLTimeout = 0;
       files.forEach(file => {
         // Add each file to promise
+        // TODO: check if the promise is still necessary
         IUBFileParsingPromises.push(
             new Promise(resolve => {
-                setTimeout(() => {
-                    // console.log('parsing xml....', `${fileDirectoryPath}/${file}`)
-                    resolve(
-                        parseIUBXmlToJson(lursoftSessionId, `${fileDirectoryPath}/${file}`)
-                    );
-                }, parseXMLTimeout);
-                parseXMLTimeout += config.IUB.lursoftCallTimeoutIncrement;
+              // console.log('parsing xml....', `${fileDirectoryPath}/${file}`)
+              resolve(
+                  parseIUBXmlToJson(`${fileDirectoryPath}/${file}`)
+              );
             })
         );
       });
@@ -358,7 +336,7 @@ function extractIUBFileData(filePath, ftpClient, lursoftSessionId, year, month, 
             fse.remove(`${IUB.IUBLocalDataDirectory}/${fileName}`, err => {
               if (err) throw err;
 
-              return callNextIteration(ftpClient, lursoftSessionId, year, month, day);
+              return callNextIteration(ftpClient, year, month, day);
             });
           })
           .catch(err => {
@@ -372,13 +350,12 @@ function extractIUBFileData(filePath, ftpClient, lursoftSessionId, year, month, 
  * Calls the next iteration if today has not been reached yet.
  *
  * @param {*} ftpClient
- * @param {string} lursoftSessionId Lursoft session ID
  * @param {string} year
  * @param {string} month
  * @param {string} day
  * @returns {*}
  */
-function callNextIteration(ftpClient, lursoftSessionId, year, month, day) {
+function callNextIteration(ftpClient, year, month, day) {
   const fetchedDate = new Date();
 
   fetchedDate.setFullYear(parseInt(year));
@@ -404,7 +381,7 @@ function callNextIteration(ftpClient, lursoftSessionId, year, month, day) {
 
     ftpClient.end();
 
-    return fetchIUBData(lursoftSessionId, nextDayYear, nextDayParsedMonth, nextDayParsedDate);
+    return fetchIUBData(nextDayYear, nextDayParsedMonth, nextDayParsedDate);
   }
 }
 
@@ -412,13 +389,12 @@ function callNextIteration(ftpClient, lursoftSessionId, year, month, day) {
  * Downloads a specific file from the IUB Database.
  *
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
- * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {Object} fileToFetch - Object of the current file that needs to be fetched.
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function downloadIUBData(ftpClient, lursoftSessionId, fileToFetch, year, month, day) {
+function downloadIUBData(ftpClient, fileToFetch, year, month, day) {
   // Get file stream from IUB FTP server
   ftpClient.get(fileToFetch.name, (err, stream) => {
     if (err) throw err;
@@ -429,7 +405,7 @@ function downloadIUBData(ftpClient, lursoftSessionId, fileToFetch, year, month, 
       ftpClient.end();
 
       // Extract IUB File
-      extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`, ftpClient, lursoftSessionId, year, month, day);
+      extractIUBFileData(`${IUB.IUBLocalDataDirectory}/${fileToFetch.name}`, ftpClient, year, month, day);
     });
 
     // Save the file to local system
@@ -441,12 +417,11 @@ function downloadIUBData(ftpClient, lursoftSessionId, fileToFetch, year, month, 
  * Reads IUB FTP structure.
  *
  * @param {Object} ftpClient - FTP Client instance for the IUB FTP server.
- * @param {string} lursoftSessionId - Lursoft session ID.
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function readIUBFtpStructure(ftpClient, lursoftSessionId, year, month, day) {
+function readIUBFtpStructure(ftpClient, year, month, day) {
   // List all initial files/directories of IUB FTP
   ftpClient.list((err, rootList) => {
     if (err) throw err;
@@ -486,9 +461,9 @@ function readIUBFtpStructure(ftpClient, lursoftSessionId, year, month, day) {
 
               if (fileToFetch) {
                 // Download the file and extract the data
-                downloadIUBData(ftpClient, lursoftSessionId, fileToFetch, year, month, day);
+                downloadIUBData(ftpClient, fileToFetch, year, month, day);
               } else {
-                callNextIteration(ftpClient, lursoftSessionId, year, month, day);
+                callNextIteration(ftpClient, year, month, day);
               }
             });
           });
@@ -501,19 +476,18 @@ function readIUBFtpStructure(ftpClient, lursoftSessionId, year, month, day) {
 /**
  * Initializes a new FTP client instance and initiates fetching on ready.
  *
- * @param {string} lursoftSessionId Lursoft session ID
  * @param {string} year Year string (e.g. '2014')
  * @param {string} month Month string (e.g. '01')
  * @param {string} day Date string (e.g. '31')
  */
-function fetchIUBData(lursoftSessionId, year, month, day) {
+function fetchIUBData(year, month, day) {
   // Initialize ftp client
   const ftpClient = new ftpClientInstance();
 
   // Retrieve directory list
   ftpClient.on('ready', () => {
     console.log(`Fetching: ${year}/${month}/${day}`);
-    readIUBFtpStructure(ftpClient, lursoftSessionId, year, month, day);
+    readIUBFtpStructure(ftpClient, year, month, day);
   });
 
   // Connect to the IUB FTP
@@ -559,26 +533,24 @@ function fetchData(req, res, next) {
     return res.status(httpStatusCodes.badRequest).json(`Day ${day} is invalid. Pass one of the following: ${dayStrings}`);
   }
 
-  helpers.getLursoftSession(helpers.getLursoftSessionRequestUrl())
-      .then(lursoftSessionId => {
-          fetchIUBData(lursoftSessionId, year, month, day);
-      })
+  fetchIUBData(year, month, day)
       .catch(console.error);
 
   res.status(httpStatusCodes.ok).json(`Data fetching for ${year}/${month}/${day} (YYYY/MM/DD) initiated successfully!`);
 }
 
 /**
- * Gets a person (copmany) from the Lursoft Database.
+ * Gets a person (copmany) from the UR Database.
  *
- * @param {string} sessionId Lursoft session ID
  * @param {string} regNr Company registration number
  * @returns {PromiseLike<Promise.response>}
  */
-function getPerson(sessionId, regNr) {
-  return helpers.soapRequest(REG_REQ(sessionId, regNr))
-      .then(data => data['soap:Body'])
-      .then((data) => data.answer.person);
+function getPerson(regNr) {
+  // TODO: add UR request here
+  return Promise.resolve({});
+  // return helpers.soapRequest()
+  //     .then(data => data['soap:Body'])
+  //     .then((data) => data.answer.person);
 }
 
 

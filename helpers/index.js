@@ -171,23 +171,6 @@ module.exports = {
         };
     },
     /**
-     * Gets a Lursoft session ID.
-     *
-     * @param {string} url Lursoft login URL
-     * @returns {PromiseLike<Promise.response>}
-     */
-    getLursoftSession(url) {
-        return soapRequest(url)
-            .then(data => data['soap:Header']['Lursoft:SessionId'])
-    },
-    /**
-     * Retrieves URL needed for getting a Lursoft session.
-     * @returns {string}
-     */
-    getLursoftSessionRequestUrl() {
-        return `${config.IUB.lursoftBaseUrl}?act=LOGINXML&Userid=${process.env.LURSOFT_USERNAME}&Password=${process.env.LURSOFT_PASSWORD}`;
-    },
-    /**
      * Checks if the passed value is a valid registration number for a Latvian Company.
      *
      * The regex checks if there are exactly 11 numbers in the string.

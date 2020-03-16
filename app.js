@@ -80,16 +80,9 @@ app.use(errorHandler);
 
 // fetch data for the last week on start-up as well as every day
 const { year, month, day } = getFetcherDate(FETCHER_DAYS);
-const lursoftSessionRequestUrl = getLursoftSessionRequestUrl();
-
-getLursoftSession(lursoftSessionRequestUrl)
-    .then(lursoftSessionId => fetchIUBData(lursoftSessionId, year, month, day))
-    .catch(console.error);
 
 setInterval(() => {
-  getLursoftSession(lursoftSessionRequestUrl)
-      .then(lursoftSessionId => fetchIUBData(lursoftSessionId, year, month, day))
-      .catch(console.error);
+  fetchIUBData(year, month, day);
 }, FETCH_TIMEOUT);
 
 module.exports = app;

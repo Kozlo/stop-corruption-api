@@ -1,2 +1,3 @@
 --------------------- STORIES -----------------------
-Remove Lursoft-related code
+- Remove Lursoft-related code
+- Make a sample request to UR
