@@ -180,6 +180,15 @@ module.exports = {
     isValidLVRegNum(regNum) {
         return !!regNum && new RegExp('^\\d{11}$').test(regNum);
     },
+    /**
+     * Converts a value from milliseconds to hours.
+     *
+     * @param {int} ms Time in milliseconds
+     * @returns {number} Time in hours
+     */
+    msToHours(ms) {
+        return ms / 1000 / 60 / 60;
+    },
     soapRequest,
     propNameFinder,
     getParsedDateNumber,

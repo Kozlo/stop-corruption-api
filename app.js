@@ -24,6 +24,11 @@ const { fetchIUBData } = require('./controllers/iub-data-fetcher');
 const { getFetcherDate, getLursoftSession, getLursoftSessionRequestUrl } = require('./helpers');
 
 /**
+ * Helpers.
+ */
+const { msToHours } = require('./helpers');
+
+/**
  * Other constants
  */
 const FETCHER_DAYS = 7; // how many days in the past should the fetcher check entries for
@@ -81,8 +86,13 @@ app.use(errorHandler);
 // fetch data for the last week on start-up as well as every day
 const { year, month, day } = getFetcherDate(FETCHER_DAYS);
 
-setInterval(() => {
-  fetchIUBData(year, month, day);
-}, FETCH_TIMEOUT);
+fetchIUBData(year, month, day);
+
+if (process.env.NODE_ENV !== 'dev') {
+  console.log(`Initiating fetching data at an interval of ${msToHours(FETCH_TIMEOUT)} hours.`);
+  setInterval(() => {
+    fetchIUBData(year, month, day);
+  }, FETCH_TIMEOUT);
+}
 
 module.exports = app;

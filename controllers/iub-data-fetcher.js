@@ -200,8 +200,8 @@ function getWinnerList(document) {
     if (Array.isArray(winner_list)) {
       winner_list.forEach(({ winner_name, winner_reg_num }) => {
         parsedWinners.push({
-          winner_name,
-          winner_reg_num
+          winner_name: typeof winner_name === 'string' ? winner_name : '',
+          winner_reg_num: typeof winner_reg_num === 'string' ? winner_reg_num : '',
         });
       });
     } else if (winner_list.winner) {
