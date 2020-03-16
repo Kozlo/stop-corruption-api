@@ -205,14 +205,13 @@ module.exports = {
 /**
  * @author Caleb Lemoine
  * @param {string} url endpoint URL
- * @param {int} timeout Milliseconds before timing out request
+ * @param {int} [timeout] Milliseconds before timing out request
  * @promise response
  * @reject {error}
  * @fulfill {body,statusCode}
  * @returns {Promise.response}
  */
 function soapRequest(url, timeout = 10000) {
-    // console.log('REQUEST:', url)
     return new Promise((resolve, reject) => {
         axios({
             method: 'get',

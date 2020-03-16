@@ -102,13 +102,13 @@ function saveData(lursoftSessionId, document) {
   }
 
   if (!type) {
-    console.log('No type found, skipping...', JSON.stringify(document));
+    // console.log('No type found, skipping...', JSON.stringify(document));
     return;
   }
 
   // skip the document if it's type is not allowed
   if (allowedTypes.indexOf(type) === -1) {
-    console.log(`Type '${type}' is not allowed. Skipping...`);
+    // console.log(`Type '${type}' is not allowed. Skipping...`);
     return;
   }
 
@@ -135,7 +135,7 @@ function saveData(lursoftSessionId, document) {
   const winnerInfo = Object.keys(uniqueWinners).map(winnerRegNum => {
     return new Promise(resolve => {
       setTimeout(() => {
-        console.log('getting person....', winnerRegNum);
+        // console.log('getting person....', winnerRegNum);
         if (helpers.isValidLVRegNum(winnerRegNum)) {
           resolve(
               getPerson(lursoftSessionId, winnerRegNum)
@@ -225,7 +225,7 @@ function getWinnerList(lursoftSessionId, document) {
         winner_reg_num: winner_list.winner.winner_reg_num,
       });
     } else if (JSON.stringify(winner_list) === JSON.stringify({})) {
-      console.log('winner_list is an empty object');
+      // console.log('winner_list is an empty object');
       return;
     } else {
       console.error('winner_list defined but failed parsing it...', JSON.stringify(document));
@@ -244,7 +244,7 @@ function getWinnerList(lursoftSessionId, document) {
         winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num : null,
       });
     } else if (JSON.stringify(winners) === JSON.stringify({})) {
-      console.log('winners is an empty object');
+      // console.log('winners is an empty object');
       return;
     } else {
       console.error('winners defined but failed parsing it...', id);
@@ -282,7 +282,7 @@ function getWinnerList(lursoftSessionId, document) {
       subProcurement.part_5_list.part_5 = part_5[index];
       new Promise(resolve => {
         setTimeout(() => {
-          console.log('saving sub procurement....', subProcurement.id);
+          // console.log('saving sub procurement....', subProcurement.id);
           resolve(
               saveData(lursoftSessionId, subProcurement)
           );
@@ -341,7 +341,7 @@ function extractIUBFileData(filePath, ftpClient, lursoftSessionId, year, month, 
         IUBFileParsingPromises.push(
             new Promise(resolve => {
                 setTimeout(() => {
-                    console.log('parsing xml....', `${fileDirectoryPath}/${file}`)
+                    // console.log('parsing xml....', `${fileDirectoryPath}/${file}`)
                     resolve(
                         parseIUBXmlToJson(lursoftSessionId, `${fileDirectoryPath}/${file}`)
                     );
