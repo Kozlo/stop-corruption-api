@@ -232,7 +232,7 @@ function getWinnerList(document) {
       // console.log('winners is an empty object');
       return;
     } else {
-      console.error('winners defined but failed parsing it...', id);
+      console.error('winners defined but failed parsing it...');
     }
   } else if (part_5.winner_list) {
     if (Array.isArray(part_5.winner_list)) {
@@ -251,7 +251,7 @@ function getWinnerList(document) {
       // console.log('winner_list is an empty object');
       return;
     } else {
-      console.error('part_5.winner_list defined but failed parsing it...', id);
+      console.error('part_5.winner_list defined but failed parsing it...');
       return;
     }
   } else if (Array.isArray(part_5)) {
@@ -276,7 +276,7 @@ function getWinnerList(document) {
 
     return;
   } else {
-    console.error('no winner found', id); //JSON.stringify(document));
+    console.error('no winner found'); //JSON.stringify(document));
     return;
   }
 
