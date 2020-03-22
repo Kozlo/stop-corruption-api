@@ -206,8 +206,8 @@ function getWinnerList(document) {
       });
     } else if (winner_list.winner) {
       parsedWinners.push({
-        winner_name: winner_list.winner.winner_name,
-        winner_reg_num: winner_list.winner.winner_reg_num,
+        winner_name:  typeof winner_list.winner.winner_name === 'string' ? winner_list.winner.winner_name : '',
+        winner_reg_num:  typeof winner_list.winner.winner_reg_num === 'string' ? winner_list.winner.winner_reg_num : '',
       });
     } else if (JSON.stringify(winner_list) === JSON.stringify({})) {
       // console.log('winner_list is an empty object');
@@ -219,14 +219,14 @@ function getWinnerList(document) {
     if (Array.isArray(winners)) {
       winners.forEach(({ winner_name, winner_reg_num }) => {
         winners.push({
-          winner_name: winner_name,
-          winner_reg_num: winner_reg_num,
+          winner_name: typeof winner_name === 'string' ? winner_name : '',
+          winner_reg_num: typeof winner_reg_num === 'string' ? winner_reg_num : '',
         });
       });
     } else if (winners.winner) {
       parsedWinners.push({
         winner_name: winners.winner.firm ? winners.winner.firm : null,
-        winner_reg_num: winners.winner.reg_num ? winners.winner.reg_num : null,
+        winner_reg_num: typeof winners.winner.reg_num === 'string' ? winners.winner.reg_num : null,
       });
     } else if (JSON.stringify(winners) === JSON.stringify({})) {
       // console.log('winners is an empty object');
@@ -238,14 +238,14 @@ function getWinnerList(document) {
     if (Array.isArray(part_5.winner_list)) {
       part_5.winner_list.forEach(({ winner_name, winner_reg_num }) => {
         parsedWinners.push({
-          winner_name,
-          winner_reg_num
+          winner_name: typeof winner_name === 'string' ? winner_name : '',
+          winner_reg_num: typeof winner_reg_num === 'string' ? winner_reg_num : '',
         });
       });
     } else if (part_5.winner_list.winner) {
       parsedWinners.push({
-        winner_name: part_5.winner_list.winner.winner_name ? part_5.winner_list.winner.winner_name : null,
-        winner_reg_num: part_5.winner_list.winner.winner_reg_num ? part_5.winner_list.winner.winner_reg_num : null,
+        winner_name: typeof part_5.winner_list.winner.winner_name === 'string' ? part_5.winner_list.winner.winner_name : null,
+        winner_reg_num: typeof part_5.winner_list.winner.winner_reg_num === 'string' ? part_5.winner_list.winner.winner_reg_num : null,
       });
     } else if (JSON.stringify(part_5.winner_list) === JSON.stringify({})) {
       // console.log('winner_list is an empty object');
