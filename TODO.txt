@@ -1,3 +1,4 @@
 --------------------- STORIES -----------------------
-- Remove Lursoft-related code
-- Make a sample request to UR
+- Make a proxy API call for testing from localhost
+- use the PHP sample to make a real request
+-

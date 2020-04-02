@@ -4,9 +4,9 @@
  * Entry point for the Anti-Corruption CRM application.
  */
 
-//=================
-// Dependencies
-//=================
+  //=================
+  // Dependencies
+  //=================
 
 const createError = require('http-errors');
 const express = require('express');
@@ -16,6 +16,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 /**
  * Import custom controllers.
@@ -66,13 +67,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 const routes = require('./routes');
 app.use('/', routes);
 
+// TODO: remove when done testing
+app.use('/token', createProxyMiddleware({
+  target: 'https://epakvisstv.vraa.gov.lv/STS/VISS.Pfas.STS/STS/Issue.svc/trust/13/certificatemixed',
+  changeOrigin: true,
+}));
 
 //=================
 // Error handling
 //=================
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
@@ -82,13 +88,12 @@ app.use(logErrors);
 app.use(clientErrorHandler);
 app.use(errorHandler);
 
-
 // fetch data for the last week on start-up as well as every day
 const { year, month, day } = getFetcherDate(FETCHER_DAYS);
 
-fetchIUBData(year, month, day);
+// fetchIUBData(year, month, day);
 
-if (process.env.NODE_ENV !== 'dev') {
+if (process.env.NODE_ENV.toUpperCase() !== 'DEV') {
   console.log(`Initiating fetching data at an interval of ${msToHours(FETCH_TIMEOUT)} hours.`);
   setInterval(() => {
     fetchIUBData(year, month, day);
