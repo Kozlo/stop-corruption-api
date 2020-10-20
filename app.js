@@ -67,12 +67,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 const routes = require('./routes');
 app.use('/', routes);
 
-// TODO: remove when done testing
-app.use('/token', createProxyMiddleware({
-  target: 'https://epakvisstv.vraa.gov.lv/STS/VISS.Pfas.STS/STS/Issue.svc/trust/13/certificatemixed',
-  changeOrigin: true,
-}));
-
 //=================
 // Error handling
 //=================
