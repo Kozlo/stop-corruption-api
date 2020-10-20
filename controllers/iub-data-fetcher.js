@@ -533,8 +533,7 @@ function fetchData(req, res, next) {
     return res.status(httpStatusCodes.badRequest).json(`Day ${day} is invalid. Pass one of the following: ${dayStrings}`);
   }
 
-  fetchIUBData(year, month, day)
-      .catch(console.error);
+  fetchIUBData(year, month, day);
 
   res.status(httpStatusCodes.ok).json(`Data fetching for ${year}/${month}/${day} (YYYY/MM/DD) initiated successfully!`);
 }
