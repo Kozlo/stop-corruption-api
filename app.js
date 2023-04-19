@@ -32,8 +32,8 @@ const { msToHours } = require('./helpers');
 /**
  * Other constants
  */
-const FETCHER_DAYS = 7; // how many days in the past should the fetcher check entries for
-const FETCH_TIMEOUT = 86400000; // wait 1 day until fetching again
+const FETCHER_DAYS = 150; // how many days in the past should the fetcher check entries for
+const FETCH_TIMEOUT = 1; // wait 1 day until fetching again
 
 //=================
 // DB setup
