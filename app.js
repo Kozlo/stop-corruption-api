@@ -42,7 +42,8 @@ const FETCH_TIMEOUT = 86400000; // wait 1 day until fetching again
 const database = process.env.MONGODB_URI;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(database, { useNewUrlParser: true }, () => console.log(`Successfully connected to the DB: ${database}`));
+mongoose.connect(database, { useNewUrlParser: true })
+  .then(() => console.log(`Successfully connected to the DB: ${database}`));
 mongoose.connection.on('error', err => console.info(`Error: Could not connect to MongoDB ${database}: `, err));
 
 //=================
