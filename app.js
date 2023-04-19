@@ -86,13 +86,13 @@ app.use(errorHandler);
 // fetch data for the last week on start-up as well as every day
 const { year, month, day } = getFetcherDate(FETCHER_DAYS);
 
-// fetchIUBData(year, month, day);
+fetchIUBData(year, month, day);
 
-if (process.env.NODE_ENV.toUpperCase() !== 'DEV') {
-  console.log(`Initiating fetching data at an interval of ${msToHours(FETCH_TIMEOUT)} hours.`);
-  setInterval(() => {
-    fetchIUBData(year, month, day);
-  }, FETCH_TIMEOUT);
-}
+// if (process.env.NODE_ENV.toUpperCase() !== 'DEV') {
+//   console.log(`Initiating fetching data at an interval of ${msToHours(FETCH_TIMEOUT)} hours.`);
+//   setInterval(() => {
+//     fetchIUBData(year, month, day);
+//   }, FETCH_TIMEOUT);
+// }
 
 module.exports = app;
